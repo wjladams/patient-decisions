@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Patient Decisions</string>
+    <string name="welcomeText" translatable="false">Welcome to Patient Decisions</string>
+</resources>
