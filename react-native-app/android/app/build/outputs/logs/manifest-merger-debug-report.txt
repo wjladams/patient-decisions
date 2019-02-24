@@ -1,0 +1,161 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-fs] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-fs/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:react-native-gesture-handler] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-gesture-handler/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.57.8] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/react-native-0.57.8.aar/a55192c883eff2c16c46be474d17676d/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/3ea6b7b50c4278f38f040fa31454894d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/ded6479668c83be218375f5e60477f0c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e8058659825407a33554c789188b1214/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6ee903cdfad64c5b6525b7c0755bb9a3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/356fefbd5733c901a3e5430e063040c3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e394bc3c9f4815ecbe6d01e219853b0d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d73bad8ee1973faea7f928c87fa67b66/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/300ef651199970bc504ab39a3cfddbab/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/326d2bfa64eb3d8e58373e1f6844ffb5/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/fa67b22e31b10889914c13ee5aaddf1b/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/3e2b0f5ea98786c517241559bf5017c3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/0986a48938f145241da1774ee99c3c50/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9608a0c3bdec622752c0cabaf836b7d5/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r174650] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/806b574bc257cb7ab59b8c769fc59785/AndroidManifest.xml:1:1-3:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/4c93202cd36cfe992118080e69e50ef8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/feed2a0dc49922ad37a387204fa09333/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/cbd6b906490b6c391ce8794a397fb848/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/d120c7ebab47282ab58f521a4e84c099/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2c3d623a66473ca4cb8ae9f2691ed16c/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+	package
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:2:5-35
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:5:5-77
+MERGED from [com.facebook.react:react-native:0.57.8] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/react-native-0.57.8.aar/a55192c883eff2c16c46be474d17676d/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.57.8] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/react-native-0.57.8.aar/a55192c883eff2c16c46be474d17676d/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:5:22-75
+application
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:7:5-24:19
+MERGED from [com.facebook.react:react-native:0.57.8] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/react-native-0.57.8.aar/a55192c883eff2c16c46be474d17676d/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.57.8] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/react-native-0.57.8.aar/a55192c883eff2c16c46be474d17676d/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9608a0c3bdec622752c0cabaf836b7d5/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9608a0c3bdec622752c0cabaf836b7d5/AndroidManifest.xml:11:5-20
+MERGED from [org.webkit:android-jsc:r174650] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/806b574bc257cb7ab59b8c769fc59785/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/806b574bc257cb7ab59b8c769fc59785/AndroidManifest.xml:2:3-17
+	android:label
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:9:7-39
+	android:icon
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:10:7-41
+	android:allowBackup
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:name
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:8:7-38
+activity#com.patientdecisions.MainActivity
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:13:7-22:18
+	android:label
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:windowSoftInputMode
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:17:9-51
+	android:configChanges
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:16:9-79
+	android:name
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:18:9-21:25
+action#android.intent.action.MAIN
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:19:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:20:13-73
+	android:name
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:20:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:23:7-84
+	android:name
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:23:17-81
+uses-sdk
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-fs] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-fs/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-fs] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-fs/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-gesture-handler/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-gesture-handler/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.8] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/react-native-0.57.8.aar/a55192c883eff2c16c46be474d17676d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.8] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/react-native-0.57.8.aar/a55192c883eff2c16c46be474d17676d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/3ea6b7b50c4278f38f040fa31454894d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/3ea6b7b50c4278f38f040fa31454894d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/ded6479668c83be218375f5e60477f0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/ded6479668c83be218375f5e60477f0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e8058659825407a33554c789188b1214/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e8058659825407a33554c789188b1214/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6ee903cdfad64c5b6525b7c0755bb9a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6ee903cdfad64c5b6525b7c0755bb9a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/356fefbd5733c901a3e5430e063040c3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/356fefbd5733c901a3e5430e063040c3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e394bc3c9f4815ecbe6d01e219853b0d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e394bc3c9f4815ecbe6d01e219853b0d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d73bad8ee1973faea7f928c87fa67b66/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d73bad8ee1973faea7f928c87fa67b66/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/300ef651199970bc504ab39a3cfddbab/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/300ef651199970bc504ab39a3cfddbab/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/326d2bfa64eb3d8e58373e1f6844ffb5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/326d2bfa64eb3d8e58373e1f6844ffb5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/fa67b22e31b10889914c13ee5aaddf1b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/fa67b22e31b10889914c13ee5aaddf1b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/3e2b0f5ea98786c517241559bf5017c3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/3e2b0f5ea98786c517241559bf5017c3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/0986a48938f145241da1774ee99c3c50/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/0986a48938f145241da1774ee99c3c50/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9608a0c3bdec622752c0cabaf836b7d5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9608a0c3bdec622752c0cabaf836b7d5/AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/4c93202cd36cfe992118080e69e50ef8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/4c93202cd36cfe992118080e69e50ef8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/feed2a0dc49922ad37a387204fa09333/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/feed2a0dc49922ad37a387204fa09333/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/cbd6b906490b6c391ce8794a397fb848/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/cbd6b906490b6c391ce8794a397fb848/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/d120c7ebab47282ab58f521a4e84c099/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/d120c7ebab47282ab58f521a4e84c099/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2c3d623a66473ca4cb8ae9f2691ed16c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/sivanookala/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2c3d623a66473ca4cb8ae9f2691ed16c/AndroidManifest.xml:20:5-44
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:react-native-fs] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-fs/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from [:react-native-fs] /Users/sivanookala/open-source/patient-decisions/react-native-app/node_modules/react-native-fs/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
