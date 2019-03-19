@@ -1,12 +1,16 @@
 {
-  "name": "PatientDecisions",
+  "name": "patient-decisions",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "clean": "watchman watch-del-all && npm cache clean && cd android && ./gradlew clean && cd ..",
     "test": "jest"
   },
   "dependencies": {
+    "@types/react": "16.8.8",
+    "@types/react-native": "0.57.40",
+    "@types/react-navigation": "^3.0.5",
     "moment": "^2.23.0",
     "react": "16.6.3",
     "react-native": "0.57.8",
@@ -17,10 +21,13 @@
     "tcomb-form-native": "^0.6.20"
   },
   "devDependencies": {
+    "@types/jest": "24.0.11",
+    "@types/react-test-renderer": "16.8.1",
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.0",
-    "react-test-renderer": "16.6.3"
+    "react-test-renderer": "16.6.3",
+    "typescript": "3.3.3333"
   },
   "jest": {
     "preset": "react-native"
