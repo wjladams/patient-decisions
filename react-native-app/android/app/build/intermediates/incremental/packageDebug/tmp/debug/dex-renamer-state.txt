@@ -1,4 +1,0 @@
-#Sat Feb 23 19:58:36 EST 2019
-base.0=/Users/sivanookala/open-source/patient-decisions/react-native-app/android/app/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
