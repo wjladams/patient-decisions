@@ -6,6 +6,7 @@
 ## To Run the app ##
 1. Install Android studio. We need this to run Android Virtual Devices (Emulators). 
 2. Add an environment variable ANDROID_HOME=~/Library/Android/sdk (you can add this in your .bash_profile)
+2. Install node, the easiest way is to [install nvm](https://github.com/nvm-sh/nvm#installation-and-update).
 3. In the project folder run npm install
 4. In the project folder run npm install -g react-native-cli
 5. Start an android virtual device from Android Studio -> Tools -> AVD Manager
