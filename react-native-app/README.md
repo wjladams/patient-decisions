@@ -5,7 +5,11 @@
 
 ## To Run the app ##
 1. Install Android studio. We need this to run Android Virtual Devices (Emulators). 
-2. Add an environment variable ANDROID_HOME=~/Library/Android/sdk (you can add this in your .bash_profile) on a Mac.  On linux set that environmental variable to ANDROID_HOME=/home/YOUR_USERNAME/Android/Sdk
+2. Add an environment variable ANDROID_HOME=~/Library/Android/sdk (you can add this in your .bash_profile) on a Mac.  On linux set that environmental variables 
+```
+export ANDROID_HOME=/home/USERNAME/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+```
 2. Install node, the easiest way is to [install nvm](https://github.com/nvm-sh/nvm#installation-and-update).
 3. In the project folder run npm install
 4. In the project folder run npm install -g react-native-cli
