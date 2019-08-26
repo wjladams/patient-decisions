@@ -22,7 +22,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 3. This will produce an apk in "react-native-app/android/app/build/outputs/apk/release" folder
 
 ## Installing apk on your phone ##
-1. Go to settings and search for "Installing apps from unknow sources" 
-2. On older phone you have to toggle a switch to allow installing apps from unknown sources. On newer phones you have to say which apps you are going to download and install the app. You can either choose chrome or gmail depending on where you are going to download the apk from.
+1. Go to settings on your phone and search for "Installing apps from unknow sources" 
+2. On older phones you have to toggle a switch to allow installing apps from unknown sources. On newer phones you have to say which apps you are going to download and install the apk from. You can either choose chrome or gmail depending on where you are going to download the apk from.
 3. If you are downloading from the browser go to https://github.com/wjladams/patient-decisions/tree/master/react-native-app/android/app/build/outputs/apk/release and download app-release.apk
 4. Open it and follow the instructions.
