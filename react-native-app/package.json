@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "clean": "watchman watch-del-all && npm cache clean && cd android && ./gradlew clean && cd ..",
-    "test": "jest"
+    "test": "jest",
+    "build": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/i && cd android && ./gradlew assembleRelease && cd ./app/build/outputs/apk/release/ && pwd && ls"
   },
   "dependencies": {
     "@types/react": "16.8.8",
