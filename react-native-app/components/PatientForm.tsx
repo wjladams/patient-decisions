@@ -4,7 +4,7 @@ import t from 'tcomb-form-native';
 import moment from 'moment';
 import { NavigationScreenProps, NavigationScreenOptions } from 'react-navigation';
 
-export enum GenderEnum { M = "Male", F = "Femail" }
+export enum GenderEnum { M = "Male", F = "Female" }
 
 export interface Patient {
   name: string;

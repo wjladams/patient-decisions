@@ -1,8 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, WebView, NativeSyntheticEvent, WebViewMessageEventData } from 'react-native';
+import { StyleSheet, Text, View, WebView, NativeSyntheticEvent, WebViewMessageEventData, Button } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { NavigationScreenProps, NavigationScreenOptions } from 'react-navigation';
 import { Patient } from './PatientForm';
+import { HtmlWebView } from './HtmlWebView';
+import { HtmlButtonWebView } from './HtmlButtonWebView';
+import { Config } from '../config/Config';
 
 interface InfoState {
   patient: Patient;
@@ -29,6 +32,13 @@ export class Info extends React.Component<NavigationScreenProps, InfoState> {
   }
 
   render() {
+    const config = new Config();
+    let views = [];
+    for(let i = 1; i < config.getPageCount(); i++) {
+       views.push(<HtmlWebView uri={config.getUri(i)} key={i}/>);
+    }
+    views.push(<HtmlButtonWebView uri={config.getUri(config.getPageCount())} navigation={this.props.navigation} patient={this.state.patient} key={config.getPageCount}/>);
+
     return (
       <View style={styles.container}>
         <View style={styles.header}>
@@ -37,19 +47,7 @@ export class Info extends React.Component<NavigationScreenProps, InfoState> {
         </View>
         <Swiper showsButtons={true} loop={false}
           onMomentumScrollEnd={(e: FIXME, state: FIXME, context: FIXME) => console.log('index:', state.index)}>
-          <WebView style={styles.webView}
-            source={{ uri: 'file:///android_asset/html/1.html' }}
-            scalesPageToFit />
-          <WebView
-            source={{ uri: 'file:///android_asset/html/2.html' }}
-            scalesPageToFit />
-          <WebView
-            source={{ uri: 'file:///android_asset/html/3.html' }}
-            scalesPageToFit />
-          <WebView
-            source={{ uri: 'file:///android_asset/html/4.html' }}
-            scalesPageToFit
-            onMessage={event => this.onPress(event)} />
+           {views}
         </Swiper>
       </View>
     );
