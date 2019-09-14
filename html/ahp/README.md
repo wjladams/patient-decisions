@@ -19,6 +19,12 @@ This is a browser based AHP javascript library.
     ahp.addAlt("alt2", "the second alt")
     //Pairwise compares alt1 to alt2, saying it is 2 times better
     ahp.pairwise(0, 1, 3)
+    //Get an array of children node names
+    let kidNamesArray = ahp.childernNames()
+    //The alternatives are stored in the alts class variable
+    let altNamesArray = ahp.alts
+    
+
     ...
   </script>
 </body>
