@@ -1,0 +1,302 @@
+<html>
+<head>
+  <title>Testing AHP javascript library</title>
+  <script src="../ahp.js"></script>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script>
+    function appendResult(result) {
+      $( "#results" ).append(result)
+      $( "#results" ).append("\n")
+    }
+    function test(description, fx) {
+      try {
+        fx()
+        appendResult("Passed: "+description);
+      } catch (error) {
+        appendResult("Failed:" + description+": with error : "+error)
+      }
+    }
+
+    class Expect {
+      constructor(trueVal) {
+        this.trueValue = trueVal
+      }
+      toBe(x) {
+        if (x != this.trueValue) {
+          throw this.trueValue+" was not "+x
+        }
+      }
+      toEqual(x) {
+        if (JSON.stringify(this.trueValue) === JSON.stringify(x)) {
+
+        } else {
+          throw this.trueValue+" was not equal to "+x
+        }
+      }
+      toBeLessThan(x) {
+        if (this.trueValue < x) {
+
+        } else {
+          throw this.trueValue+" was not less than "+x
+        }
+      }
+      toBeCloseTo(x, delta=7) {
+        let diff = Math.abs(x - this.trueValue)
+        let err = Math.pow(10, -delta)
+        if (diff < err) {
+
+        } else {
+          throw this.trueValue+" was not close enough to "+x+ " with err="+err+" and delta="+delta
+        }
+      }
+      toBeNull() {
+        this.toBe(null)
+      }
+      toThrow() {
+        try {
+          this.trueValue()
+          throw "function was expected to throw an error and did not"
+        } catch (error) {
+          //We expected this, it should happen
+        }
+      }
+      toBeDefined() {
+        if (this.trueValue == null) {
+          throw "The value was not defined"
+        }
+      }
+    }
+    function expect(trueVal) {
+      return new Expect(trueVal)
+    }
+  </script>
+  <body>
+    <h1>Test results</h1>
+    <pre id="results"></pre>
+    <script>
+    test('adds 1 + 2 to equal 3', () => {
+      expect(1 + 2).toBe(3);
+    });
+
+    test('makes sure we are not in 1984 (i.e. 2+2 != 5)', () => {
+      expect(2 + 2).toBeLessThan(5);
+    });
+
+    test('init vector test', () => {
+      let v = vInit(3)
+      expect(v.length).toBe(3)
+      expect(v).toEqual([0, 0, 0])
+      v = vInit(2, 1.4)
+      expect(v).toEqual([1.4, 1.4])
+    });
+
+    test('normalize vector inline', () => {
+      let v = [1, 2]
+      vNormalize(v)
+      expect(v).toEqual([1/3, 2/3])
+    });
+
+    test('mInit', () => {
+      let mat12 = mInit(1,2)
+      expect(mat12).toEqual([[0, 0]])
+    })
+
+    test('mId', () => {
+      let size=3
+      let id3 = mId(size)
+      expect(id3).toEqual([[1, 0, 0], [0, 1, 0], [0, 0 ,1]])
+    })
+
+    test('normalize vector not inline', () => {
+      let v = [1, 2]
+      expect(vNormalize(v, false)).toEqual([1/3, 2/3.]);
+    })
+
+    test('mMultVec: multiplying a matrix by a vector', () =>{
+      let v = [1, 2]
+      let m = [[1, 3], [-2, 4]]
+      let mv=mMultVec(m, v)
+
+      expect(mv[0]).toBeCloseTo(7, 8)
+      expect(mv[1]).toBeCloseTo(6, 8)
+    })
+
+    test('mLargestEigen', () => {
+      let m = [[1, 2, 6], [1/2, 1, 3], [1/6, 1/3, 1]]
+      let pv = [0.6, 0.3, 0.1]
+      let eig = mLargestEigen(m)
+      for(let i=0; i<pv.length; i++) {
+        expect(eig[i]).toBeCloseTo(pv[i], 7)
+      }
+      let val = mLargestEigen(m, true)
+      expect(val).toBeCloseTo(3, 8)
+    })
+
+    test('Add position to square matrix', ()=> {
+      let m = []
+      mSquareAddPos(m)
+      expect(m).toEqual([[1]])
+      mSquareAddPos(m)
+      expect(m).toEqual([[1, 0], [0, 1]])
+    })
+
+    test('hmlpref', () => {
+      expect(prefHML(0, 0)).toBe(0)
+      expect(prefHML(1, 0)).toBeNull()
+      expect(prefHML(0, 1)).toBeNull()
+      expect(prefHML(11, 12)).toBe(0)
+      expect(prefHML(10, 12)).toBe(-1)
+      expect(prefHML(15, 12)).toBe(1)
+    })
+
+    test('bestHMLIndex', () => {
+      expect(bestHMLIndex([0, 0, 0])).toEqual([0, 0])
+      expect(bestHMLIndex([-1, 0, 0])).toEqual([1, null])
+      expect(bestHMLIndex([1, 0, 0])).toEqual([0, null])
+      expect(bestHMLIndex([1, 1.001, 0])).toEqual([1, 0])
+      expect(bestHMLIndex([1, 1.8, 0])).toEqual([1, 1])
+      expect(bestHMLIndex([1, 5, 0])).toEqual([1, 2])
+    })
+
+
+    test('Pairwise constructor', () => {
+        let pw = new Pairwise(3)
+        expect(pw.size).toEqual(3)
+        expect(pw.matrix).toEqual([[1,0,0],[0,1,0],[0,0,1]])
+    })
+
+    test('Pairwise setting', () => {
+        let pw = new Pairwise(3)
+        pw.set(0, 1, 2)
+        expect(pw.matrix).toEqual([[1, 2, 0], [1/2, 1, 0],[0, 0,1]])
+        expect(() => {
+            pw.set(0, 0, 2)
+        }).toThrow()
+    })
+
+    test('Pairwise priority', () => {
+        let pw = new Pairwise(3)
+        pw.set(0, 1, 2)
+        pw.set(1,2, 3)
+        pw.set(0, 2, 6)
+        expect(pw.matrix).toEqual([[1, 2, 6], [1/2, 1, 3],[1/6, 1/3,1]])
+        let expected=[0.6, 0.3, 0.1]
+        let calcd = pw.priority()
+        for(let i=0; i < expected.length; i++) {
+            expect(calcd[i]).toBeCloseTo(expected[i], 8)
+        }
+    })
+
+    test('Prioritizer bestAltIndex', () => {
+        let p = new Prioritizer(3)
+        p.direct_data = [0.1, 0.6, 0.2]
+        expect(p.bestAltIndex()).toEqual([1, 2])
+        p.direct_data = [0.4, 0.401, 0.3]
+        expect(p.bestAltIndex()).toEqual([1, 0])
+        p.direct_data = [0.1, 0.5, 0.1]
+        expect(p.bestAltIndex()).toEqual([1, 2])
+    })
+    test('basic node construction', () => {
+        let node = new AHPTreeNode(null, 0)
+        node.addAlt("alt 0")
+        expect(node.nalts()).toEqual(1)
+        node.addAlt("alt 2")
+        expect(node.nalts()).toEqual(2)
+        node.addChild()
+        expect(node.nchildren()).toEqual(1)
+        node.addChild()
+        expect(node.nchildren()).toEqual(2)
+        let vals = node.synthesize()
+        expect(vals).toEqual([0, 0])
+    })
+
+    test('simple synthesis', () => {
+        let node = new AHPTreeNode(null, 3)
+        let c1 = node.addChild()
+        let c2 = node.addChild()
+        c1.setAltScore(0, 0.7)
+        c1.setAltScore(1, 0.5)
+        c1.setAltScore(2, 1.0)
+
+        c2.setAltScore(0, 0.1)
+        c2.setAltScore(1, 0.4)
+        c2.setAltScore(2, 0.8)
+
+        let scores = node.synthesize()
+        expect(scores[0]).toBeCloseTo(0.4)
+        expect(scores[1]).toBeCloseTo(0.45)
+        expect(scores[2]).toBeCloseTo(0.9)
+    })
+
+    test('synthesis with pairwise', () => {
+        let node = new AHPTreeNode(null, 3)
+        let c1 = node.addChild()
+        let c2 = node.addChild()
+        c1.setAltScore(0, 0.7)
+        c1.setAltScore(1, 0.5)
+        c1.setAltScore(2, 1.0)
+
+        c2.setAltScore(0, 0.1)
+        c2.setAltScore(1, 0.4)
+        c2.setAltScore(2, 0.8)
+
+        node.pairwise(0, 1, 2)
+
+        let scores = node.synthesize()
+        expect(scores[0]).toBeCloseTo((2*0.7+1*0.1)/3)
+        expect(scores[1]).toBeCloseTo((2*0.5+1*0.4)/3)
+        expect(scores[2]).toBeCloseTo((2*1.0 + 1*0.8)/3)
+    })
+
+    test('json parsing ahp model', () => {
+      jsonString = '{\
+          "name" : "Main",\
+          "description" : "How can I describe myself I am funny, and quirky, and like long walks on beaches.", \
+          "alt_names" : ["alt1", "alt2", "alt3"],\
+\
+          "children": [\
+              {"name": "crit1", "description": "The first criterion", "alt_scores": [1, 0.5, 0.25]},\
+              {"name": "crit2", "description": "Criterion the 2nd", "alt_scores": [1, 0.25, 0]},\
+              {"name": "crit3", "description": "Criterion the 3th (just for fun)", "alt_scores": [0.1, 0.5, 0.75]},\
+              {"name": "crit4", "description": "Crit 4rd", "alt_scores": [0.51, 0.5, 1.0]}\
+          ],\
+\
+          "pairwise": [\
+              [1, 2, 6, 24],\
+              [0, 1, 3, 12],\
+              [0, 0, 1, 4],\
+              [0, 0, 0, 1]\
+          ]\
+      }'
+        var obj = JSON.parse(jsonString)
+        let node = AHPTreeNode.fromJSONObject(obj)
+        expect(node).toBeDefined()
+        expect(node.name).toBe("Main")
+        expect(node.description).toBe("How can I describe myself I am funny, and quirky, and like long walks on beaches.")
+        expect(node.nalts()).toEqual(3)
+        expect(node.alts[0]).toEqual("alt1")
+        expect(node.nchildren()).toEqual(4)
+        let kid1 = node.children[0]
+        expect(kid1.direct_data).toEqual([1, 0.5, 0.25])
+        let childPris = node.childPrioritizer.priority()
+        console.log(childPris)
+        expect(childPris[0]/childPris[1]).toBeCloseTo(node.childPrioritizer.matrix[0][1])
+        expect(childPris[1]/childPris[2]).toBeCloseTo(node.childPrioritizer.matrix[1][2])
+        expect(childPris[2]/childPris[3]).toBeCloseTo(node.childPrioritizer.matrix[2][3])
+
+        expect(node.childrenNames()).toEqual(['crit1', 'crit2', 'crit3', 'crit4'])
+    })
+
+    test("simple ahp creation", () => {
+      let ahp = new AHPTreeNode();
+      ahp.addChildName("crit1", "the first criterion")
+      ahp.addChildName("crit2", "second crit")
+      expect(ahp.nchildren()).toEqual(2)
+      ahp.addAlt("alt1", "the first alt")
+      ahp.addAlt("alt 2", "secondary alt")
+      expect(ahp.nalts()).toBe(2)
+    })
+     </script>
+  </body>
+</head>
+</html>

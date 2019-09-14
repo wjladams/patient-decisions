@@ -1,0 +1,26 @@
+# AHP Javascript library
+This is a browser based AHP javascript library.
+
+## Usage
+```javascript
+<html>
+<head>
+  ...
+  <script src="../ahp.js"></script>
+  ...
+</head>
+<body>
+  <script>
+    //Creates a new root node (parent = null) with no alts
+    let ahp = new AHPTreeNode();
+    ahp.addChildName("crit1", "the first criterion")
+    ahp.addChildName("crit2", "second crit")
+    ahp.addAlt("alt1", "the first alternative")
+    ahp.addAlt("alt2", "the second alt")
+    //Pairwise compares alt1 to alt2, saying it is 2 times better
+    ahp.pairwise(0, 1, 3)
+    ...
+  </script>
+</body>
+
+```
