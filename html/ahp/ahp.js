@@ -225,10 +225,12 @@ class Prioritizer {
     constructor(size) {
         this.size = size
         this.alts = []
+        this.alt_descriptions = []
         this.direct_data = []
         for(let i=0; i < size; i++) {
             this.alts[i] = "Alternative "+(i+1)
             this.direct_data[i] = 0
+            this.alt_descriptions[i] = "Default description for Alternative "+(i+1)
         }
     }
 
@@ -246,12 +248,13 @@ class Prioritizer {
         throw "Could not find a free name, this makes no sense"
     }
 
-    addAlt(name) {
+    addAlt(name, description="No description given") {
         this.size += 1
         if (name == null) {
             name = this.firstFreeName()
         }
         this.alts.push(name)
+        this.alt_descriptions.push(description)
         this.direct_data.push(0)
     }
 
@@ -325,7 +328,7 @@ class AHPTreeNode extends Prioritizer {
 
     addChildName(name, description=null) {
       let childNode = new AHPTreeNode(this, this.alts.length, name, description)
-      this.addChild(childNode)
+      return this.addChild(childNode)
     }
 
     addChild(childNode=null) {
@@ -383,6 +386,20 @@ class AHPTreeNode extends Prioritizer {
             let rval = []
             for(let i=0; i < this.children.length; i++) {
                 rval.push(this.children[i].name)
+            }
+            return rval
+        }
+    }
+
+    childrenDescriptions() {
+        if (this.children == null) {
+            return null
+        } else if (this.children.length == 0) {
+            return []
+        } else {
+            let rval = []
+            for(let i=0; i < this.children.length; i++) {
+                rval.push(this.children[i].description)
             }
             return rval
         }

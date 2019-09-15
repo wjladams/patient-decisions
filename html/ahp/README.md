@@ -1,6 +1,11 @@
 # AHP Javascript library
 This is a browser based AHP javascript library.
 
+## Files
+* `ahp.js`: The AHP calculation library
+* `myexpect.js`: A simple browser based library for doing unit tests.
+* `thyroid_model.js`: Defines a global variable `AHP_MODEL` with the data needed for analyzing **thyroid cancer information**.
+
 ## Usage
 ```javascript
 <html>
@@ -23,7 +28,7 @@ This is a browser based AHP javascript library.
     let kidNamesArray = ahp.childernNames()
     //The alternatives are stored in the alts class variable
     let altNamesArray = ahp.alts
-    
+
 
     ...
   </script>
