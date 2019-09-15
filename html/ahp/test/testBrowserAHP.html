@@ -231,6 +231,15 @@
       ahp.addAlt("alt 2", "secondary alt")
       expect(ahp.nalts()).toBe(2)
     })
+    test("argmax", () => {
+      let vals = [3, 2, 1.5, 2.8]
+      expect(argmax(vals)).toBe(0)
+      expect(argmax([2, 3, 5, 1, -10])).toBe(2)
+      //Try a tie
+      let winners = argmax([3, 1, 3, 2, -1, 0])
+      expect(winners).toEqual([0, 2])
+
+    })
      </script>
   </body>
 </head>

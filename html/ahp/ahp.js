@@ -137,6 +137,35 @@ function mSquareAddPos(mat) {
 }
 
 /**
+Returns the index of the maximum value in the array.
+If there is a tie, the winning indices are returned
+*/
+function argmax(data, always_array=false) {
+  if ((data == null) || (data.length == 0)) {
+    return -1
+  }
+  let rval = 0
+  let max = data[0]
+  for(let i=1; i < data.length; i++) {
+    if (data[i] > max) {
+      max = data[i]
+      rval = i
+    }
+  }
+  //Check each index to see if it is a winner
+  let rvalArray=[]
+  for(let i=0; i < data.length; i++) {
+    if (data[i] == max) {
+      rvalArray.push(i)
+    }
+  }
+  if ((rvalArray.length == 1) && (!always_array)) {
+    return rvalArray[0]
+  } else {
+    return rvalArray
+  }
+}
+/**
  * Returns -2, -1, 0, 1, 2 describing how much better val1 is than val2
  * -2 means val1 is much worse than val1
  * -1 means val1 is worse than val1
@@ -305,6 +334,12 @@ class Pairwise extends Prioritizer {
         mPairwise(this.matrix, rrow, rcol, val)
     }
 
+    get(row, col, val) {
+        let rrow = this.indexOf(row)
+        let rcol = this.indexOf(col)
+        return this.matrix[rrow][rcol]
+    }
+
     addAlt(name) {
         super.addAlt(name)
         mSquareAddPos(this.matrix)
@@ -344,6 +379,24 @@ class AHPTreeNode extends Prioritizer {
         this.childPrioritizer.set(child1, child2, value)
     }
 
+    pairwiseAll(pwArray) {
+      let nkids = this.nchildren()
+      for (let row=0; row < nkids; row++) {
+          for (let col=0; col < nkids; col++) {
+              if (row != col) {
+                  let val = pwArray[row][col]
+                  if (val >= 1) {
+                      //Only set for values >= 1, the others are reciprocals
+                      this.childPrioritizer.set(row, col, val)
+                  }
+              }
+          }
+      }
+    }
+    getPairwise(child1, child2) {
+      return this.childPrioritizer.get(child1, child2)
+    }
+
     setAltScore(alt, score) {
         if (Number.isInteger(alt)) {
             //We were passed the alternative as an integer position
@@ -361,7 +414,7 @@ class AHPTreeNode extends Prioritizer {
 
     addAlt(name) {
         super.addAlt(name)
-        console.log(this.children)
+        //console.log(this.children)
         for(var i=0; i<this.children.length; i++) {
           let child = this.children[i]
           console.log(child);
@@ -426,6 +479,66 @@ class AHPTreeNode extends Prioritizer {
         return this.direct_data
     }
 
+    monteCarloAdjust(fromNode, pw_base=2, direct_base=0.1) {
+      let nalts = this.nalts();
+      let nkids = this.nchildren();
+      if (this.nchildren() == 0) {
+        //Direct data tweakign on the Bottom
+        for(let alt=0; alt < nalts; alt++) {
+          this.direct_data[alt] = fromNode.direct_data[alt] + direct_base * randn_bm(-1, 1)
+          if (this.direct_data[alt] < 0) {
+            this.direct_data[alt] = 0
+          } else if (this.direct_data[alt] > 1) {
+            this.direct_data[alt] = 1
+          }
+        }
+      } else {
+        //Tweaking pairwise comparisons, and all children
+        for(let rowChild=0; rowChild < nkids; rowChild++) {
+          let src = fromNode.children[rowChild]
+          let dest = this.children[rowChild]
+          //Adjust on the child
+          dest.monteCarloAdjust(src, pw_base, direct_base)
+          //Now adjust all pairwise comparisons for this row
+          for(let colChild=(rowChild+1); colChild < nkids; colChild++) {
+            let val = fromNode.getPairwise(rowChild, colChild)
+            if (val == 0) {
+              //set uncompared to 1
+              val = 1
+            }
+            val = val * Math.pow(pw_base, randn_bm(-1, 1))
+            this.pairwise(rowChild, colChild, val)
+          }
+        }
+      }
+    }
+    monteCarlo(pw_base=2, direct_base=0.1, count=100) {
+      let tempAHP = Object.create(this)
+      let experiments = []
+      let nalts = this.nalts()
+      let winCounts = vInit(nalts)
+      let winPercents = vInit(nalts)
+      for(let i=0; i < count; i++) {
+        //First do the adjustment
+        tempAHP.monteCarloAdjust(this, pw_base, direct_base)
+        //Now we Synthesize
+        let scores = tempAHP.synthesize()
+        experiments.push(scores.slice(0))
+        let winner = argmax(scores, true)
+        for(let j=0; j < winner.length; j++) {
+          winCounts[winner[j]] += 1
+        }
+      }
+      //Calcualte winning percentages
+      for(let j=0; j < nalts; j++) {
+        winPercents[j] = winCounts[j] / count
+      }
+      return {
+        "experiments":experiments,
+        "winCounts":winCounts,
+        "winPercents":winPercents
+      }
+    }
     static fromJSONObject(obj, parentNode) {
         let size = 0
         if (parentNode != null) {
@@ -478,4 +591,23 @@ class AHPTreeNode extends Prioritizer {
         }
         return rval
     }
+}
+
+/**
+Creates a random number between min and max, normally
+distributed, skew=1 means the mean = max - min.
+Gotten from https://stackoverflow.com/questions/25582882/javascript-math-random-normal-distribution-gaussian-bell-curve
+*/
+function randn_bm(min, max, skew=1) {
+    var u = 0, v = 0;
+    while(u === 0) u = Math.random(); //Converting [0,1) to (0,1)
+    while(v === 0) v = Math.random();
+    let num = Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
+
+    num = num / 10.0 + 0.5; // Translate to 0 -> 1
+    if (num > 1 || num < 0) num = randn_bm(min, max, skew); // resample between 0 and 1 if out of range
+    num = Math.pow(num, skew); // Skew
+    num *= max - min; // Stretch to fill range
+    num += min; // offset to min
+    return num;
 }
