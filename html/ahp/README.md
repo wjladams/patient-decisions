@@ -26,8 +26,12 @@ This is a browser based AHP javascript library.
     ahp.pairwise(0, 1, 3)
     //Get an array of children node names
     let kidNamesArray = ahp.childernNames()
+    //Get an array of children node descriptions
+    let kidDescrArray = ahp.childernDescriptions()
     //The alternatives are stored in the alts class variable
     let altNamesArray = ahp.alts
+    //The alternative descriptions are stored:
+    let altDescrsArray = ahp.alt_descriptions
 
 
     ...
