@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Testing AHP javascript library</title>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="../ahp.js"></script>
+  <script src="../otosclerosis_model.js"></script>
+  <script src="../myexpect.js"></script>
+</head>
+  <body>
+    <h1>Testing Thyroid Model results</h1>
+    <pre id="results"></pre>
+    <script>
+      test('Check Model Exists', () => {
+        expect(AHP_MODEL).toBeDefined();
+      });
+      test('Check alternatives exist', () => {
+        expect(AHP_MODEL.nalts()).toBe(3)
+        expect(AHP_MODEL.alts).toEqual(['Watchful Waiting', 'Surgery', 'Hearing Aids'])
+      })
+      test('Check criteria exist', () => {
+        expect(AHP_MODEL.nchildren()).toBe(3)
+      })
+      test('Check criteria descriptions exist', () => {
+        expect(AHP_MODEL.childrenDescriptions().length).toBe(3)
+      })
+
+      test('Check criteria names exist', () => {
+        expect(AHP_MODEL.childrenNames().length).toBe(3)
+      })
+
+      test('Synthesize', () => {
+        let scores = AHP_MODEL.synthesize()
+        expect(scores.length).toBe(3)
+        console.log(scores)
+      })
+
+      test('Monte Carlo', () => {
+        let info = AHP_MODEL.monteCarlo()
+        console.log(info)
+      })
+
+    </script>
+  </body>
+</html>

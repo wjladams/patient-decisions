@@ -556,6 +556,14 @@ class AHPTreeNode extends Prioritizer {
         } else {
             //We need alt names from the object
             rval.alts = obj.alt_names
+            if (obj.alt_descriptions != null) {
+              rval.alt_descriptions = obj.alt_descriptions
+            } else {
+              rval.alt_descriptions = []
+              for(let i=0; i < rval.alts.length; i++) {
+                rval.alt_descriptions.push(null)
+              }
+            }
         }
         // Get children
         if (obj.children != null) {
