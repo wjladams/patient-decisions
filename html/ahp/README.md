@@ -1,5 +1,5 @@
 # AHP Javascript library
-This is a browser based AHP javascript library.
+This is a browser based AHP javascript library, for general AHP usage.
 
 ## Files
 * `ahp.js`: The AHP calculation library
