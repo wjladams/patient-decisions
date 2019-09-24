@@ -5,13 +5,13 @@ AHP_MODEL_JSON = {
   "alt_descriptions" : ["Remain vigilant", "Better explanation", "Remove all of the thyroid"],
   "children": [
       {
-        "name": "Certain about cancer",
-        "description": "Making sure I know if I have cancer",
+        "name": "Certain about Having Cancer",
+        "description": "Making Sure I Know if I Have Cancer",
         "alt_scores": [0, 0.8, 1.0]
       },
       {
-        "name" : "Surgerical concerns",
-        "description" : "Health concerns around various complications",
+        "name" : "Surgical Concerns",
+        "description" : "Concerns About Having Surgery",
         "children" : [
           {
             "name": "No scar",
