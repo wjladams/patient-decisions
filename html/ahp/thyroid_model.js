@@ -14,7 +14,7 @@ AHP_MODEL_JSON = {
         "description" : "Concerns About Having Surgery",
         "children" : [
           {
-            "name": "No scar",
+            "name": "No Scar",
             "description" : "Not having a scar",
             "alt_scores" : [1.0, 0.2, 0.1]
           },
