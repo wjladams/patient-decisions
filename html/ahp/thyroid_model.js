@@ -33,6 +33,12 @@ AHP_MODEL_JSON = {
             "description" : "Avoiding risks to my voice at all costs",
             "alt_scores" : [1.0, 0.9, 0.5]
           },
+        ],
+        "pairwise" : [
+          [1, 0, 0, 0],
+          [0, 1, 0, 0],
+          [0, 0, 1, 0],
+          [0, 0, 0, 1]
         ]
       }
   ],

@@ -2,9 +2,9 @@
 <head>
   <title>Testing AHP javascript library</title>
   <script src="jquery-3.4.1.min.js"></script>
-  <script src="../ahp.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dlens/anpjs@0.2/ahp.js"></script>
   <script src="../thyroid_model.js"></script>
-  <script src="../myexpect.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dlens/anpjs/myexpect.js"></script>
 </head>
   <body>
     <h1>Testing Thyroid Model results</h1>
@@ -20,14 +20,21 @@
           'Remove Thyroid'])
       })
       test('Check criteria exist', () => {
-        expect(AHP_MODEL.nchildren()).toBe(7)
+        expect(AHP_MODEL.nchildren()).toBe(2)
       })
       test('Check criteria descriptions exist', () => {
-        expect(AHP_MODEL.childrenDescriptions().length).toBe(7)
+        expect(AHP_MODEL.childrenDescriptions().length).toBe(2)
       })
 
       test('Check criteria names exist', () => {
-        expect(AHP_MODEL.childrenNames().length).toBe(7)
+        expect(AHP_MODEL.childrenNames().length).toBe(2)
+      })
+
+      test('Check Surgical children exist', () => {
+        let surg = AHP_MODEL.getChildWithName('Surgical Concerns')
+        expect(surg).toBeDefined()
+        expect(surg.name).toBe('Surgical Concerns')
+        expect(surg.nchildren()).toBe(4)
       })
 
       test('Synthesize', () => {
