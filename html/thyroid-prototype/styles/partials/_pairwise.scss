@@ -1,0 +1,23 @@
+/* !PAIRWISE */
+
+.pairwise-question {
+	text-align: center;
+	font: 700 1.75rem/1.2 museosans;
+	color: $blue800;
+}
+
+.pairwise-answers {
+	display: flex;
+	color: $blue800;
+	text-align: center;
+}
+
+.pairwise-inputs {
+	display: flex;
+	color: $blue800;
+	text-align: center;
+}
+
+.continue-btn {
+	margin: 24px auto;
+}

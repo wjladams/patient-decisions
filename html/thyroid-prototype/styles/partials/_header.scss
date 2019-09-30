@@ -1,0 +1,34 @@
+/*  HEADER & NAV  */
+
+header {
+	float:left;
+	width:100%;
+	background: $gray200;
+	}
+
+
+	/*-----------------
+	  STYLES FOR UNDER 40em (640px) Width
+	-------------------*/
+
+	@media screen and (max-width: 40em) {
+
+		.logo { text-align: center; }
+
+	} /* end @media */
+
+
+	/*-----------------
+		STYLES FOR OVER 40em (640px) Width
+	-------------------*/
+
+	@media screen and (min-width: 40em) {
+
+	.logo { float: left; }
+
+	.mainNav {
+		float: right;
+		margin: .75em 0;}
+
+
+	} /* end @media */

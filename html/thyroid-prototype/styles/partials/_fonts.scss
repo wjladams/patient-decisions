@@ -1,0 +1,48 @@
+// 500 museosans
+// 500 museosans italic
+// 900 museosans
+// 700 museosanscond
+// 700 museoslab
+
+
+@font-face {
+  font-family: 'museosans';
+  src: url('../fonts/museo-sans/museosans-500-webfont.woff2') format('woff2'),
+    url('../fonts/museo-sans/museosans-500-webfont.woff') format('woff'),
+    url('../fonts/museo-sans/museosans-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'museosans';
+  src: url('../fonts/museo-sans/museosans-500italic-webfont.woff2') format('woff2'),
+    url('../fonts/museo-sans/museosans-500italic-webfont.woff') format('woff'),
+    url('../fonts/proxima_nova/proxima_nova_reg-webfont.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'museosans';
+  src: url('../fonts/museo-sans/museosans-900-webfont.woff2') format('woff2'),
+    url('../fonts/museo-sans/museosans-900-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'museosanscond';
+  src: url('../fonts/museo-sans-cond/museosanscnd-700-webfont.woff2') format('woff2'),
+    url('../fonts/museo-sans-cond/museosanscnd-700-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'museoslab';
+  src: url('../fonts/museo-slab/museo_slab_700-webfont.woff2') format('woff2'),
+    url('../fonts/museo-slab/museo_slab_700-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

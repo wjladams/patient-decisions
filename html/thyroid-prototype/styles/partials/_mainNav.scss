@@ -1,0 +1,64 @@
+.logo {
+  color: $purple500;
+  margin-left: 1rem;
+}
+
+.main-nav-control {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 1rem;
+  border-radius: 0 0 8px 0;
+  font: 500 1em/1 museosans;
+  color: white;
+
+  &.close {
+    background: rgba(255,255,255,.2);
+  }
+
+  &.open {
+    background: $gray200;
+    color: $greenblue500;
+  }
+}
+
+.main-nav-wrapper {
+  position: fixed;
+  background: $greenblue500;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 2rem;
+  display: none;
+  &.open {
+    display: block;
+  }
+}
+
+.main-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+
+.mainNav li {
+	margin: .2rem 0;
+	}
+
+.main-nav li:first-child { margin-left: 0; }
+
+.main-nav a  {
+	padding: 1rem;
+	background: none;
+	color: white;
+	font: 800 1em/1 museosans;
+	text-decoration: underline;
+  display: inline-block;
+  display: block;
+	}
+
+.main-nav a:hover, .main-nav a:focus  {
+	opacity: .8;
+}

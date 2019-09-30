@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- THIS MUST BE DELETED WHEN SITE GOES LIVE!!!!!!!! -->
+	<meta name="robots" content="nofollow" />
+
+	<meta charset="utf-8" />
+
+	<!-- allows the content to be zoomed in automatic on the iphone -->
+	<meta name="viewport" content="width=device-width" />
+
+	<meta name="viewport" content="width=device-width, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="Decision Lens" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+		<!-- favicons from iconhandbook.co.uk -->
+
+		<!-- Opera Speed Dial Favicon -->
+		<link rel="icon" type="image/png" href="/speeddial-160px.png" />
+
+		<!-- Standard Favicon 16x16 -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+		<!-- PNG Favicon 32x32 -->
+		<link rel="icon" type="image/png" href="http://example.com/image.png" />
+
+
+		<link href="http://www.yoursite.com/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
+		<link href="http://www.yoursite.com/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
+		<link href="http://www.yoursite.com/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
+		<link href="http://www.yoursite.com/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
+
+
+
+	<meta name="description" content="" />
+
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="scripts/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		$( document ).ready(function() {
+			$( "#open-menu" ).click(function() {
+				$( ".main-nav-wrapper" ).toggleClass( "open" );
+			});
+			$( "#close-menu" ).click(function() {
+				$( ".main-nav-wrapper" ).toggleClass( "open" );
+			});
+		});
+	</script>
+
+</head>
+
+<body class="pairwise">
+
+	<a id="open-menu" class="main-nav-control open" href="#">Menu</a>
+
+	<div class="main-nav-wrapper">
+
+		<a id="close-menu"  class="main-nav-control close" href="#">Close</a>
+
+		<h1 class="logo">WeDecide</h1>
+
+		<ul class="main-nav">
+			<li><a href="">Intro</a></li>
+			<li><a href="">Treatment Options</a></li>
+			<li><a href="">Healthcare Criteria</a></li>
+			<li><a href="">Compare Criteria</a></li>
+			<li><a href="">Summary</a></li>
+		</ul>
+
+	</div><!-- /mainNav -->
+
+				<h1 class="pairwise-question">Which is more important?</h1>
+
+				<div class="pairwise-answers">
+					<p class="pairwise-answer left">Knowing if I have cancer</p>
+					<p class="pairwise-answer or">or</p>
+					<p class="pairwise-answer right">Not having a scar on my neck</p>
+				</div>
+
+				<div class="pairwise-inputs">
+					<label class="radio">
+					  <input id="radio1" name="radio" type="radio">
+					  <span class="control-indicator"></span>
+					  <i>Knowing if I have cancer is</i> <b>Much More Important</b>
+					</label>
+					<label class="control radio">
+					  <input id="radio2" name="radio" type="radio">
+					  <span class="control-indicator"></span>
+					  <i>Knowing if I have cancer is</i> <b>More Important</b>
+					</label>
+					<label class="control radio">
+					  <input id="radio2" name="radio" type="radio">
+					  <span class="control-indicator"></span>
+					  They're Equal
+					</label>
+					<label class="control radio">
+					  <input id="radio2" name="radio" type="radio">
+					  <span class="control-indicator"></span>
+					  <i>Not having a scar on my neck is</i> <b>More Important</b>
+					</label>
+					<label class="control radio">
+					  <input id="radio2" name="radio" type="radio">
+					  <span class="control-indicator"></span>
+					  <i>Not having a scar on my neck is</i> <b>Much More Important</b>
+					</label>
+				</div>
+
+
+				<a class="continue-btn" href="">Continue</a>
+
+
+</body>
+
+</html>

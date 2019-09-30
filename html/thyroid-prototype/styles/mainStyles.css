@@ -1,0 +1,250 @@
+/* MAKE SOMETHING */
+@font-face {
+  font-family: 'museosans';
+  src: url("../fonts/museo-sans/museosans-500-webfont.woff2") format("woff2"), url("../fonts/museo-sans/museosans-500-webfont.woff") format("woff"), url("../fonts/museo-sans/museosans-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'museosans';
+  src: url("../fonts/museo-sans/museosans-500italic-webfont.woff2") format("woff2"), url("../fonts/museo-sans/museosans-500italic-webfont.woff") format("woff"), url("../fonts/proxima_nova/proxima_nova_reg-webfont.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+@font-face {
+  font-family: 'museosans';
+  src: url("../fonts/museo-sans/museosans-900-webfont.woff2") format("woff2"), url("../fonts/museo-sans/museosans-900-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: 'museosanscond';
+  src: url("../fonts/museo-sans-cond/museosanscnd-700-webfont.woff2") format("woff2"), url("../fonts/museo-sans-cond/museosanscnd-700-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'museoslab';
+  src: url("../fonts/museo-slab/museo_slab_700-webfont.woff2") format("woff2"), url("../fonts/museo-slab/museo_slab_700-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+/*-----------------
+	Reset
+-------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*-------------------
+	 BASE STYLES
+-----------------------*/
+/* !HTML TAGS */
+html {
+  font: 18px/1 museosans; }
+
+body {
+  color: black; }
+
+h1, .h1 {
+  font: 700 1.75rem/1.2 museoslab;
+  margin: .7em 0; }
+
+h2, .h2 {
+  font: 200 1.313rem museosans;
+  margin: 1.2em 0 0; }
+
+h3, .h3 {
+  font: 500 1rem museosans;
+  margin: 1.5em 0 .3em; }
+
+h4, .h4 {
+  font: 500 1.2rem museosans;
+  margin: 0 0 .5em; }
+
+p {
+  margin: 0 0 .6em 0;
+  color: rgba(0, 0, 0, 0.7);
+  font: 500 1rem/1.45 museosans; }
+
+ul {
+  list-style: disc outside none; }
+
+a, a:link {
+  color: #F93851;
+  text-decoration: underline;
+  transition: opacity .2s; }
+
+a:hover, a:focus {
+  opacity: .8; }
+
+img {
+  max-width: 100%; }
+
+button {
+  margin: 1em 0; }
+
+strong {
+  font-weight: bold; }
+
+::-moz-selection {
+  background: #6158A5;
+  color: white; }
+
+::selection {
+  background: #6158A5;
+  color: white; }
+
+/*  !GENERIC & REUSABLE SELECTORS  */
+.wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+.invis {
+  display: none; }
+
+.mainContent {
+  clear: both;
+  padding: 1em 0 2em; }
+
+/*-------------
+	SELF CLEARING FLOATS - Rocking it old skool son
+---------------*/
+.group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*
+------------
+    Self Clearing Floats in IE
+------------
+*/
+/* IE6 */
+* html .group {
+  height: 1%; }
+
+/* IE7 */
+*:first-child + html .group {
+  min-height: 1px; }
+
+/*-----------------
+	STYLES FOR OVER 40em (640px) Width
+-------------------*/
+@media screen and (min-width: 40em) {
+  .wrapper {
+    max-width: 1200px; } }
+/* end @media */
+.logo {
+  color: #6158A5;
+  margin-left: 1rem; }
+
+.main-nav-control {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 1rem;
+  border-radius: 0 0 8px 0;
+  font: 500 1em/1 museosans;
+  color: white; }
+  .main-nav-control.close {
+    background: rgba(255, 255, 255, 0.2); }
+  .main-nav-control.open {
+    background: #EAF2F3;
+    color: #30DBC4; }
+
+.main-nav-wrapper {
+  position: fixed;
+  background: #30DBC4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 2rem;
+  display: none; }
+  .main-nav-wrapper.open {
+    display: block; }
+
+.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.mainNav li {
+  margin: .2rem 0; }
+
+.main-nav li:first-child {
+  margin-left: 0; }
+
+.main-nav a {
+  padding: 1rem;
+  background: none;
+  color: white;
+  font: 800 1em/1 museosans;
+  text-decoration: underline;
+  display: inline-block;
+  display: block; }
+
+.main-nav a:hover, .main-nav a:focus {
+  opacity: .8; }
+
+/* !PAIRWISE */
+.pairwise-question {
+  text-align: center;
+  font: 700 1.75rem/1.2 museosans;
+  color: #173953; }
+
+.pairwise-answers {
+  display: flex;
+  color: #173953;
+  text-align: center; }
+
+.pairwise-inputs {
+  display: flex;
+  color: #173953;
+  text-align: center; }
+
+.continue-btn {
+  margin: 24px auto; }
+
+/*# sourceMappingURL=mainStyles.css.map */
