@@ -59,6 +59,9 @@
 			$( "#close-menu" ).click(function() {
 				$( ".main-nav-wrapper" ).toggleClass( "open" );
 			});
+			$( ".radio" ).click(function() {
+				$( "input:checked" ).parent( ".radio" ).toggleClass( "active" );
+			});
 		});
 	</script>
 
@@ -95,34 +98,34 @@
 				<div class="pairwise-inputs">
 					<label class="radio">
 					  <input id="radio1" name="radio" type="radio">
-					  <span class="control-indicator"></span>
+					  <div class="control-indicator"></div>
 					  <i>Knowing if I have cancer is</i> <b>Much More Important</b>
 					</label>
 					<label class="control radio">
 					  <input id="radio2" name="radio" type="radio">
-					  <span class="control-indicator"></span>
+					  <div class="control-indicator"></div>
 					  <i>Knowing if I have cancer is</i> <b>More Important</b>
 					</label>
 					<label class="control radio">
 					  <input id="radio2" name="radio" type="radio">
-					  <span class="control-indicator"></span>
+					  <div class="control-indicator"></div>
 					  They're Equal
 					</label>
 					<label class="control radio">
 					  <input id="radio2" name="radio" type="radio">
-					  <span class="control-indicator"></span>
+					  <div class="control-indicator"></div>
 					  <i>Not having a scar on my neck is</i> <b>More Important</b>
 					</label>
 					<label class="control radio">
 					  <input id="radio2" name="radio" type="radio">
-					  <span class="control-indicator"></span>
+					  <div class="control-indicator"></div>
 					  <i>Not having a scar on my neck is</i> <b>Much More Important</b>
 					</label>
 				</div>
 
-
-				<a class="continue-btn" href="">Continue</a>
-
+				<div class="footer">
+					<a class="continue-btn" href="">Continue</a>
+				</div>
 
 </body>
 

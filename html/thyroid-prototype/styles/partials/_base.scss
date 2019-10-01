@@ -86,15 +86,14 @@ p {
 
 ul { list-style: disc outside none; }
 
-a, a:link {
-	color: $red500;
+a {
+	color: $purple500;
 	text-decoration: underline;
-	transition: opacity .2s;
+	&:hover {
+		color: scale-color($purple500, $lightness: 5%);
+	}
 }
 
-a:hover, a:focus {
-	opacity: .8;
-}
 
 img { max-width: 100%; }
 
