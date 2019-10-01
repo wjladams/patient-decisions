@@ -46,9 +46,18 @@
 		font: 500 1rem/1.2 museosans;
 		color: $purple500;
 		flex-basis: 200px;
+		i {
+			display: none;
+		}
+		b {
+			font-weight: 500;
+		}
 		&.active {
 			background: $purple500;
 			color: white;
+			b {
+				font-weight: bold;
+			}
 		}
 	}
 	& .control-indicator {
