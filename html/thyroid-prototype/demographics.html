@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- THIS MUST BE DELETED WHEN SITE GOES LIVE!!!!!!!! -->
+	<meta name="robots" content="nofollow" />
+
+	<meta charset="utf-8" />
+
+	<!-- allows the content to be zoomed in automatic on the iphone -->
+	<meta name="viewport" content="width=device-width" />
+
+	<meta name="viewport" content="width=device-width, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="Decision Lens" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+		<!-- favicons from iconhandbook.co.uk -->
+
+		<!-- Opera Speed Dial Favicon -->
+		<link rel="icon" type="image/png" href="/speeddial-160px.png" />
+
+		<!-- Standard Favicon 16x16 -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+		<!-- PNG Favicon 32x32 -->
+		<link rel="icon" type="image/png" href="http://example.com/image.png" />
+
+
+		<link href="http://www.yoursite.com/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
+		<link href="http://www.yoursite.com/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
+		<link href="http://www.yoursite.com/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
+		<link href="http://www.yoursite.com/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
+
+
+
+	<meta name="description" content="" />
+
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="scripts/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="common.js"></script>
+
+	<script>
+		$( document ).ready(function() {
+			$( "#open-menu" ).click(function() {
+				$( ".main-nav-wrapper" ).toggleClass( "open" );
+			});
+			$( "#close-menu" ).click(function() {
+				$( ".main-nav-wrapper" ).toggleClass( "open" );
+			});
+			$( ".radio" ).click(function() {
+				$( "input:checked" ).parent( ".radio" ).toggleClass( "active" );
+			});
+		});
+	</script>
+
+</head>
+
+<body class="demographics">
+
+	<a id="open-menu" class="main-nav-control open" href="#">Menu</a>
+
+	<div class="main-nav-wrapper">
+
+		<a id="close-menu"  class="main-nav-control close" href="#">Close</a>
+
+		<h1 class="logo">WeDecide</h1>
+
+		<ul class="main-nav">
+			<li><a href="">Intro</a></li>
+			<li><a href="">Treatment Options</a></li>
+			<li><a href="">Healthcare Criteria</a></li>
+			<li><a href="">Compare Criteria</a></li>
+			<li><a href="">Summary</a></li>
+		</ul>
+
+	</div><!-- /mainNav -->
+
+				<h1 class="demographics-intro" align="center">Demographic Information</h1>
+
+				<div class="demographic-questions">
+					<p class="demegraphic-question left">Name: <input type="text" width="50" class="demegraphic-name" id="pname" value="Jane Q. Smith">
+					<p class="demographic-question left">Age: <input type="number" class="demographic-age" id="age" value="30">
+					<p class="demographic-question left">Sex:
+						<select class="deomgraphic-sex" id="sex">
+							<option>Female</option>
+							<option>Male</option>
+							<option>Not reported</option>
+						</select>
+					<p class="demographic-question left">Bethesda:
+						<select class="demographic-bethesda" id="bethesda">
+							<option>I</option>
+							<option>II</option>
+							<option>III</option>
+							<option>IV</option>
+							<option>V</option>
+							<option>VI</option>
+						</select>
+					<p class="demographic-question left">Afirma:
+						<select class="demographic-afirma" id="afirma">
+							<option value="">N/A</option>
+							<option value="1">Positive</option>
+							<option value="-1">Negative</option>
+						</select>
+					<p class="demographic-question left">Thyroseq:
+						<select class="demographic-afirma" id="thyroseq">
+							<option value="">N/A</option>
+							<option value="1">Positive</option>
+							<option value="-1">Negative</option>
+						</select>
+
+				</div>
+
+
+				<div class="footer">
+					<button class="continue-btn" onclick="storeDemographics();">Continue</button>
+					<!--<a class="continue-btn" href="">Continue</a>-->
+				</div>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- allows the content to be zoomed in automatic on the iphone -->
+    <meta name="viewport" content="width=device-width" />
+
+    <meta name="viewport" content="width=device-width, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Decision Lens" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+      <!-- favicons from iconhandbook.co.uk -->
+
+      <!-- Opera Speed Dial Favicon -->
+      <link rel="icon" type="image/png" href="/speeddial-160px.png" />
+
+      <!-- Standard Favicon 16x16 -->
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+      <!-- PNG Favicon 32x32 -->
+      <link rel="icon" type="image/png" href="http://example.com/image.png" />
+
+
+      <link href="http://www.yoursite.com/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
+      <link href="http://www.yoursite.com/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
+      <link href="http://www.yoursite.com/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
+      <link href="http://www.yoursite.com/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
+
+
+
+    <meta name="description" content="" />
+
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+    <link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="scripts/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../common.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h2 class="top">Your FNA has an associated Bethesda Score</h2>
+        <table class="bethesda">
+          <tbody><tr>
+            <th>Bethesda class</th>
+            <th>Diagnostic category</th>
+            <th>Cancer risk (%)</th>
+          </tr>
+          <tr>
+            <td>I</td>
+            <td>Nondiagnostic</td>
+            <td>1-4</td>
+          </tr>
+          <tr>
+            <td>II</td>
+            <td>Benign</td>
+            <td>0-3</td>
+          </tr>
+          <tr>
+            <td>III</td>
+            <td>
+              <div class="tooltip">AUS<span class="tooltiptext">Atypia of Undetermined Significance</span></div> or <div class="tooltip">FLUS<span class="tooltiptext">Follicular Lesion of Undetermined Significance</span></div>
+            </td>
+            <td>5-15</td>
+          </tr>
+          <tr>
+            <td>IV</td>
+            <td><div class="tooltip">FN<span class="tooltiptext">Follicular Neoplasm</span></div>/<div class="tooltip">SN<span class="tooltiptext">Secondary Neoplasm</span></div></td>
+            <td>15-30</td>
+          </tr>
+          <tr>
+            <td>V</td>
+            <td><div class="tooltip">SUSP<span class="tooltiptext">Suspicious for Malignancy</span></div></td>
+            <td>60-75</td>
+          </tr>
+          <tr>
+            <td>VI</td>
+            <td>Malignant</td>
+            <td>97-99</td>
+          </tr>
+        </tbody></table>
+      </div>
+      <div class="footer">
+        <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
+        <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
+        <!--<a class="continue-btn" href="">Continue</a>-->
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    var PREVIOUS_PAGE = "2.html";
+    var NEXT_PAGE = "4.html";
+    insertResponsesIntoHTML();
+    </script>
+
+  </body>
+</html>
