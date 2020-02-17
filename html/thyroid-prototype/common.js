@@ -76,7 +76,7 @@ function setCurrentResponseKey(newKey) {
 function getCurrentResponseValues() {
   let key = getCurrentResponseKey();
   if ((key === undefined) || (key === null)) {
-    alert("Current Response Key is null");
+    //alert("Current Response Key is null");
     return {};
   } else {
     return JSON.parse(localStorage.getItem(key));
