@@ -316,4 +316,9 @@ strong {
   padding-left: 12px;
   padding-right: 12px;
 }
+
+.walkthrough-info-list {
+  line-height: 200%;
+  list-style-type: disc;
+}
 /*# sourceMappingURL=mainStyles.css.map */
