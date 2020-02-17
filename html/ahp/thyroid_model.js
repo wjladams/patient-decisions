@@ -16,33 +16,33 @@ var AHP_MODEL_JSON = {
         "description" : "Concerns About Having Surgery",
         "children" : [
           {
-            "name": "No Scar",
+            "name": "Scar",
             "id": 2,
-            "description" : "Not having a scar",
+            "description" : "The different options have differing scarring effects.",
             "alt_scores" : [1.0, 0.2, 0.1]
           },
           {
-            "name": "Medication forever",
+            "name": "Low Calcium",
             "id":3,
-            "description" : "The possible need to take medication forever",
+            "description" : "Some options could require you to take a calcium supplement.",
             "alt_scores" : [1.0, 0.3, 0.1]
           },
           {
-            "name": "Avoid surgery",
+            "name": "Voice Complications",
             "id": 4,
-            "description" : "Not having surgery if I don't have to",
+            "description" : "Some options could effect your voice.",
             "alt_scores" : [1.0, 0.2, 0.1]
           },
           {
-            "name": "Risk to voice",
+            "name": "Need for Medication",
             "id":5,
-            "description" : "Avoiding risks to my voice at all costs",
+            "description" : "Some options may require lifelong medication.",
             "alt_scores" : [1.0, 0.9, 0.5]
           },
           {
-            "name": "Another option",
+            "name": "Recovery",
             "id":6,
-            "description" : "Just here",
+            "description" : "Some options have longer recovery times.",
             "alt_scores" : [1.0, 0.9, 0.5]
           },
         ],

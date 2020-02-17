@@ -148,14 +148,16 @@
 					}
 					var NEXT_PW_POSITION = CURRENT_PW_POSITION + 1
 					var PREV_PW_POSITION = CURRENT_PW_POSITION - 1
-					if (PREV_PW_POSITION < 0) {
-						PREV_PW_POSITION = 0
-					}
 					var NEXT_PAGE = "?currentPosition="+NEXT_PW_POSITION
+					//What if we go past the end?
 					if (NEXT_PW_POSITION >= numberOfCompares) {
 						NEXT_PAGE="results.html";
 					}
 					var PREVIOUS_PAGE = "?currentPosition="+PREV_PW_POSITION
+					//What if we go before the beginning?
+					if (PREV_PW_POSITION < 0) {
+						PREVIOUS_PAGE = "walk-last.html"
+					}
 				</script>
 				<!-- This script gets row and column names and inserts-->
 				<script>

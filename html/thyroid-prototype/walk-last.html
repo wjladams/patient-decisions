@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- THIS MUST BE DELETED WHEN SITE GOES LIVE!!!!!!!! -->
+  	<meta name="robots" content="nofollow" />
+
+  	<meta charset="utf-8" />
+
+  	<!-- allows the content to be zoomed in automatic on the iphone -->
+  	<meta name="viewport" content="width=device-width" />
+
+  	<meta name="viewport" content="width=device-width, minimal-ui" />
+  	<meta name="apple-mobile-web-app-capable" content="yes" />
+  	<meta name="apple-mobile-web-app-title" content="Decision Lens" />
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+  		<!-- favicons from iconhandbook.co.uk -->
+
+  		<!-- Opera Speed Dial Favicon -->
+  		<link rel="icon" type="image/png" href="/speeddial-160px.png" />
+
+  		<!-- Standard Favicon 16x16 -->
+  		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  		<!-- PNG Favicon 32x32 -->
+  		<link rel="icon" type="image/png" href="http://example.com/image.png" />
+
+
+  		<link href="http://www.yoursite.com/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
+  		<link href="http://www.yoursite.com/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
+  		<link href="http://www.yoursite.com/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
+  		<link href="http://www.yoursite.com/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
+
+
+
+  	<meta name="description" content="" />
+
+    <title></title>
+
+  	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+  	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+  	<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  		<script src="scripts/css3-mediaqueries.js"></script>
+  	<![endif]-->
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h2><span class="participantName"></span> we will consider these health care outcomes</h2>
+        <div class="criteriaTreeHtml">
+        </div>
+        <!-- <ol class="priorities" id="slippylist" tabindex="0" aria-role="listbox">
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Making sure I know if I have cancer</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Not having a scar</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">The possible need to take medication forever</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Whatever my doctor thinks I should do</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Not having surgery if I don't have to</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Risk to my voice</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Concern related to other health problems</li>
+        </ol> -->
+
+      </div>
+      <div class="footer">
+        <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
+        <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
+        <!--<a class="continue-btn" href="">Continue</a>-->
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="ahp.js"></script>
+    <script src="thyroid_model.js"></script>
+    <script src="common.js"></script>
+    <script>
+    var PREVIOUS_PAGE = "walk13.html";
+    var NEXT_PAGE = "pairwise.html";
+    var ahpModel = getResponseAHPModel();
+    var critTree = ahpModel.getCriteriaTreeHtml();
+    //alert(critTree)
+    insertResponsesIntoHTML();
+    insertStringIntoClass("criteriaTreeHtml", critTree)
+    </script>
+  </body>
+</html>
