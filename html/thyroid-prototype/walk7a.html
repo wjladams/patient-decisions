@@ -56,17 +56,20 @@
 
       <div class="starter-template">
         <div class="optiontypes">
-          <h1 class="top"><span class="participantName"></span> your medical/surgical options are:</h1>
-          <div class="altsdescription">
-            <ul>
-          	<li><span class="definition">Observation:</span> Keep close tabs on the condition, prepared to make another judgment if the time comes.
-          	</li>
-            <li><span class="definition">Hemi-Thyroidectomy:</span> Removal of half the thyroid that contains the growth
-          	</li>
-            <li><span class="definition">Total Thyroidectomy:</span> Removal of the entire thyroid.
-          </li></ul>
-          </div>
+          <h1 class="top"><span class="participantName"></span>, those medical/surgical options include differences in the following areas:</h1>
+         <div class="optionnav">
+           <ul>
+               <li><span class="definition">Scar:</span> The different options have differing scarring effects.</li>
+               <li><span class="definition">Low Calcium:</span> Some options could require you to take a calcium supplement.</li>
+               <li><span class="definition">Voice Complications:</span> Some options could effect your voice.</li>
+               <li><span class="definition">Need for Medication</span> Some options may require lifelong medication.</li>
+               <li><span class="definition">Recovery:</span> Some options have longer recovery times.</li>
+            </ul>
          </div>
+      </div>
+      <p>
+      <div class="closing">
+        Let's explore these different options in greater detail.
       </div>
       <div class="footer">
         <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
@@ -84,14 +87,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-    if (getResponseHasUsefulMolecularTesting()) {
-      //We have some molecular testing, so go to that page
-      var PREVIOUS_PAGE = "walk4.html";
-    } else {
-      //There is no molecular testing, skip over those pages
-      var PREVIOUS_PAGE = "walk3.html";
-    }
-    var NEXT_PAGE = "walk7a.html";
+    var PREVIOUS_PAGE = "walk7.html";
+    var NEXT_PAGE = "walk8.html";
     insertResponsesIntoHTML();
     insertAHPInfoIntoHTML();
     </script>
