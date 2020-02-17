@@ -109,17 +109,17 @@
 					  <i>Knowing if I have cancer is</i> <b>More Important</b>
 					</label>
 					<label class="control radio">
-					  <input id="radio2" name="vote" type="radio" onclick="storeVote(0);">
+					  <input id="radio3" name="vote" type="radio" onclick="storeVote(0);">
 					  <div class="control-indicator"></div>
 					  They're Equal
 					</label>
 					<label class="control radio">
-					  <input id="radio2" name="vote" type="radio" onclick="storeVote(-1);">
+					  <input id="radio4" name="vote" type="radio" onclick="storeVote(-1);">
 					  <div class="control-indicator"></div>
 					  <i>Not having a scar on my neck is</i> <b>More Important</b>
 					</label>
 					<label class="control radio">
-					  <input id="radio2" name="vote" type="radio" onclick="storeVote(-2);">
+					  <input id="radio5" name="vote" type="radio" onclick="storeVote(-2);">
 					  <div class="control-indicator"></div>
 					  <i>Not having a scar on my neck is</i> <b>Much More Important</b>
 					</label>
@@ -170,13 +170,44 @@
 				<!-- This is the script to store votes-->
 				<script>
 				function storeVote(symbolicVote) {
-					let vote = convertIntegerSymbolicVote(symbolicVote);
-					let ahpModel = getResponseAHPModel();
+					var vote = convertIntegerSymbolicVote(symbolicVote);
+					var ahpModel = getResponseAHPModel();
 					ahpModel.pairwiseId(ROW_ID, COL_ID, vote)
 					setResponseAHPModel(ahpModel)
 				}
 				</script>
-
+				<!-- This script gets the last vote for this place and selects that radio button-->
+				<script>
+					var ahpModel = getResponseAHPModel();
+					var numVote = ahpModel.getPairwiseId(ROW_ID, COL_ID);
+					var intVote = convertNumericVoteToIntegerSymbolic(numVote);
+					if (intVote == null) {
+						//We have no vote, do nothing
+					} else {
+						//We have a vote, select the appropriate cell
+						var buttonId;
+						switch(intVote) {
+							case 2:
+								buttonId = "radio1";
+								break;
+							case 1:
+								buttonId = "radio2";
+								break;
+							case 0:
+								buttonId = "radio3";
+								break;
+							case -1:
+								buttonId = "radio4";
+								break;
+							case -2:
+								buttonId = "radio5";
+								break;
+							default:
+								console.log("Nothing to do with vote="+intVote)
+						}
+						document.getElementById(buttonId).checked=true
+					}
+				</script>
 
 
 </body>
