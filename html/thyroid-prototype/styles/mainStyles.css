@@ -307,4 +307,13 @@ strong {
     background: #30DBC4;
     color: white; }
 
+.pairwise-results-values {
+  margin: 24px auto;
+  line-height: 200%;
+}
+
+.pairwise-results-values, th, td {
+  padding-left: 12px;
+  padding-right: 12px;
+}
 /*# sourceMappingURL=mainStyles.css.map */

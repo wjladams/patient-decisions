@@ -50,7 +50,9 @@
 	<![endif]-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+	<script src="ahp.js"></script>
+	<script src="thyroid_model.js"></script>
+	<script src="common.js"></script>
 	<script>
 		$( document ).ready(function() {
 			$( "#open-menu" ).click(function() {
@@ -90,42 +92,85 @@
 				<h1 class="pairwise-question">Which is more important?</h1>
 
 				<div class="pairwise-answers">
-					<p class="pairwise-answer left">Knowing if I have cancer</p>
+					<p class="pairwise-answer left"><span class="pwRowName">abc</span></p>
 					<p class="pairwise-answer or">or</p>
-					<p class="pairwise-answer right">Not having a scar on my neck</p>
+					<p class="pairwise-answer right"><span class="pwColName">cde</span></p>
 				</div>
 
 				<div class="pairwise-inputs">
 					<label class="radio">
-					  <input id="radio1" name="radio" type="radio">
+					  <input id="radio1" name="vote" type="radio" onclick="storeVote(2);">
 					  <div class="control-indicator"></div>
 					  <i>Knowing if I have cancer is</i> <b>Much More Important</b>
 					</label>
 					<label class="control radio">
-					  <input id="radio2" name="radio" type="radio">
+					  <input id="radio2" name="vote" type="radio" onclick="storeVote(1);">
 					  <div class="control-indicator"></div>
 					  <i>Knowing if I have cancer is</i> <b>More Important</b>
 					</label>
 					<label class="control radio">
-					  <input id="radio2" name="radio" type="radio">
+					  <input id="radio2" name="vote" type="radio" onclick="storeVote(0);">
 					  <div class="control-indicator"></div>
 					  They're Equal
 					</label>
 					<label class="control radio">
-					  <input id="radio2" name="radio" type="radio">
+					  <input id="radio2" name="vote" type="radio" onclick="storeVote(-1);">
 					  <div class="control-indicator"></div>
 					  <i>Not having a scar on my neck is</i> <b>More Important</b>
 					</label>
 					<label class="control radio">
-					  <input id="radio2" name="radio" type="radio">
+					  <input id="radio2" name="vote" type="radio" onclick="storeVote(-2);">
 					  <div class="control-indicator"></div>
 					  <i>Not having a scar on my neck is</i> <b>Much More Important</b>
 					</label>
 				</div>
 
 				<div class="footer">
-					<a class="continue-btn" href="">Continue</a>
-				</div>
+	        <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
+	        <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
+	        <!--<a class="continue-btn" href="">Continue</a>-->
+	      </div>
+
+				<!-- This script gets the current position and sets next position and prev-->
+				<script>
+					let numberOfCompares = AHP_MODEL.pairwiseOrderByIds.length;
+					let url = new URL(window.location.href)
+					var CURRENT_PW_POSITION = parseInt(url.searchParams.get("currentPosition"))
+					if (CURRENT_PW_POSITION == null) {
+						CURRENT_PW_POSITION = 0
+					}
+					var NEXT_PW_POSITION = CURRENT_PW_POSITION + 1
+					var PREV_PW_POSITION = CURRENT_PW_POSITION - 1
+					if (PREV_PW_POSITION < 0) {
+						PREV_PW_POSITION = 0
+					}
+					var NEXT_PAGE = "?currentPosition="+NEXT_PW_POSITION
+					if (NEXT_PW_POSITION >= numberOfCompares) {
+						NEXT_PAGE="results.html";
+					}
+					var PREVIOUS_PAGE = "?currentPosition="+PREV_PW_POSITION
+				</script>
+				<!-- This script gets row and column names and inserts-->
+				<script>
+					let currentPairwiseInfo = AHP_MODEL.pairwiseOrderByIds[CURRENT_PW_POSITION];
+					let ROW_ID = currentPairwiseInfo[0];
+					let COL_ID = currentPairwiseInfo[1];
+					let rowNodeName = AHP_MODEL.getChildWithId(ROW_ID).name;
+					let colNodeName = AHP_MODEL.getChildWithId(COL_ID).name;
+					insertStringIntoClass("pwRowName", rowNodeName);
+					insertStringIntoClass("pwColName", colNodeName);
+				</script>
+				<!-- This is the script to store votes-->
+				<script>
+				function storeVote(symbolicVote) {
+					let vote = convertIntegerSymbolicVote(symbolicVote);
+					let ahpModel = getResponseAHPModel();
+					ahpModel.pairwiseId(ROW_ID, COL_ID, vote)
+					setResponseAHPModel(ahpModel)
+				}
+				</script>
+
+
 
 </body>
 

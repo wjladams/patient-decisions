@@ -62,6 +62,13 @@ function addResponse(values=null) {
   return newKey
 }
 
+function setACurrentResponseValue(forKey, newValue) {
+  let responseKey = getCurrentResponseKey();
+  let vals = getCurrentResponseValues();
+  vals[forKey] = newValue;
+  localStorage.setItem(responseKey, JSON.stringify(vals));
+}
+
 function setCurrentResponseKey(newKey) {
   sessionStorage.setItem(CURRENT_RESPONSE_KEY, newKey);
 }
@@ -191,6 +198,20 @@ function getResponseAdjustCancerRisk() {
 function getResponseValue(keyName) {
   let responses = getCurrentResponseValues();
   return responses[keyName];
+}
+
+function getResponseAHPModel() {
+  let ahpjson = getResponseValue("ahpmodel");
+  if (ahpjson == null) {
+    ahpjson = AHP_MODEL_JSON;
+  }
+  let ahpmodel = AHPTreeNode.fromJSONObject(ahpjson);
+  return ahpmodel
+}
+
+function setResponseAHPModel(ahpmodel) {
+  let ahpjson = JSON.stringify(ahpmodel);
+  setACurrentResponseValue("ahpmodel", ahpjson);
 }
 
 function getResponseHasUsefulMolecularTesting() {

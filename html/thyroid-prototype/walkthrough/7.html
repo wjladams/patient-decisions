@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
 
-    <title>Starter Template for Bootstrap</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+    <!-- allows the content to be zoomed in automatic on the iphone -->
+    <meta name="viewport" content="width=device-width" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Decision Lens" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+
+      <!-- favicons from iconhandbook.co.uk -->
+
+      <!-- Opera Speed Dial Favicon -->
+      <link rel="icon" type="image/png" href="/speeddial-160px.png" />
+
+      <!-- Standard Favicon 16x16 -->
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+      <!-- PNG Favicon 32x32 -->
+      <link rel="icon" type="image/png" href="http://example.com/image.png" />
+
+
+      <link href="http://www.yoursite.com/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
+      <link href="http://www.yoursite.com/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
+      <link href="http://www.yoursite.com/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
+      <link href="http://www.yoursite.com/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
+
+
+
+    <meta name="description" content="" />
+
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+    <link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="scripts/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../common.js"></script>
+    <script src="../ahp-thyroid.js"></script>
+
   </head>
 
   <body>
@@ -22,36 +56,26 @@
 
       <div class="starter-template">
         <div class="optiontypes">
-           <h2>What are my options?</h2>
-           <table class="optionstable">
-             <colgroup>
-               <col style="width: 33%;">
-               <col style="width: 33%;">
-               <col style="width: 33%;">
-             </colgroup>
-             <tbody><tr>
-               <th>Observation</th>
-               <th>Hemi-Thyroidectomy</th>
-               <th>Total Thyroidectomy</th>
-             </tr>
-             <tr>
-               <td>No scar</td>
-               <td>Midline 3-4cm scar</td>
-               <td>Midline 4-5cm scar</td>
-             </tr>
-           </tbody></table>
+          <h1 class="top"><span class="participantName"></span> your medical options to consider are:</h1>
+          <div class="altsdescription">
+            <ul>
+          	<li><span class="definition">Observation:</span> Keep close tabs on the condition, prepared to make another judgment if the time comes.
+          	</li>
+            <li><span class="definition">Hemi-Thyroidectomy:</span> Removal of half the thyroid that contains the growth
+          	</li>
+            <li><span class="definition">Total Thyroidectomy:</span> Removal of the entire thyroid.
+          </li></ul>
+          </div>
          </div>
          <div class="optionnav">
-           <h3>Considerations</h3>
-           <table class="optionnavcontents">
-             <tbody><tr>
-               <td class="highlight">Scar</td>
-               <td>Low Calcium</td>
-               <td>Voice Complications</td>
-               <td>Need for Medication</td>
-               <td>Recovery</td>
-             </tr>
-           </tbody></table>
+           <h3>Things to consider when choosing between your options:</h3>
+           <ul>
+               <li><span class="definition">Scar:</span> The different options have differing scarring effects.
+               <li><span class="definition">Low Calcium:</span> Some options could require you to take a calcium supplement.
+               <li><span class="definition">Voice Complications:</span> Some options could effect your voice.
+               <td><span class="definition">Need for Medication</span> Some options may require lifelong medication.
+               <td><span class="definition">Recovery:</span> Some options have longer recovery times.
+            </ul>
          </div>
       </div>
       <div class="footer">
@@ -70,9 +94,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-    var PREVIOUS_PAGE = "6.html";
+    if (getResponseHasUsefulMolecularTesting()) {
+      //We have some molecular testing, so go to that page
+      var PREVIOUS_PAGE = "4.html";
+    } else {
+      //There is no molecular testing, skip over those pages
+      var PREVIOUS_PAGE = "3.html";
+    }
     var NEXT_PAGE = "8.html";
     insertResponsesIntoHTML();
+    insertAHPInfoIntoHTML();
     </script>
   </body>
 </html>
