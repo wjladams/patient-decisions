@@ -2,7 +2,7 @@
 AHP_MODEL_JSON = {
     "name" : "Otosclerosis Model",
     "description" : "The Otosclerosis Model",
-    "alt_names" : ['Watchful Waiting', 'Surgery', 'Hearing Aids'],
+    "alts" : ['Watchful Waiting', 'Surgery', 'Hearing Aids'],
     "alt_descriptions" : [
       'Remain vigilant',
       'Removing the 4 bones of the ear and inserting a prosthesis (refashioning the small bones of the ear to improve hearing)',

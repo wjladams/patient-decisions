@@ -103,6 +103,7 @@
 				</table>
 
 				<div class="footer">
+          <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
 	        <button class="continue-btn" disabled onclick="window.location.href=NEXT_PAGE;">Next</button>
 	      </div>
 
@@ -128,6 +129,8 @@
         </script>
 
         <script>
+          let PREVIOUS_PAGE = "pairwise.html?currentPosition=-1"
+          let NEXT_PAGE = "results.html"
         insertResponsesIntoHTML();
         </script>
 

@@ -1,7 +1,7 @@
 var AHP_MODEL_JSON = {
   "name" : "Thyroid Cancer Model",
   "description" : "Our first attempt at the Thyroid Cancer Model.",
-  "alt_names" : ["Observation", "Hemi-Thyroidectomy", "Total Thyroidectomy"],
+  "alts" : ["Observation", "Hemi-Thyroidectomy", "Total Thyroidectomy"],
   "alt_descriptions" : ["Remain vigilant", "Better explanation", "Remove all of the thyroid"],
   "children": [
       {

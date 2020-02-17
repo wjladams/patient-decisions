@@ -45,8 +45,8 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../common.js"></script>
-    <script src="../ahp-thyroid.js"></script>
+    <script src="common.js"></script>
+    <script src="ahp-thyroid.js"></script>
 
   </head>
 
@@ -96,12 +96,12 @@
     <script>
     if (getResponseHasUsefulMolecularTesting()) {
       //We have some molecular testing, so go to that page
-      var PREVIOUS_PAGE = "4.html";
+      var PREVIOUS_PAGE = "walk4.html";
     } else {
       //There is no molecular testing, skip over those pages
-      var PREVIOUS_PAGE = "3.html";
+      var PREVIOUS_PAGE = "walk3.html";
     }
-    var NEXT_PAGE = "8.html";
+    var NEXT_PAGE = "walk8.html";
     insertResponsesIntoHTML();
     insertAHPInfoIntoHTML();
     </script>

@@ -135,9 +135,16 @@
 				<script>
 					let numberOfCompares = AHP_MODEL.pairwiseOrderByIds.length;
 					let url = new URL(window.location.href)
-					var CURRENT_PW_POSITION = parseInt(url.searchParams.get("currentPosition"))
+					var CURRENT_PW_POSITION = url.searchParams.get("currentPosition")
+					//alert("Current position='"+CURRENT_PW_POSITION+"'")
 					if (CURRENT_PW_POSITION == null) {
 						CURRENT_PW_POSITION = 0
+					} else {
+						CURRENT_PW_POSITION = parseInt(CURRENT_PW_POSITION)
+						if (CURRENT_PW_POSITION < 0) {
+							//This means we want to go to the end
+							CURRENT_PW_POSITION = numberOfCompares - 1
+						}
 					}
 					var NEXT_PW_POSITION = CURRENT_PW_POSITION + 1
 					var PREV_PW_POSITION = CURRENT_PW_POSITION - 1

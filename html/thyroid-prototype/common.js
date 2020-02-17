@@ -126,7 +126,7 @@ function storeDemographics() {
   let nr = numberOfCurrentResponses();
   //alert("Current number of responses="+nr);
   addResponse(result);
-  window.location.href = "walkthrough/1.html";
+  window.location.href = "walk1.html";
 }
 
 
@@ -201,16 +201,26 @@ function getResponseValue(keyName) {
 }
 
 function getResponseAHPModel() {
-  let ahpjson = getResponseValue("ahpmodel");
-  if (ahpjson == null) {
+  var ahpjsonString = getResponseValue("ahpmodel");
+  var ahpjson;
+  if (ahpjsonString == null) {
     ahpjson = AHP_MODEL_JSON;
+  } else {
+    ahpjson = JSON.parse(ahpjsonString);
   }
   let ahpmodel = AHPTreeNode.fromJSONObject(ahpjson);
   return ahpmodel
 }
 
 function setResponseAHPModel(ahpmodel) {
-  let ahpjson = JSON.stringify(ahpmodel);
+  //There is a problem with circular refs, don't store parent node
+  let ahpjson = JSON.stringify(ahpmodel, function(key, value) {
+    if (key == "parentNode") {
+      return undefined;
+    } else {
+      return value;
+    }
+  });
   setACurrentResponseValue("ahpmodel", ahpjson);
 }
 

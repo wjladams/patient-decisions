@@ -21,38 +21,17 @@
     <div class="container">
 
       <div class="starter-template">
-        <div class="optiontypes">
-           <h2>What are my options?</h2>
-           <table class="optionstable">
-             <colgroup>
-               <col style="width: 33%;">
-               <col style="width: 33%;">
-               <col style="width: 33%;">
-             </colgroup>
-             <tbody><tr>
-               <th>Observation</th>
-               <th>Hemi-Thyroidectomy</th>
-               <th>Total Thyroidectomy</th>
-             </tr>
-             <tr>
-               <td>No recovery</td>
-               <td>Same day surgery or one night in hospital</td>
-               <td>Same day surgery or one night in hospital</td>
-             </tr>
-           </tbody></table>
-         </div>
-         <div class="optionnav">
-           <h3>Considerations</h3>
-           <table class="optionnavcontents">
-             <tbody><tr>
-               <td>Scar</td>
-               <td>Low Calcium</td>
-               <td>Voice Complications</td>
-               <td>Need for Medication</td>
-               <td class="highlight">Recovery</td>
-             </tr>
-           </tbody></table>
-         </div>
+        <h2>What matters the most to you?</h2>
+        <ol class="priorities" id="slippylist" tabindex="0" aria-role="listbox">
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Making sure I know if I have cancer</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Not having a scar</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">The possible need to take medication forever</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Whatever my doctor thinks I should do</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Not having surgery if I don't have to</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Risk to my voice</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Concern related to other health problems</li>
+        </ol>
+
       </div>
       <div class="footer">
         <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
@@ -70,8 +49,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-    var PREVIOUS_PAGE = "11.html";
-    var NEXT_PAGE = "13.html";
+    var PREVIOUS_PAGE = "walk14.html";
+    var NEXT_PAGE = "pairwise.html";
     insertResponsesIntoHTML();
     </script>
   </body>
