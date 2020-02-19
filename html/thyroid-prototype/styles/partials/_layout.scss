@@ -1,0 +1,38 @@
+.demographic-questions {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 1em;
+	border: 2px solid $gray200;
+	border-radius: 8px;
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1em;
+	border: 2px solid $gray200;
+	border-radius: 8px;
+}
+
+.container {
+	h1 {
+		text-align: center;
+	}
+}
+
+.pairwise-results-values {
+	p strong {
+		color: $purple500;
+	}
+}
+
+.optionstable {
+	> tbody > tr > td, > tbody > tr > th {
+		border-left: 1px solid $gray200;
+		padding: .25em;
+		text-align: left;
+	}
+	th {
+		font: 700 1rem/1.2 museosans;
+	}
+}
