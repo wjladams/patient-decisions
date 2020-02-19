@@ -90,8 +90,10 @@
 	border-radius: 8px;
 	padding: 1rem 3rem;
 	text-align: center;
+	font: 500 1rem/1.45 museosans;
 	&:hover {
 		background: $greenblue500;
 		color: white;
+		cursor: pointer;
 	}
 }

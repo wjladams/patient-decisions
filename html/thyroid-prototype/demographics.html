@@ -3,37 +3,12 @@
 
 <head>
 
-	<!-- THIS MUST BE DELETED WHEN SITE GOES LIVE!!!!!!!! -->
 	<meta name="robots" content="nofollow" />
 
 	<meta charset="utf-8" />
 
 	<!-- allows the content to be zoomed in automatic on the iphone -->
 	<meta name="viewport" content="width=device-width" />
-
-	<meta name="viewport" content="width=device-width, minimal-ui" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-title" content="Decision Lens" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-
-		<!-- favicons from iconhandbook.co.uk -->
-
-		<!-- Opera Speed Dial Favicon -->
-		<link rel="icon" type="image/png" href="/speeddial-160px.png" />
-
-		<!-- Standard Favicon 16x16 -->
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-		<!-- PNG Favicon 32x32 -->
-		<link rel="icon" type="image/png" href="http://example.com/image.png" />
-
-
-		<link href="http://www.yoursite.com/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
-		<link href="http://www.yoursite.com/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
-		<link href="http://www.yoursite.com/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
-		<link href="http://www.yoursite.com/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
-
 
 
 	<meta name="description" content="" />
@@ -91,15 +66,26 @@
 				<h1 class="demographics-intro" align="center">Demographic Information</h1>
 
 				<div class="demographic-questions">
-					<p class="demegraphic-question left">Name: <input type="text" width="50" class="demegraphic-name" id="pname" value="Jane Q. Smith">
-					<p class="demographic-question left">Age: <input type="number" class="demographic-age" id="age" value="30">
-					<p class="demographic-question left">Sex:
-						<select class="deomgraphic-sex" id="sex">
-							<option>Female</option>
-							<option>Male</option>
-							<option>Not reported</option>
-						</select>
-					<p class="demographic-question left">Bethesda:
+					<p class="form-field">
+						<label for="pname">Name</label>
+						<input type="text" width="50" class="demegraphic-name" id="pname" value="Jane Q. Smith">
+					</p>
+
+					<p class="form-field">
+						<label for="age">Age</label>
+						<input type="number" class="demographic-age" id="age" value="30">
+					</p>
+
+					<p class="form-field">
+						<label for="sex">Sex</label>
+							<select class="deomgraphic-sex" id="sex">
+								<option>Female</option>
+								<option>Male</option>
+								<option>Not reported</option>
+							</select>
+					</p>
+					<p class="form-field">
+						<label for="bethesda">Bethesda</label>
 						<select class="demographic-bethesda" id="bethesda">
 							<option>I</option>
 							<option>II</option>
@@ -108,18 +94,23 @@
 							<option>V</option>
 							<option>VI</option>
 						</select>
-					<p class="demographic-question left">Afirma:
+					</p>
+					<p class="form-field">
+						<label for="afirma">Afirma</label>
 						<select class="demographic-afirma" id="afirma">
 							<option value="">N/A</option>
 							<option value="1">Positive</option>
 							<option value="-1">Negative</option>
 						</select>
-					<p class="demographic-question left">Thyroseq:
+					</p>
+					<p class="form-field">
+						<label for="thyroseq">Thyroseq</label>
 						<select class="demographic-afirma" id="thyroseq">
 							<option value="">N/A</option>
 							<option value="1">Positive</option>
 							<option value="-1">Negative</option>
 						</select>
+					</p>
 
 				</div>
 
