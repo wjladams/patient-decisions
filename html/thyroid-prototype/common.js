@@ -365,4 +365,24 @@ function hasResponseKeyFromURL() {
   return responseKey != null;
 }
 
+//Simple function to go back one page of history
+function goBack() {
+  window.history.back();
+}
+
+function ahpModelSortedAlts(ahpModel) {
+  var priorities = ahpModel.synthesize();
+  var alts = ahpModel.alts.slice(0);
+  var altsSorted = alts.slice(0);
+  var altScoresDict = {};
+  for(var i=0; i < alts.length; i++) {
+    altScoresDict[alts[i]] = priorities[i];
+  }
+  altsSorted.sort(function(a, b) {
+    var cmp = altScoresDict[b]-altScoresDict[a];
+    // alert("Comparing "+a+" to "+b+ " compare value = "+cmp)
+    return cmp
+  })
+  return altsSorted
+}
 var CURRENT_RESPONDENT_NAME = getNameOfCurrentRespondent();

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+    <link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+    <script src="common.js"></script>
+    <script src="ahp.js"></script>
+  	<script src="thyroid_model.js"></script>
+    <script src="ahp-thyroid.js"></script>
+
+    <script>
+    //Checks for responseKey if given
+    setResponseKeyFromURL();
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="optiontypes">
+           <h1><span class="participantName"></span> Choice Summary</h1>
+           <form>
+           <table class="optionstable" width="100%">
+             <colgroup>
+               <col style="width: 25%;">
+               <col style="width: 25%;">
+               <col style="width: 25%;">
+               <col style="width: 25%;">
+             </colgroup>
+             <tbody id="tabledata">
+               <tr>
+                 <th></th>
+                 <th class="table-header">Physician Rec.</th>
+                 <th class="table-header">We Decide Rec.</th>
+                 <th class="table-header">Patient Choice</th>
+               </tr>
+
+             </tbody>
+           </table>
+          </form>
+         </div>
+      </div>
+      <div class="footer">
+        <button class="continue-btn" onclick="goBack();">Previous</button>
+        <button class="continue-btn" onclick="window.location.href='dr.html';">Return to Physican Page</button>
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    newBody = "<tr> <th></th>\
+                     <th class=\"table-header\">Physician Rec.</th>\
+                     <th class=\"table-header\">We Decide Rec.</th>\
+                     <th class=\"table-header\">Patient Choice</th>\
+                   </tr>";
+
+    alts = AHP_MODEL.alts;
+    for (var alt of alts) {
+      newBody += "<tr><td class=\"table-header\">"+alt+"</td>";
+      newBody += "<td class=\"table-check-button\"><input  value=\""+alt+"\" name=\"dr_rec\" type=\"radio\" onclick=\"updateValues();\"/></td>";
+      newBody += "<td class=\"table-check-button\"><input value=\""+alt+"\" disabled=\"true\" name=\"we_rec\" type=\"radio\" onclick=\"updateValues();\"/></td>";
+      newBody += "<td class=\"table-check-button\"><input value=\""+alt+"\" name=\"you_rec\" type=\"radio\" onclick=\"updateValues();\"/></td>";
+      newBody += "</tr>\n";
+    }
+    document.getElementById("tabledata").innerHTML=newBody;
+    </script>
+    <script>
+    //Define the updateValues() function
+    function updateValues() {
+      var drRec = document.forms[0].elements["dr_rec"].value;
+      //var weRec = document.forms[0].elements["we_rec"].value;
+      var youRec = document.forms[0].elements["you_rec"].value;
+      setACurrentResponseValue("dr_rec", drRec)
+      setACurrentResponseValue("you_rec", youRec)
+    }
+
+    //Setup current values.
+    var currentValues = getCurrentResponseValues();
+    document.forms[0].elements["dr_rec"].value = currentValues["dr_rec"];
+    var ahpModel = getResponseAHPModel();
+    var sortedAlts = ahpModelSortedAlts(ahpModel);
+    document.forms[0].elements["we_rec"].value = sortedAlts[0];
+    document.forms[0].elements["you_rec"].value = currentValues["you_rec"];
+    </script>
+    <script>
+    var PREVIOUS_PAGE = "walk9.html";
+    var NEXT_PAGE = "walk11.html";
+    insertResponsesIntoHTML();
+    </script>
+  </body>
+</html>
