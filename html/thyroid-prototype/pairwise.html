@@ -107,7 +107,10 @@
 	        <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
 	        <!--<a class="continue-btn" href="">Continue</a>-->
 	      </div>
-
+				<script>
+				//Checks for responseKey if given
+				setResponseKeyFromURL();
+				</script>
 				<!-- This script gets the current position and sets next position and prev-->
 				<script>
 					let numberOfCompares = AHP_MODEL.pairwiseOrderByIds.length;

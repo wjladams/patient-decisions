@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+    <link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+    <script src="common.js"></script>
+    <script src="ahp-thyroid.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="optiontypes">
+           <h1>Physician's Information Page</h1>
+           <table class="optionstable">
+             <colgroup>
+               <col style="width: 50%;">
+               <col style="width: 50%;">
+             </colgroup>
+             <tbody id="tabledata">
+             </tbody>
+           </table>
+         </div>
+      </div>
+      <!--
+      <div class="footer">
+        <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
+        <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
+      </div>
+    -->
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    //Checks to see if a key from localStorage is a response key
+    function isResponseKey(akey) {
+      var pat = /^response\-\d+$/;
+      return pat.test(akey)
+    }
+
+    function getAllResponseKeys() {
+      var rval = []
+      for (key in localStorage) {
+        if (isResponseKey(key)) {
+          rval.push(key)
+        }
+      }
+      return rval;
+    }
+
+    var responseKeys = getAllResponseKeys();
+    var newBody = ""
+    for (var responseKey of responseKeys) {
+      var pname = getNameOfRespondent(responseKey)
+      newBody += "<tr><td>"+pname+"</td><td>";
+      //Add demographics link
+      newBody += "<a href=\"demographics.html?responseKey="+responseKey+"\">Demographics</a>, "
+      //Add the Votes link
+      newBody += "<a href=\"pairwise.html?responseKey="+responseKey+"\">Votes</a>, ";
+      //Add results link
+      newBody += "<a href=\"results.html?responseKey="+responseKey+"\">Results</a>";
+      newBody += "</tr>\n";
+    }
+    document.getElementById("tabledata").innerHTML=newBody;
+    </script>
+    <script>
+    var PREVIOUS_PAGE = "walk9.html";
+    var NEXT_PAGE = "walk11.html";
+    insertResponsesIntoHTML();
+    </script>
+  </body>
+</html>

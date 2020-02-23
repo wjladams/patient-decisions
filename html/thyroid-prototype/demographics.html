@@ -68,7 +68,7 @@
 				<div class="demographic-questions">
 					<p class="form-field">
 						<label for="pname">Name</label>
-						<input type="text" width="50" class="demegraphic-name" id="pname" value="Jane Q. Smith">
+						<input type="text" width="50" class="demegraphic-name" id="name" value="Jane Q. Smith">
 					</p>
 
 					<p class="form-field">
@@ -116,10 +116,37 @@
 
 
 				<div class="footer">
-					<button class="continue-btn" onclick="storeDemographics();">Continue</button>
+					<button class="continue-btn" onclick="mystoreDemographics();">Continue</button>
 					<!--<a class="continue-btn" href="">Continue</a>-->
 				</div>
 
+				<script>
+				function mystoreDemographics() {
+					if (!CREATE_NEW_RESPONSE) {
+						//No need to create a new response, nothing to do
+						window.location.href = "walk1.html";
+					} else {
+						//We need to store a new one
+						storeDemographics();
+					}
+				}
+				let CREATE_NEW_RESPONSE = true;
+				if (hasResponseKeyFromURL()) {
+					console.log("Tryign to insert resposne");
+					//Sent new response to use, do not need to create
+					CREATE_NEW_RESPONSE = false;
+					//Set that as our current response
+					setResponseKeyFromURL();
+					//Load data
+					var responseData = getCurrentResponseValues();
+					//Set inputs with this data
+
+					for (var field in responseData) {
+						document.getElementById(field).value = responseData[field];
+						document.getElementById(field).disabled = true;
+					}
+				}
+				</script>
 </body>
 
 </html>

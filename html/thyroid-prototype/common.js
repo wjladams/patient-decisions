@@ -83,10 +83,19 @@ function getCurrentResponseValues() {
   }
 }
 
+function getResponseValues(key) {
+  return JSON.parse(localStorage.getItem(key))
+}
+
 function getNameOfCurrentRespondent() {
   let currentValues = getCurrentResponseValues();
   //alert(currentValues['name']);
   return currentValues['name'];
+}
+
+function getNameOfRespondent(respondentKey) {
+  var response = getResponseValues(responseKey);
+  return response['name']
 }
 
 function getCurrentResponseKey() {
@@ -107,7 +116,7 @@ function numberOfCurrentResponses() {
 }
 
 function storeDemographics() {
-  let name = document.getElementById("pname").value;
+  let name = document.getElementById("name").value;
   let age = document.getElementById("age").value;
   let sex = document.getElementById("sex").value;
   let bethesda = document.getElementById("bethesda").value;
@@ -328,6 +337,32 @@ function getResponseMolecularTestName() {
   } else {
     return "";
   }
+}
+
+/**
+If the URL has a responseKey= value, we grab it and set the
+current response to that.
+*/
+function setResponseKeyFromURL() {
+  var url = new URL(window.location.href)
+  var responseKey = url.searchParams.get("responseKey");
+  console.log(responseKey)
+  if (responseKey == null) {
+    //We have nothing to do, there was no responseKey
+  } else {
+    //Let's make sure the response exists
+    if (localStorage.getItem(responseKey) != null) {
+      setCurrentResponseKey(responseKey);
+    } else {
+      alert("Invalid response key sent, nothing done.");
+    }
+  }
+}
+//Checks if the url has a responseKey item sets
+function hasResponseKeyFromURL() {
+  var url = new URL(window.location.href)
+  var responseKey = url.searchParams.get("responseKey");
+  return responseKey != null;
 }
 
 var CURRENT_RESPONDENT_NAME = getNameOfCurrentRespondent();
