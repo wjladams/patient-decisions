@@ -200,7 +200,7 @@ function getResponseValue(keyName) {
   return responses[keyName];
 }
 
-function getResponseAHPModel() {
+function getResponseAHPModelOld() {
   var ahpjsonString = getResponseValue("ahpmodel");
   var ahpjson;
   if (ahpjsonString == null) {
@@ -212,23 +212,37 @@ function getResponseAHPModel() {
   return ahpmodel
 }
 
+function getResponseAHPModel() {
+  var ahpmodel = AHP_MODEL;
+  var votesjsonString = getResponseValue("ahpvotes");
+  if (votesjsonString == null) {
+    //No votes yet, do nothing
+  } else {
+    votesDictionary = JSON.parse(votesjsonString);
+    setAHPModelAllSymbolicPairwise(ahpmodel, votesDictionary)
+  }
+  return ahpmodel
+}
+
 /**
 This function gets all of the pairwise comparisons in symbolic form.
 The returned result is a dictionary whose keys are [rowId,colId] and
 values are the symbolic (-2, -1, 0, 1, 2) vote for that comparison.
 */
-function getAHPModelAllSymbolicPairwise(ahmodel) {
+function getAHPModelAllSymbolicPairwise(ahpmodel) {
   //First we need to get that list of pw votes
   var voteLocations = ahpmodel.pairwiseOrderByIds;
   var rval = {};
   var numericVote;
   var symbolicVote;
+  var locationInfo;
   for (var location of voteLocations) {
+    locationInfo = location.join(" ")
     numericVote = ahpmodel.getPairwiseId(location[0], location[1])
     if (numericVote != 0) {
       //Only need to store non-zero votes
       symbolicVote = convertNumericVoteToIntegerSymbolic(numericVote)
-      rval[location] = symbolicVote
+      rval[locationInfo] = symbolicVote
     }
   }
   return rval;
@@ -241,17 +255,19 @@ getAHPModelAllSymbolicPairwise()
 function setAHPModelAllSymbolicPairwise(ahpmodel, pwDictionary) {
   var symbolicVote
   var numericVote
-  for (var location in pwDictionary) {
-    symbolicVote = pwDictionary[location]
+  var location
+  for (var locationInfo in pwDictionary) {
+    location = locationInfo.split(" ")
+    symbolicVote = pwDictionary[locationInfo]
     numericVote = convertIntegerSymbolicVote(symbolicVote)
     ahpmodel.pairwiseId(location[0], location[1], numericVote)
   }
 }
 
 
-function setResponseAHPModel(ahpmodel) {
+function setResponseAHPModelOld(ahpmodel) {
   //There is a problem with circular refs, don't store parent node
-  let ahpjson = JSON.stringify(ahpmodel, function(key, value) {
+  var ahpjson = JSON.stringify(ahpmodel, function(key, value) {
     if (key == "parentNode") {
       return undefined;
     } else {
@@ -260,6 +276,17 @@ function setResponseAHPModel(ahpmodel) {
   });
   setACurrentResponseValue("ahpmodel", ahpjson);
 }
+
+/**
+This one only fetches all of the pw, as ordered by pairwiseOrderByIds
+and sets into a dictionary
+*/
+function setResponseAHPModel(ahpmodel) {
+  var pw = getAHPModelAllSymbolicPairwise(ahpmodel)
+  var pwjson = JSON.stringify(pw);
+  setACurrentResponseValue("ahpvotes", pwjson);
+}
+
 
 function getResponseHasUsefulMolecularTesting() {
   let afirma = getResponseValue("afirma");
