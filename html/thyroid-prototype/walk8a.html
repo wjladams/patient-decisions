@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Scar Concerns</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
     <link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
@@ -18,32 +18,20 @@
   <body>
 
     <div class="container">
-      <div class="wrapper">
-        <div class="optiontypes">
-           <h1>Concerns about <i>Voice Complications</i></h1>
-           <table class="optionstable">
-             <colgroup>
-               <col style="width: 33%;">
-               <col style="width: 33%;">
-               <col style="width: 33%;">
-             </colgroup>
-             <tbody><tr>
-               <th>Observation</th>
-               <th>Hemi-Thyroidectomy</th>
-               <th>Total Thyroidectomy</th>
-             </tr>
-             <tr>
-               <td>No concerns</td>
-               <td>
-                 <p><strong>Temporary</strong> for 10 people in 100.</p><p><strong>Permanent</strong> for ~1-5 people in 100.</p>
-               </td>
-               <td>
-                 <p><strong>Temporary</strong> for 20 people in 100.</p><p><strong>Permanent</strong> for ~1-5 people in 100.</p>
-               </td>
-             </tr>
-           </tbody></table>
-         </div>
-      </div>
+      <h1><b>Low Calcium</b> concerns</h1>
+      <table class="concern-options" width="100%">
+        <tr><th><u><b>Observation</b></u></th><th>Hemi-Thyroidectomy</th><th>Thyroidectomy</th></tr>
+        <tr>
+          <td>No concern</td>
+          <td>No concern</td>
+          <td> Some concern:
+            <ul>
+              <li> <u>Temporary</u> for 2 out of 100</li>
+              <li> <u>Permanent</u> for less than 5 out of 100</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
       <div class="footer">
         <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
         <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
@@ -60,9 +48,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-    var PREVIOUS_PAGE = "walk8.html";
-    var NEXT_PAGE = "walk10.html";
+    var PREVIOUS_PAGE = "walk7a.html";
+    var NEXT_PAGE = "walk9.html";
     insertResponsesIntoHTML();
+    insertAHPInfoIntoHTML();
+    </script>
     </script>
   </body>
 </html>
