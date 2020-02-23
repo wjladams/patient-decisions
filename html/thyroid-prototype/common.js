@@ -212,6 +212,43 @@ function getResponseAHPModel() {
   return ahpmodel
 }
 
+/**
+This function gets all of the pairwise comparisons in symbolic form.
+The returned result is a dictionary whose keys are [rowId,colId] and
+values are the symbolic (-2, -1, 0, 1, 2) vote for that comparison.
+*/
+function getAHPModelAllSymbolicPairwise(ahmodel) {
+  //First we need to get that list of pw votes
+  var voteLocations = ahpmodel.pairwiseOrderByIds;
+  var rval = {};
+  var numericVote;
+  var symbolicVote;
+  for (var location of voteLocations) {
+    numericVote = ahpmodel.getPairwiseId(location[0], location[1])
+    if (numericVote != 0) {
+      //Only need to store non-zero votes
+      symbolicVote = convertNumericVoteToIntegerSymbolic(numericVote)
+      rval[location] = symbolicVote
+    }
+  }
+  return rval;
+}
+
+/**
+Sets all the pairwise data using the pwDictionary generated from
+getAHPModelAllSymbolicPairwise()
+*/
+function setAHPModelAllSymbolicPairwise(ahpmodel, pwDictionary) {
+  var symbolicVote
+  var numericVote
+  for (var location in pwDictionary) {
+    symbolicVote = pwDictionary[location]
+    numericVote = convertIntegerSymbolicVote(symbolicVote)
+    ahpmodel.pairwiseId(location[0], location[1], numericVote)
+  }
+}
+
+
 function setResponseAHPModel(ahpmodel) {
   //There is a problem with circular refs, don't store parent node
   let ahpjson = JSON.stringify(ahpmodel, function(key, value) {
