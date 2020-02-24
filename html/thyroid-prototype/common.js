@@ -385,4 +385,61 @@ function ahpModelSortedAlts(ahpModel) {
   })
   return altsSorted
 }
+
+/**This is a poor mans dataframe.*/
+class DF {
+  constructor() {
+    this.rowNames = []
+    this.colNames = []
+    this.data = []
+  }
+
+  nCols() {
+    return this.colNames.length;
+  }
+
+  addRow(rowName) {
+    var rval = this.rowNames.indexOf(rowName)
+    if (rval >= 0) {
+      //Row already existed, give up
+    } else {
+      this.rowNames.push(rowName)
+      this.data.push(new Array(this.nCols()))
+      rval = this.rowNames.length - 1
+    }
+    return rval
+  }
+
+  addCol(colName) {
+    var rval = this.colNames.indexOf(colName)
+    if (rval >= 0) {
+      //Column already existed
+    } else {
+      this.colNames.push(colName)
+      for(var row of this.data) {
+        row.push(null)
+      }
+      rval = this.colNames.length - 1
+    }
+    return rval
+  }
+
+  set(rowName, colName, val) {
+    var row = this.addRow(rowName)
+    var col = this.addCol(colName)
+    this.data[row][col] = val
+  }
+
+  toCSV() {
+    var colsep = "\t"
+    var rowsep = "\n"
+    var rval = colsep+this.colNames.join(colsep)+rowsep
+    for (var rowIndex=0; rowIndex < this.data.length; rowIndex++) {
+      rval += this.rowNames[rowIndex]+colsep
+      rval += this.data[rowIndex].join(colsep)
+      rval += rowsep
+    }
+    return rval;
+  }
+}
 var CURRENT_RESPONDENT_NAME = getNameOfCurrentRespondent();
