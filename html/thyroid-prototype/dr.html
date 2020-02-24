@@ -72,13 +72,15 @@
       var pname = getNameOfRespondent(responseKey)
       newBody += "<tr><td>"+pname+"</td><td>";
       //Add demographics link
-      newBody += "<a href=\"demographics.html?responseKey="+responseKey+"\">Demographics</a>, "
+      newBody += "<a class=\"dr-link\" href=\"demographics.html?responseKey="+responseKey+"\">Demographics</a>, "
       //Add the Votes link
-      newBody += "<a href=\"pairwise.html?responseKey="+responseKey+"\">Votes</a>, ";
+      newBody += "<a class=\"dr-link\" href=\"pairwise.html?responseKey="+responseKey+"\">Votes</a>, ";
       //Add results link
-      newBody += "<a href=\"results.html?responseKey="+responseKey+"\">Results</a>, ";
+      newBody += "<a class=\"dr-link\" href=\"results.html?responseKey="+responseKey+"\">Results</a>, ";
       //Add Choices link
-      newBody += "<a href=\"choice.html?responseKey="+responseKey+"\">Ultimate Choices</a>";
+      newBody += "<a class=\"dr-link\" href=\"choice.html?responseKey="+responseKey+"\">Ultimate Choices</a>, ";
+      //Add Notes link
+      newBody += "<a class=\"dr-link\" href=\"notes.html?responseKey="+responseKey+"\">Physician Notes</a>";
       newBody += "</td></tr>\n";
     }
     document.getElementById("tabledata").innerHTML=newBody;
