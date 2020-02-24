@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Notes</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+    <link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+    <script src="common.js"></script>
+    <script src="ahp-thyroid.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="optiontypes">
+           <h1>Physician's Notes for <span class="participantName"></h1>
+           <textarea id="notes" oninput="updateValues();" data-provide="markdown-editable" cols="90" rows="14">
+           </textarea>
+         </div>
+      </div>
+      <div class="footer">
+        <button class="continue-btn" onclick="goBack();">Previous</button>
+        <button class="continue-btn" onclick="window.location.href='dr.html';">Return to Physican Page</button>
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    let textarea = document.getElementById("notes");
+    var currentValues = getCurrentResponseValues();
+    var text = currentValues["notes"];
+    if (text == null) {
+      text = "Please include any notes you feel fitting.";
+    }
+    textarea.value = text;
+    function updateValues() {
+      setACurrentResponseValue("notes", textarea.value);
+    }
+    </script>
+    <script>
+    var PREVIOUS_PAGE = "walk9.html";
+    var NEXT_PAGE = "walk11.html";
+    insertResponsesIntoHTML();
+    </script>
+  </body>
+</html>
