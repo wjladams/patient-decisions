@@ -412,4 +412,11 @@ strong {
   font: 700 1rem/1.2 museosans;
 }
 
+.step-indicator {
+  font: 200 1.2rem/1.2 museosans;
+  color: #173953;
+  display: inline-flex;
+  align-items: center;
+}
+
 /*# sourceMappingURL=mainStyles.css.map */
