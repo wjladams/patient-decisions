@@ -104,6 +104,7 @@
 
 				<div class="footer">
 	        <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
+					<span class="step-indicator" id="step"></span>
 	        <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
 	        <!--<a class="continue-btn" href="">Continue</a>-->
 	      </div>
@@ -138,6 +139,9 @@
 					if (PREV_PW_POSITION < 0) {
 						PREVIOUS_PAGE = "walk-last.html"
 					}
+
+					//Update the step data
+					document.getElementById("step").innerHTML = "Step "+(CURRENT_PW_POSITION + 1)+" / "+numberOfCompares+" of Data";
 				</script>
 				<!-- This script gets row and column names and inserts-->
 				<script>
