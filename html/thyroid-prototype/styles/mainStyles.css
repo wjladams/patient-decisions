@@ -419,4 +419,33 @@ strong {
   align-items: center;
 }
 
+/* html,body{
+    height: 100%
+} */
+
+/* #header{
+    background-color: yellow;
+    height: 100px;
+    width: 100%;
+}
+
+#holder {
+    min-height: 100%;
+    position:relative;
+} */
+
+/* #mainbody {
+    padding-bottom: 100px;
+} */
+
+.footer {
+    bottom: 0;
+    /* height: 100px; */
+    left: 0;
+    position: absolute;
+    right: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 /*# sourceMappingURL=mainStyles.css.map */
