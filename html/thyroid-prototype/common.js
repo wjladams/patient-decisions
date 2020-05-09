@@ -116,6 +116,11 @@ function numberOfCurrentResponses() {
 }
 
 function storeDemographics() {
+  let dresult = {}
+  let demographic;
+  for (demographic of DEMOGRAPHICS) {
+    dresult[demographic] = document.getElementById(demographic).value
+  }
   let name = document.getElementById("name").value;
   let age = document.getElementById("age").value;
   let sex = document.getElementById("sex").value;
