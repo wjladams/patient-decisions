@@ -4,7 +4,9 @@
 //The demographic variable names / ids in demographics.html
 DEMOGRAPHICS = ["name", "age", "sex", "bethesda", "afirma", "thyroseq"]
 
-// Configure this yourself
+// Configure this function yourself.  This is used to insert Demographics
+// and other information into html elements.  See this example to understand
+// how to use it.
 function insertResponsesIntoHTML() {
   /**
   Inserts the standard variables into the spans with the appropriate
@@ -77,8 +79,10 @@ var THYROSEQ_ONE_MINUS_NPV_BY_BETHESDA = {
 
 
 ////////////////////////////////////////////////////////////////
-/// Additional functions needed until the end of this file//////
+/// Additional functions needed                              ///
 /// These are only functions that are used in this config.js ///
+/// You could also put walkthrough functions needed across   ///
+/// multiple walkthroughs in here.                           ///
 ////////////////////////////////////////////////////////////////
 function getResponseAdjustCancerRisk() {
   //This is based on Bethesda and Molecular testing
@@ -152,6 +156,10 @@ function getResponseMolecularTestName() {
     return "";
   }
 }
+
+////////////////////////////////////////////////////////////////
+////  End of additional function section                   /////
+////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////////////
