@@ -245,6 +245,22 @@ function ahpModelSortedAlts(ahpModel) {
   return altsSorted
 }
 
+
+// Handles inserting the navigation into each page
+// must be called in the page, of course :)
+function insertNAVIntoHTML() {
+  let navstring=`
+    <li><a href="demographics.html">Demographics</a></li>
+    <li><a href="walk1.html">Patient Information Walkthrough</a></li>
+    <li><a href="pairwise.html">Compare Criteria</a></li>
+    <li><a href="results.html">Patient Summary</a></li>
+    <li><a href="dr.html">Doctor Summary</a></li>
+    <li><a href="notes.html">Doctor's Notes</a></li>
+    `
+  insertStringIntoClass('main-nav', navstring)
+}
+
+
 /**This is a poor mans dataframe.*/
 class DF {
   constructor() {

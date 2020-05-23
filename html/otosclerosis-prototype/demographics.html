@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta name="robots" content="nofollow" />
+
+	<meta charset="utf-8" />
+
+	<!-- allows the content to be zoomed in automatic on the iphone -->
+	<meta name="viewport" content="width=device-width" />
+
+
+	<meta name="description" content="" />
+
+	<title>WeDecide Otosclerosis</title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="scripts/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="config.js"></script>
+	<script src="common.js"></script>
+
+	<script>
+		$( document ).ready(function() {
+			$( "#open-menu" ).click(function() {
+				$( ".main-nav-wrapper" ).toggleClass( "open" );
+			});
+			$( "#close-menu" ).click(function() {
+				$( ".main-nav-wrapper" ).toggleClass( "open" );
+			});
+			$( ".radio" ).click(function() {
+				$( "input:checked" ).parent( ".radio" ).toggleClass( "active" );
+			});
+		});
+	</script>
+
+</head>
+
+<body class="demographics">
+
+	<a id="open-menu" class="main-nav-control open" href="#">Menu</a>
+
+	<div class="main-nav-wrapper">
+
+		<a id="close-menu"  class="main-nav-control close" href="#">Close</a>
+
+		<h1 class="logo">WeDecide</h1>
+
+		<ul class="main-nav">
+		</ul>
+
+	</div><!-- /mainNav -->
+
+				<h1 class="demographics-intro" align="center">Demographic Information</h1>
+
+				<div class="demographic-questions">
+					<p class="form-field">
+						<label for="pname">Name</label>
+						<input type="text" width="50" class="demegraphic-name" id="name" value="Jane Q. Smith">
+					</p>
+
+					<p class="form-field">
+						<label for="age">Age</label>
+						<input type="number" class="demographic-age" id="age" value="30">
+					</p>
+
+					<p class="form-field">
+						<label for="gender">Gender</label>
+							<select class="deomgraphic-sex" id="gender">
+								<option>Female</option>
+								<option>Male</option>
+								<option>Other</option>
+								<option>Do not want to report</option>
+							</select>
+					</p>
+					<p class="form-field">
+						<label for="comorbidities">Comorbidities</label><br>
+						<input type="text" size="50" class="demographic-comorbidities" id="comorbidities">
+						</input>
+					</p>
+					<p class="form-field">
+						<label for="audiometery">Audiometery</label><br>
+						<input type="text" size="50" class="demographic-audiometery" id="audiometery">
+						</input>
+					</p>
+
+				</div>
+
+
+				<div class="footer">
+					<button class="continue-btn" onclick="mystoreDemographics();">Continue</button>
+					<!--<a class="continue-btn" href="">Continue</a>-->
+				</div>
+
+				<script>
+				function mystoreDemographics() {
+					if (!CREATE_NEW_RESPONSE) {
+						//No need to create a new response, nothing to do
+						window.location.href = "walk1.html";
+					} else {
+						//We need to store a new one
+						storeDemographics();
+					}
+				}
+				let CREATE_NEW_RESPONSE = true;
+				if (hasResponseKeyFromURL()) {
+					console.log("Tryign to insert resposne");
+					//Sent new response to use, do not need to create
+					CREATE_NEW_RESPONSE = false;
+					//Set that as our current response
+					setResponseKeyFromURL();
+					//Load data
+					var responseData = getCurrentResponseValues();
+					//Set inputs with this data
+
+					for (var field in responseData) {
+						document.getElementById(field).value = responseData[field];
+						document.getElementById(field).disabled = true;
+					}
+				}
+				insertNAVIntoHTML()
+				</script>
+</body>
+
+</html>
