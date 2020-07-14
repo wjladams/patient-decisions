@@ -28,19 +28,6 @@
 	<![endif]-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		$( document ).ready(function() {
-			$( "#open-menu" ).click(function() {
-				$( ".main-nav-wrapper" ).toggleClass( "open" );
-			});
-			$( "#close-menu" ).click(function() {
-				$( ".main-nav-wrapper" ).toggleClass( "open" );
-			});
-			$( ".radio" ).click(function() {
-				$( "input:checked" ).parent( ".radio" ).toggleClass( "active" );
-			});
-		});
-	</script>
   <script src="ahp.js"></script>
   <!-- <script src="thyroid_model.js"></script> -->
 	<script src="config.js"></script>
@@ -48,23 +35,11 @@
 
 </head>
 
-<body class="pairwise">
-
-	<a id="open-menu" class="main-nav-control open" href="#">Menu</a>
+<body class="pairwise" onunload="confirmUnload()">
 
 	<div class="main-nav-wrapper">
 
-		<a id="close-menu"  class="main-nav-control close" href="#">Close</a>
-
 		<h1 class="logo">WeDecide</h1>
-
-		<ul class="main-nav">
-			<li><a href="">Intro</a></li>
-			<li><a href="">Treatment Options</a></li>
-			<li><a href="">Healthcare Criteria</a></li>
-			<li><a href="">Compare Criteria</a></li>
-			<li><a href="">Summary</a></li>
-		</ul>
 
 	</div><!-- /mainNav -->
 			<div class="container">
@@ -78,10 +53,10 @@
 	          <p><strong>Least Aligned:</strong> <span class="results3">Unknown</span></p>
 					</div>
 				</div>
-
-				<div class="footer">
-          <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
-	        <button class="continue-btn" disabled onclick="window.location.href=NEXT_PAGE;">Next</button>
+				<div class="wrapper results-text">
+				</div>
+				<div class="footer results-text">
+					Please return the tablet to the front desk.
 	      </div>
 			</div>
 
@@ -115,6 +90,11 @@
           let NEXT_PAGE = "results.html"
         insertResponsesIntoHTML();
         </script>
+				<script>
+				window.onbeforeunload = function(e) {
+				    return 'Please press the Logout button to logout.';
+				};
+				</script>
 
 </body>
 

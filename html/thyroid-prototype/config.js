@@ -247,6 +247,8 @@ var AHP_MODEL_JSON = {
 
 var AHP_MODEL = AHPTreeNode.fromJSONObject(AHP_MODEL_JSON)
 
+var RESULTS_END_TEXT = "Please return the tablet to the front desk"
+
 ////////////////////////////////////////////////////////////////////
 //// End of the AHP Model definition section                  //////
 ////////////////////////////////////////////////////////////////////
