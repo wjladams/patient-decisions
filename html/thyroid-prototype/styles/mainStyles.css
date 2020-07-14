@@ -400,7 +400,12 @@ strong {
 }
 
 .results-text {
+  font: 500 1rem/1.45 museosans;
   font-size: 1.5rem;
+  text-align: center;
+  height: auto;
+  border: none;
+  font:
 }
 
 .pairwise-results-values p strong {
@@ -451,5 +456,14 @@ strong {
     padding-bottom: 20px;
     padding-top: 20px;
 }
+
+.wrapper-noborder {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  /* border: 2px solid #EAF2F3; */
+  border-radius: 8px;
+}
+
 
 /*# sourceMappingURL=mainStyles.css.map */
