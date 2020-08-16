@@ -45,6 +45,10 @@ function getResponseValues(responseId) {
   return JSON.parse(localStorage.getItem(responseId))
 }
 
+function removeResponse(responseId) {
+  localStorage.removeItem(responseId)
+}
+
 function getNameOfCurrentRespondent() {
   let currentValues = getCurrentResponseValues();
   //alert(currentValues['name']);

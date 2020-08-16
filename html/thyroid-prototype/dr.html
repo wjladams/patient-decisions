@@ -84,9 +84,11 @@
       //Add Choices link
       newBody += "<a class=\"dr-link\" href=\"choice.html?responseKey="+responseKey+"\">Ultimate Choices</a>, ";
       //Add Notes link
-      newBody += "<a class=\"dr-link\" href=\"notes.html?responseKey="+responseKey+"\">Physician Notes</a>";
+      newBody += "<a class=\"dr-link\" href=\"notes.html?responseKey="+responseKey+"\">Physician Notes</a>, ";
+      newBody += "<a class=\"dr-link\" href=\"javascript:removeResponse('"+responseKey+"');location.reload();\">Delete</button>";
       newBody += "</td></tr>\n";
     }
+
     document.getElementById("tabledata").innerHTML=newBody;
     </script>
     <script>
