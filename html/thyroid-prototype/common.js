@@ -41,8 +41,8 @@ function getCurrentResponseValues() {
   }
 }
 
-function getResponseValues(key) {
-  return JSON.parse(localStorage.getItem(key))
+function getResponseValues(responseId) {
+  return JSON.parse(localStorage.getItem(responseId))
 }
 
 function getNameOfCurrentRespondent() {
@@ -109,6 +109,13 @@ function getResponseValue(keyName) {
   return responses[keyName];
 }
 
+function getResponseValueWithResponseId(responseId, keyName) {
+  let responses = getResponseValues(responseId);
+  return responses[keyName];
+}
+
+
+
 function getResponseAHPModelOld() {
   var ahpjsonString = getResponseValue("ahpmodel");
   var ahpjson;
@@ -124,6 +131,18 @@ function getResponseAHPModelOld() {
 function getResponseAHPModel() {
   var ahpmodel = AHP_MODEL;
   var votesjsonString = getResponseValue("ahpvotes");
+  if (votesjsonString == null) {
+    //No votes yet, do nothing
+  } else {
+    votesDictionary = JSON.parse(votesjsonString);
+    setAHPModelAllSymbolicPairwise(ahpmodel, votesDictionary)
+  }
+  return ahpmodel
+}
+
+function getResponseAHPModelWithResponseId(responseKey) {
+  var ahpmodel = AHP_MODEL;
+  var votesjsonString = getResponseValueWithResponseId(responseKey, "ahpvotes");
   if (votesjsonString == null) {
     //No votes yet, do nothing
   } else {

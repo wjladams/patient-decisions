@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
 
     <link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+    <script src="ahp.js"></script>
     <script src="config.js"></script>
     <script src="common.js"></script>
     <script src="https://unpkg.com/papaparse@5.1.1/papaparse.min.js"></script>
@@ -100,6 +101,12 @@
           if (dataKey != "ahpvotes") {
             //Non-votes data
             df.set(responseKey, dataKey, response[dataKey])
+          } else {
+            //This is the pairwise comparison for the user.  I need to use this
+            //to get the pairwise votes into this row, and the overall selection
+            //Additionally I should store the actual synthesized values.
+            var ahpModel = getResponseAHPModelWithResponseId(responseKey);
+            writeAHPModelToDF(ahpModel, df, responseKey)
           }
         }
       }
@@ -111,6 +118,66 @@
       var url = URL.createObjectURL(data)
       document.getElementById('download_link').href = url
       //alert(df.toCSV())
+    }
+
+    function writeAHPModelToDF(ahpModel, df, dfRow) {
+      var priorities = ahpModel.synthesize();
+      var alts = ahpModel.alts.slice(0);
+      var altsSorted = alts.slice(0);
+      var altScoresDict = {};
+      var nkids = ahpModel.nchildren()
+      //Get sorted alts
+      for(var i=0; i < alts.length; i++) {
+        altScoresDict[alts[i]] = priorities[i];
+      }
+      altsSorted.sort(function(a, b) {
+        var cmp = altScoresDict[b]-altScoresDict[a];
+        // alert("Comparing "+a+" to "+b+ " compare value = "+cmp)
+        return cmp
+      })
+      //end of getting sorted alts
+
+      //First write the pairwise comparisons and bottom level direct data
+      writeAHPModelPairwiseToDF(ahpModel, df, dfRow)
+      //Now write synthesized scores
+      for(let altIndex=0; altIndex < ahpModel.nalts(); altIndex++) {
+        let dfCol = "OverallScore["+alts[altIndex]+"]"
+        let value = priorities[altIndex]
+        df.set(dfRow, dfCol, value)
+      }
+      //Now write best, second and third
+      df.set(dfRow, "1st place alt", altsSorted[0])
+      df.set(dfRow, "2nd place alt", altsSorted[1])
+      df.set(dfRow, "3rd place alt", altsSorted[2])
+    }
+
+    function writeAHPModelPairwiseToDF(node, df, dfRow) {
+      //Writes the pairwise comparisons of this node and it's children
+      var wrtName = node.name
+      var nkids = node.nchildren()
+      for(let row=0; row < nkids; row++) {
+        let rowName = node.children[row].name
+        for(let col=(row+1); col < nkids; col++) {
+          let colName = node.children[col].name
+          let val = node.getPairwise(row, col)
+          let dfCol = rowName + " vs "+ colName + " wrt " + wrtName
+          df.set(dfRow, dfCol, val)
+        }
+      }
+      //Write all children of this one as well
+      if (nkids > 0) {
+        for (child of node.children) {
+          writeAHPModelPairwiseToDF(child, df, dfRow)
+        }
+      } else {
+        //Bottom level, need to write the direct data
+        for (let altIndex=0; altIndex < node.nalts(); altIndex++) {
+          let directData = node.direct_data[altIndex];
+          let altName = node.alts[altIndex]
+          let dfCol = altName + " wrt " + wrtName
+          df.set(dfRow, dfCol, directData)
+        }
+      }
     }
     setupDownload()
     </script>
