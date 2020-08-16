@@ -67,6 +67,10 @@
           rval.push(key)
         }
       }
+      //Let's sort them all
+      getInt = (a) => {var pieces=a.split("-"); return pieces[pieces.length-1]}
+      cmp = (a,b) => {var intA=getInt(a); var intB=getInt(b); return intB-intA;}
+      rval.sort(cmp)
       return rval;
     }
 
