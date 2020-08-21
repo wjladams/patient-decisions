@@ -21,6 +21,7 @@
   	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
 
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="config.js"></script>
   	<script src="common.js"></script>
 
@@ -28,21 +29,20 @@
   <body>
 
     <div class="container">
-      <h1>Welcome <span class="participantName"></span> </h1>
-
+      <h1>Risk Factors Info for <span class="participantName"></span> </h1>
       <div class="wrapper">
+        <h2>Are there any factors that increase my risk of developing otosclerosis?</h2>
 
-        <h2>We will do 3 things together today</h2>
-        <ol>
-            <li> Provide you with useful information about <i>Otosclerosis</i> and options for treatment</li>
-            <li>Ask some questions about which medical goals are most important to you</li>
-            <li>Provide you insight into the medical options for <i>Otosclerosis</i> that best meet your goals</li>
-        </ol>
+        People are at increased risk of otosclerosis include:
+        <ul>
+          <li> Individuals who have first degree family member (e.g. parents, siblings) has the condition
+          <li> The condition tends to deteriorate during periods of hormonal change like puberty or pregnancy
+        </ul>
+
       </div>
-
       <div class="footer">
         <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
-        <span class="step-indicator">Step 1 / 13 of Information</span>
+        <span class="step-indicator">Step 3 / 13 of Information</span>
         <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
       </div>
 
@@ -56,11 +56,10 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script>
-    var PREVIOUS_PAGE = "demographics.html";
-    var NEXT_PAGE = "walk2.html";
+    var PREVIOUS_PAGE = "walk2.html";
+    var NEXT_PAGE = "walk4.html";
     insertResponsesIntoHTML();
     </script>
   </body>
