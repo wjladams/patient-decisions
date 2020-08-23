@@ -167,80 +167,144 @@ function getResponseMolecularTestName() {
 ////////////////////////////////////////////////////////////////////
 
 var AHP_MODEL_JSON = {
-  "name" : "Thyroid Cancer Model",
-  "description" : "Our first attempt at the Thyroid Cancer Model.",
-  "alts" : ["Observation", "Hemi-Thyroidectomy", "Total Thyroidectomy"],
-  "alt_descriptions" : ["Remain vigilant", "Better explanation", "Remove all of the thyroid"],
+  "name" : "Otosclerosis Model",
+  "description" : "Version 4.1 of the Otosclerosis Model.",
+  "alts" : ["Watchful Waiting", "Hearing Aid", "Surgery"],
+  "alt_descriptions" : ["Remain vigilant", "Hearing aid", "Surgery of inner ear"],
   "children": [
       {
-        "name": "Not Knowing if I Have Cancer",
+        "name": "Hearing Improvement",
         "id" : 0,
-        "description": "Making Sure I Know if I Have Cancer",
-        "alt_scores": [0, 0.8, 1.0]
+        "description": "How concerned am I about hearing improvement?",
+        "alt_scores": [0, 0.5, 1.0]
       },
       {
-        "name" : "Having Surgery",
+        "name" : "Risks",
         "id" : 1,
         "description" : "Concerns About Having Surgery",
         "children" : [
           {
-            "name": "Having a Scar",
+            "name": "Possible permanent hearing risks",
             "id": 2,
-            "description" : "The different options have differing scarring effects.",
-            "alt_scores" : [1.0, 0.2, 0.1]
+            "description": "Complications that could occur depending on the chosen path.",
+            "children":
+            [
+              {
+                "name": "Possible complete loss of hearing on side of surgery",
+                "description": "1 in 200 chance of complete hearing loss on surgerical side.",
+                "id":3,
+                "alt_scores": [1.0, 1.0, 0]
+              },
+              {
+                "name": "Possible hearing distortion",
+                "description": "",
+                "id":4,
+                "alt_scores": [1.0, 0.0, 1.0]
+              }
+            ],
+            "pairwise" : [
+              [1, 0],
+              [0, 1]
+            ]
           },
           {
-            "name": "Potential Low Calcium",
-            "id":3,
-            "description" : "Some options could require you to take a calcium supplement.",
-            "alt_scores" : [1.0, 0.3, 0.1]
+            "name": "Possible temporary health risks",
+            "id": 5,
+            "description": "Possible temporary side effects",
+            "children":
+            [
+              {
+                "name": "Possible temporary loss of taste (1 in 5 chance)",
+                "description": "",
+                "id":6,
+                "alt_scores":[1.0, 1.0, 0.0]
+              },
+              {
+                "name": "Possible anesthetic issues",
+                "description":"",
+                "id":7,
+                "alt_scores": [1.0, 1.0, 0.0]
+              }
+            ],
+            "pairwise" : [
+              [1, 0],
+              [0, 1]
+            ]
           },
           {
-            "name": "Voice Complications",
-            "id": 4,
-            "description" : "Some options could effect your voice.",
-            "alt_scores" : [1.0, 0.2, 0.1]
-          },
-          {
-            "name": "Need for Thyroid Supplemenatation",
-            "id":5,
-            "description" : "Some options may require lifelong thyroid medication.",
-            "alt_scores" : [1.0, 0.9, 0.5]
-          },
-          {
-            "name": "Recovery from Surgery",
-            "id":6,
-            "description" : "Some options have longer recovery times.",
-            "alt_scores" : [1.0, 0.9, 0.5]
-          },
+            "name":"Possible permanent health issues",
+            "id":8,
+            "description":"",
+            "children":
+            [
+              {
+                "name": "Increase chance of ear infections",
+                "id":9,
+                "description":"",
+                "alt_scores":[1.0, 0.0, 1.0]
+              },
+              {
+                "name": "Possible loss of balance (1 in 200 chance)",
+                "description":"",
+                "id":10,
+                "alt_scores":[1.0, 1.0, 0.0]
+              }
+            ],
+            "pairwise" : [
+              [1, 0],
+              [0, 1]
+            ]
+          }
         ],
         "pairwise" : [
-          [1, 0, 0, 0, 0],
-          [0, 1, 0, 0, 0],
-          [0, 0, 1, 0, 0],
-          [0, 0, 0, 1, 0],
-          [0, 0, 0, 0, 1]
+          [1, 0, 0],
+          [0, 1, 0],
+          [0, 0, 1]
+        ]
+      },
+      {
+        "name": "Inconvenience",
+        "id":11,
+        "description":"These are not health risks.  They are things that could bother you in the short or long term.",
+        "children":
+        [
+          {
+            "name": "Short term inconvenience",
+            "id":12,
+            "description":"These are inconveniences that last for last than a month, without long term impacts.",
+            "alt_scores":[1.0, 0.7, 0.1],
+          },
+          {
+            "name": "Long term inconveniences",
+            "id":13,
+            "description":"These are inconveniences that last longer than a month.",
+            "alt_scores":[0.4, 0.1, 1.0]
+          }
+        ],
+        "pairwise" : [
+          [1, 0],
+          [0, 1]
         ]
       }
-  ],
+    ],
 
-  "pairwise": [
-    [1, 0],
-    [0, 1],
-  ],
+    "pairwise": [
+      [1, 0, 0],
+      [0, 1, 0],
+      [0, 0, 1]
+    ],
 
   "pairwiseOrderByIds": [
-    [2, 3],
-    [3, 4],
-    [4, 5],
-    [5, 6],
-    [2, 4],
+    [0, 1],
+    [1, 11],
+    [0, 11],
     [2, 5],
-    [2, 6],
-    [3, 5],
-    [3, 6],
-    [4, 6],
-    [0, 1]
+    [5, 8],
+    [2, 8],
+    [3, 4],
+    [6, 7],
+    [9, 10],
+    [12, 13]
   ]
 
 }
