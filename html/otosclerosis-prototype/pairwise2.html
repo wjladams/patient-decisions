@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta name="robots" content="nofollow" />
+
+	<meta charset="utf-8" />
+
+	<!-- allows the content to be zoomed in automatic on the iphone -->
+	<meta name="viewport" content="width=device-width" />
+
+	<meta name="viewport" content="width=device-width, minimal-ui" />
+
+
+	<meta name="description" content="" />
+
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="scripts/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="ahp.js"></script>
+	<!-- <script src="thyroid_model.js"></script> -->
+	<script src="config.js"></script>
+	<script src="common.js"></script>
+
+</head>
+
+<body class="pairwise">
+
+
+				<h1 class="pairwise-question">Which are you more concerned about?</h1>
+
+				<div class="pairwise-answers">
+					<p class="pairwise-answer left"><span class="pwRowName">abc</span>
+						<br>
+							<a href="#" id="rowdesc" class="pairwise-description"
+							data-toggle="popover"
+							data-placement="bottom"
+							data-content="Some content inside the popover.  However this popover is quite long winded.">More information</a>
+					</p>
+					<p class="pairwise-answer or">or</p>
+					<p class="pairwise-answer right"><span class="pwColName">cde</span>
+						<br>
+						<a href="#" id="coldesc" class="pairwise-description"
+							data-toggle="popover"
+							data-placement="bottom"
+							data-content="Some content inside the popover.  However this popover is quite long winded.">More information
+						</a>
+					</p>
+
+				</div>
+
+				<div class="pairwise-inputs">
+					<label class="radio">
+					  <input id="radio1" name="vote" type="radio" onclick="storeVote(2);">
+					  <div class="control-indicator"></div>
+					  <i>Knowing if I have cancer is</i> <b>Much More Concerning</b>
+					</label>
+					<label class="control radio">
+					  <input id="radio2" name="vote" type="radio" onclick="storeVote(1);">
+					  <div class="control-indicator"></div>
+					  <i>Knowing if I have cancer is</i> <b>More Concerning</b>
+					</label>
+					<label class="control radio">
+					  <input id="radio3" name="vote" type="radio" onclick="storeVote(0);">
+					  <div class="control-indicator"></div>
+					  They're Equal
+					</label>
+					<label class="control radio">
+					  <input id="radio4" name="vote" type="radio" onclick="storeVote(-1);">
+					  <div class="control-indicator"></div>
+					  <i>Not having a scar on my neck is</i> <b>More Concerning</b>
+					</label>
+					<label class="control radio">
+					  <input id="radio5" name="vote" type="radio" onclick="storeVote(-2);">
+					  <div class="control-indicator"></div>
+					  <i>Not having a scar on my neck is</i> <b>Much More Concerning</b>
+					</label>
+				</div>
+
+				<div class="footer">
+	        <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
+					<span class="step-indicator" id="step"></span>
+	        <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
+	        <!--<a class="continue-btn" href="">Continue</a>-->
+	      </div>
+				<script>
+				//Checks for responseKey if given
+				setResponseKeyFromURL();
+				</script>
+				<!-- This script gets the current position and sets next position and prev-->
+				<script>
+					let numberOfCompares = AHP_MODEL.pairwiseOrderByIds.length;
+					let url = new URL(window.location.href)
+					var CURRENT_PW_POSITION = url.searchParams.get("currentPosition")
+					//alert("Current position='"+CURRENT_PW_POSITION+"'")
+					if (CURRENT_PW_POSITION == null) {
+						CURRENT_PW_POSITION = 0
+					} else {
+						CURRENT_PW_POSITION = parseInt(CURRENT_PW_POSITION)
+						if (CURRENT_PW_POSITION < 0) {
+							//This means we want to go to the end
+							CURRENT_PW_POSITION = numberOfCompares - 1
+						}
+					}
+					var NEXT_PW_POSITION = CURRENT_PW_POSITION + 1
+					var PREV_PW_POSITION = CURRENT_PW_POSITION - 1
+					var NEXT_PAGE = "?currentPosition="+NEXT_PW_POSITION
+					//What if we go past the end?
+					if (NEXT_PW_POSITION >= numberOfCompares) {
+						NEXT_PAGE="results.html";
+					}
+					var PREVIOUS_PAGE = "?currentPosition="+PREV_PW_POSITION
+					//What if we go before the beginning?
+					if (PREV_PW_POSITION < 0) {
+						PREVIOUS_PAGE = "walk-last.html"
+					}
+
+					//Update the step data
+					document.getElementById("step").innerHTML = "Step "+(CURRENT_PW_POSITION + 1)+" / "+numberOfCompares+" of Data";
+				</script>
+				<!-- This script gets row and column names and inserts-->
+				<script>
+					let currentPairwiseInfo = AHP_MODEL.pairwiseOrderByIds[CURRENT_PW_POSITION];
+					let ROW_ID = currentPairwiseInfo[0];
+					let COL_ID = currentPairwiseInfo[1];
+					let rowNodeName = AHP_MODEL.getChildWithId(ROW_ID).name;
+					let colNodeName = AHP_MODEL.getChildWithId(COL_ID).name;
+					insertStringIntoClass("pwRowName", rowNodeName);
+					insertStringIntoClass("pwColName", colNodeName);
+				</script>
+				<!-- This is the script to store votes-->
+				<script>
+				function storeVote(symbolicVote) {
+					var vote = convertIntegerSymbolicVote(symbolicVote);
+					var ahpModel = getResponseAHPModel();
+					ahpModel.pairwiseId(ROW_ID, COL_ID, vote)
+					setResponseAHPModel(ahpModel)
+				}
+				</script>
+				<!-- This script gets the last vote for this place and selects that radio button-->
+				<script>
+					var ahpModel = getResponseAHPModel();
+					var numVote = ahpModel.getPairwiseId(ROW_ID, COL_ID);
+					var intVote = convertNumericVoteToIntegerSymbolic(numVote);
+					if (intVote == null) {
+						//We have no vote, do nothing
+					} else {
+						//We have a vote, select the appropriate cell
+						var buttonId;
+						switch(intVote) {
+							case 2:
+								buttonId = "radio1";
+								break;
+							case 1:
+								buttonId = "radio2";
+								break;
+							case 0:
+								buttonId = "radio3";
+								break;
+							case -1:
+								buttonId = "radio4";
+								break;
+							case -2:
+								buttonId = "radio5";
+								break;
+							default:
+								console.log("Nothing to do with vote="+intVote)
+						}
+						document.getElementById(buttonId).checked=true
+					}
+
+					$('[data-toggle="popover"]').popover();
+					let rowNodeDesc = AHP_MODEL.getChildWithId(ROW_ID).description;
+					let colNodeDesc = AHP_MODEL.getChildWithId(COL_ID).description;
+					$( "#rowdesc" ).attr("data-content", rowNodeDesc)
+					$( "#coldesc" ).attr("data-content", colNodeDesc)
+
+
+				</script>
+
+
+</body>
+
+</html>
