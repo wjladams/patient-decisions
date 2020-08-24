@@ -304,6 +304,14 @@ strong {
   margin: 0 2rem;
   flex-basis: 300px;
 }
+
+.pairwise-description {
+  font: 500 1.0rem/1.0 museosans;
+  color: #173953;
+  margin: 0 2rem;
+  flex-basis: 300px;
+}
+
 .pairwise-answer.or {
   font-size: 1rem;
   color: #8B9CA9;
@@ -465,5 +473,18 @@ strong {
   border-radius: 8px;
 }
 
+.popover {
+  width: 325px;
+  opacity: 1.0;
+  background-color: inherit;
+  border-style:groove;
+  border-width:4px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  word-wrap: break-word;
+  text-align: left;
+  white-space: pre-line;
+}
 
 /*# sourceMappingURL=mainStyles.css.map */
