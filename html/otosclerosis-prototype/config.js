@@ -175,28 +175,28 @@ var AHP_MODEL_JSON = {
       {
         "name": "Hearing Improvement",
         "id" : 0,
-        "description": "How concerned am I about hearing improvement?",
+        "description": "",
         "alt_scores": [0, 0.5, 1.0]
       },
       {
-        "name" : "Risks",
+        "name" : "Risks to Overall Health and Hearing",
         "id" : 1,
-        "description" : "Concerns About Having Surgery",
+        "description" : "both temporary and permanent risks to health.",
         "children" : [
           {
-            "name": "Possible permanent hearing risks",
+            "name": "Hearing Risks",
             "id": 2,
-            "description": "Complications that could occur depending on the chosen path.",
+            "description": "hearing loss (1 in 200 chance) or hearing distortion",
             "children":
             [
               {
-                "name": "Possible complete loss of hearing on side of surgery",
+                "name": "Loss of hearing on side of surgery <br>(1 in 200 chance)",
                 "description": "1 in 200 chance of complete hearing loss on surgerical side.",
                 "id":3,
                 "alt_scores": [1.0, 1.0, 0]
               },
               {
-                "name": "Possible hearing distortion",
+                "name": "Hearing Distortion (???? in ????? chance)",
                 "description": "",
                 "id":4,
                 "alt_scores": [1.0, 0.0, 1.0]
@@ -208,19 +208,19 @@ var AHP_MODEL_JSON = {
             ]
           },
           {
-            "name": "Possible temporary health risks",
+            "name": "Temporary Health Risks",
             "id": 5,
-            "description": "Possible temporary side effects",
+            "description": "loss of taste (1 in 5 chance) or anesthetic issues",
             "children":
             [
               {
-                "name": "Possible temporary loss of taste (1 in 5 chance)",
+                "name": "Temporary Loss of Taste (1 in 5 chance)",
                 "description": "",
                 "id":6,
                 "alt_scores":[1.0, 1.0, 0.0]
               },
               {
-                "name": "Possible anesthetic issues",
+                "name": "Anesthetic Risks",
                 "description":"",
                 "id":7,
                 "alt_scores": [1.0, 1.0, 0.0]
@@ -232,19 +232,19 @@ var AHP_MODEL_JSON = {
             ]
           },
           {
-            "name":"Possible permanent health issues",
+            "name":"Permanent Health Risks",
             "id":8,
-            "description":"",
+            "description":"increase risk of ear infections or possible loss of balance (1 in 200 chance)",
             "children":
             [
               {
-                "name": "Increase chance of ear infections",
+                "name": "Increase Chance of Ear Infections",
                 "id":9,
                 "description":"",
                 "alt_scores":[1.0, 0.0, 1.0]
               },
               {
-                "name": "Possible loss of balance (1 in 200 chance)",
+                "name": "Loss of Balance (1 in 200 chance)",
                 "description":"",
                 "id":10,
                 "alt_scores":[1.0, 1.0, 0.0]
@@ -265,17 +265,17 @@ var AHP_MODEL_JSON = {
       {
         "name": "Inconvenience",
         "id":11,
-        "description":"These are not health risks.  They are things that could bother you in the short or long term.",
+        "description":"things that could bother you in the short or long term, but are not health risks.",
         "children":
         [
           {
-            "name": "Short term inconvenience",
+            "name": "Short Term Inconveniences (less than a month)",
             "id":12,
             "description":"These are inconveniences that last for last than a month, without long term impacts.",
             "alt_scores":[1.0, 0.7, 0.1],
           },
           {
-            "name": "Long term inconveniences",
+            "name": "Long Term Inconveniences (a month or longer)",
             "id":13,
             "description":"These are inconveniences that last longer than a month.",
             "alt_scores":[0.4, 0.1, 1.0]
