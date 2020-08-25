@@ -42,18 +42,12 @@
 
 				<div class="pairwise-answers">
 					<p class="pairwise-answer left"><span class="pwRowName">abc</span>
-							<a href="#" id="rowdesc"
-							data-toggle="popover"
-							data-placement="bottom"
-							data-content="Some content inside the popover.  However this popover is quite long winded.">...</a>
+						<span class="pairwise-description" id="rowdesc"></span>
+						</a>
 					</p>
 					<p class="pairwise-answer or">or</p>
 					<p class="pairwise-answer right"><span class="pwColName">cde</span>
-						<a href="#" id="coldesc"
-							data-toggle="popover"
-							data-placement="bottom"
-							data-content="Some content inside the popover.  However this popover is quite long winded.">...
-						</a>
+						<span class="pairwise-description" id="coldesc"></span>
 					</p>
 
 				</div>
@@ -181,8 +175,8 @@
 					$('[data-toggle="popover"]').popover();
 					let rowNodeDesc = AHP_MODEL.getChildWithId(ROW_ID).description;
 					let colNodeDesc = AHP_MODEL.getChildWithId(COL_ID).description;
-					$( "#rowdesc" ).attr("data-content", rowNodeDesc)
-					$( "#coldesc" ).attr("data-content", colNodeDesc)
+					$( "#rowdesc" ).text(rowNodeDesc)
+					$( "#coldesc" ).text(colNodeDesc)
 
 
 				</script>
