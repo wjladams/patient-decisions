@@ -340,4 +340,29 @@ class DF {
     return rval;
   }
 }
+
+function drawChance(canvas, chance, nRows, nCols, boxSize) {
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.strokeStyle = "black";
+  var sum=0;
+  var x=0;
+  canvas.width=nCols*boxSize
+  canvas.height=nRows*boxSize
+  for (let row=0; row < nRows; row++) {
+    y = row*boxSize
+    for(let col=0; col < nCols; col++) {
+      x = col*boxSize
+      if (sum < chance) {
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(x, y, boxSize, boxSize);
+      } else {
+        ctx.fillStyle = "#DDDDFF";
+        ctx.fillRect(x, y, boxSize, boxSize);
+      }
+      ctx.strokeRect(x, y, boxSize, boxSize);
+      sum += 1
+    }
+  }
+}
 var CURRENT_RESPONDENT_NAME = getNameOfCurrentRespondent();

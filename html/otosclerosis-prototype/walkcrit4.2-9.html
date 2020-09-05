@@ -22,6 +22,7 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="ahp.js"></script>
     <script src="config.js"></script>
   	<script src="common.js"></script>
 
@@ -29,20 +30,20 @@
   <body>
 
     <div class="container">
-      <h1>Risk Factors Info for <span class="participantName"></span> </h1>
+      <h1>Permanent Health Risks</h1>
       <div class="wrapper">
-        <h2>Are there any factors that increase my risk of developing otosclerosis?</h2>
-
-        People are at increased risk of otosclerosis include:
-        <ul>
-          <li> Individuals who have first degree family member (e.g. parents, siblings) has the condition
-          <li> The condition tends to deteriorate during periods of hormonal change like puberty or pregnancy
-        </ul>
-
+          <h2 class="subrisk">Loss of balance</h2>
+            <ul>
+              <li>For the surgery option, there is a chance of permanent loss of balance.</li>
+              <li>The chances of this are 1 in 200</li>
+              <li>This can be visualized as:<br>
+                  <canvas id="viz"></canvas>
+              </li>
+            </ul>
       </div>
       <div class="footer">
         <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
-        <span class="step-indicator">Step 3 / 17 of Information</span>
+        <span class="step-indicator">Step 16 / 17 of Information</span>
         <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
       </div>
 
@@ -57,9 +58,18 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/tether.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script> <!--Handling canvas pict-->
+      var canvas = document.getElementById("viz")
+      var afterCanvas = document.getElementById("vizAfter")
+      var nRows = 8
+      var nCols = 25
+      var chance = 1
+      var boxSize = 20
+      drawChance(canvas, chance, nRows, nCols, boxSize)
+    </script>
     <script>
-    var PREVIOUS_PAGE = "walk2.html";
-    var NEXT_PAGE = "walk4.html";
+    var PREVIOUS_PAGE = "walkcrit4.2-8.html";
+    var NEXT_PAGE = "walk17.html";
     insertResponsesIntoHTML();
     </script>
   </body>

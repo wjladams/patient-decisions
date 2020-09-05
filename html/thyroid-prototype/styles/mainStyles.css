@@ -487,4 +487,9 @@ strong {
   white-space: pre-line;
 }
 
+.riskTable {
+  text-align: center;
+  border-spacing: 15px 1rem; 
+}
+
 /*# sourceMappingURL=mainStyles.css.map */

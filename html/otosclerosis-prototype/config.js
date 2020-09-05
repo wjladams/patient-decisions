@@ -13,15 +13,7 @@ function insertResponsesIntoHTML() {
   names.  Uses the fucntion insertResponseIntoClass() to do the actual work.
   */
   insertResponseIntoClass('participantName', 'name');
-  insertResponseIntoClass('bethesdaScore', 'bethesda');
-  let responses = getCurrentResponseValues();
-  let bethesda = responses['bethesda'];
-  insertStringIntoClass('bethesdaScoreRiskRange', BETHESDA_CANCER_RISK_TEXT[bethesda]);
-  let molecularTestName = getResponseMolecularTestName();
-  molecularTestName = capitalizeFirstLetter(molecularTestName);
-  insertStringIntoClass('molecularTestName', molecularTestName);
-  let adjustedCancerRisk = getResponseAdjustCancerRisk();
-  insertStringIntoClass('adjustedCancerRisk', adjustedCancerRisk);
+  insertStringIntoClass('numberOfSteps', NUMBER_OF_WALKTHROUGH_STEPS)
 }
 
 ////////////////////////////////////////////////////
@@ -309,6 +301,7 @@ var AHP_MODEL_JSON = {
 
 }
 
+var NUMBER_OF_WALKTHROUGH_STEPS=17
 var AHP_MODEL = AHPTreeNode.fromJSONObject(AHP_MODEL_JSON)
 
 ////////////////////////////////////////////////////////////////////
