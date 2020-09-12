@@ -11,3 +11,4 @@
 .externalNativeBuild
 .idea
 node_modules
+.ipynb_checkpoints
