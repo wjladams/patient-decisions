@@ -15,4 +15,4 @@ The following are some external resources that we have created to help with work
 
 ## Paticipants in this research project
 
-* Dr. Bill Adams <a href="https://linkedin.com/in/wjladams ">Linked In Profile</a>, <a href="https://github.com/wjladams">Github Profile</a>
+* Dr. Bill Adams <a href="https://linkedin.com/in/wjladams ">on LinkedIn</a>, <a href="https://github.com/wjladams">on Github</a>
