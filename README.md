@@ -15,4 +15,9 @@ The following are some external resources that we have created to help with work
 
 ## Paticipants in this research project
 
-* Dr. Bill Adams <a href="https://linkedin.com/in/wjladams ">on LinkedIn</a>, <a href="https://github.com/wjladams">on Github</a>
+* Dr. Bill Adams <a href="https://linkedin.com/in/wjladams ">on LinkedIn</a>, <a href="https://github.com/wjladams">on Github</a>: performed the following roles
+  * Main developer of the web applications for the Thyroid Cancer and Otosclerosis use case.
+  * Mathematician designing new calculations required.
+  * Helped to design the AHP model that powers the decision for both the Thyroid Cancer and Otosclerosis models.
+  * Setup and maintains the github source code repository.
+  
