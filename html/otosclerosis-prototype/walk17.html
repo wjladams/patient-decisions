@@ -14,40 +14,49 @@
 
   	<meta name="description" content="" />
 
-    <title>Otosclerosis Information</title>
+    <title></title>
 
   	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
 
   	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="config.js"></script>
-  	<script src="common.js"></script>
-
   </head>
+
   <body>
 
     <div class="container">
-      <h1>Next is the Questionnaire</h1>
+      <h1>Trade-off considerations for <span class="participantName"></span></h1>
+
       <div class="wrapper">
-        <ul>
-          <li>We will now ask you some questions about this goals and concerns.</li>
-          <li><span class="participantName"></span>, your answers help us find the
-            treatment option that best aligns to your goals and concerns.
-          </li>
-        </ul>
+        <h2>We now consider the trade-offs associated with your choice between:</h2>
+          <ul><li>Watchful Waiting
+            <li>Hearing aid
+            <li>Surgery
+          </ul>
+
+        <div class="criteriaTreeHtml">
+        </div>
+        <!-- <ol class="priorities" id="slippylist" tabindex="0" aria-role="listbox">
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Making sure I know if I have cancer</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Not having a scar</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">The possible need to take medication forever</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Whatever my doctor thinks I should do</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Not having surgery if I don't have to</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Risk to my voice</li>
+            <li draggable="true" class="sortable-bulk" aria-role="option" tabindex="-1">Concern related to other health problems</li>
+        </ol> -->
+        <h2 class="strongpurp">You can help us guide your care by telling us which considerations matter most to you
+        </h2>
       </div>
-      <div class="wrapper">
-        <h2> Let's get started!</h2>
-      </div>
+
       <div class="footer">
         <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
         <span class="step-indicator">Step 17 / 17 of Information</span>
         <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
+        <!--<a class="continue-btn" href="">Continue</a>-->
       </div>
-
-
     </div><!-- /.container -->
 
 
@@ -57,11 +66,18 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/tether.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="ahp.js"></script>
+    <!-- <script src="thyroid_model.js"></script> -->
+    <script src="common.js"></script>
     <script>
-    var PREVIOUS_PAGE = "walk4.2-9.html";
+    var PREVIOUS_PAGE = "walkcrit4.2-9.html";
     var NEXT_PAGE = "pairwise.html";
+    var ahpModel = getResponseAHPModel();
+    var critTree = ahpModel.getCriteriaTreeHtml();
+    //alert(critTree)
     insertResponsesIntoHTML();
+    insertStringIntoClass("criteriaTreeHtml", critTree)
     </script>
   </body>
 </html>

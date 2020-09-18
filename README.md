@@ -3,8 +3,7 @@
 This tablet based application aims to aid patient's make informed decisions about crucial health care choices.
 
 * [Thyroid-Prototype](html/thyroid-prototype/demographics.html) The prototype for Thyroid Cancer.
-
-* [react-native-app](react-native-app): The actual application source code, includes documentation to get started
+* [Otosclerosis-Prototype](html/otosclerosis/index.html) The prototype for Otosclerosis.
 * [storyboard](storyboard): The storyboard for the application, and extra details around any specific workflows that come up
 
 
@@ -15,3 +14,5 @@ The following are some external resources that we have created to help with work
 * [Dr. Natalie Justicz Initial Presentation](https://justicz.github.io/natalie-presentation/)
 
 ## Paticipants in this research project
+
+* Dr. Bill Adams <a href="https://linkedin.com/in/wjladams ">Linked In Profile</a>, <a href="https://github.com/wjladams">Github Profile</a>
