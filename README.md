@@ -13,7 +13,7 @@ The following are some external resources that we have created to help with work
 * [Initial Designs for Screens and Workflow in A Google Doc](https://docs.google.com/document/d/1hk7hpidpw1jSYNCgQQt_G5vujk6L_KFmTbhT0Pe3C5Q/edit?usp=sharing)
 * [Dr. Natalie Justicz Initial Presentation](https://justicz.github.io/natalie-presentation/)
 
-## Paticipants in this research project
+## Participants in this research project
 
 * Dr. Bill Adams <a href="https://linkedin.com/in/wjladams ">on LinkedIn</a>, <a href="https://github.com/wjladams">on Github</a>: performed the following roles
   * Main developer of the web applications for the Thyroid Cancer and Otosclerosis use case.
