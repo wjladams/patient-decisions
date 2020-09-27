@@ -3,7 +3,7 @@
 This tablet based application aims to aid patient's make informed decisions about crucial health care choices.
 
 * [Thyroid-Prototype](html/thyroid-prototype/demographics.html) The prototype for Thyroid Cancer.
-* [Otosclerosis-Prototype](html/otosclerosis/index.html) The prototype for Otosclerosis.
+* [Otosclerosis-Prototype](otosclerosis/demographics.html) The prototype for Otosclerosis.
 * [storyboard](storyboard): The storyboard for the application, and extra details around any specific workflows that come up
 
 
