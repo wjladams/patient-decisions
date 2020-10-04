@@ -612,6 +612,34 @@ class AHPTreeNode extends Prioritizer {
       return this.direct_data
   }
 
+  childWeights(parentWeight=1, bottomOnly=true, currentDict=null) {
+    if (currentDict==null) {
+      currentDict = {}
+    }
+    if (this.children.length == 0) {
+        //No children so this node has nothing to contribute
+        return currentDict
+    }
+    //Now let's synthesize each child
+    let childScores = this.childPrioritizer.priority()
+    let childNames = this.childrenNames()
+    for(let i=0; i < this.children.length; i++) {
+      let score = parentWeight*childScores[i]
+      if (!bottomOnly) {
+        //We want all scores in this list
+        currentDict[childNames[i]]=score
+      } else {
+        //We only want to add for bottom level ones
+        if (this.children[i].children.length == 0) {
+          currentDict[childNames[i]]=score
+        }
+      }
+      //Handle the recursion
+      this.children[i].childWeights(score, bottomOnly, currentDict)
+    }
+    return currentDict
+  }
+
   getSensitivityWeights() {
     if ((this.sensitivity_weights == null) ||
       (this.children.length != this.sensitivity_weights.length)

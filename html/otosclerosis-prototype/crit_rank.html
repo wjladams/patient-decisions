@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- THIS MUST BE DELETED WHEN SITE GOES LIVE!!!!!!!! -->
+	<meta name="robots" content="nofollow" />
+
+	<meta charset="utf-8" />
+
+	<!-- allows the content to be zoomed in automatic on the iphone -->
+	<meta name="viewport" content="width=device-width" />
+
+	<meta name="viewport" content="width=device-width, minimal-ui" />
+
+
+	<meta name="description" content="" />
+
+	<title>Healt care goals</title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="scripts/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="ahp.js"></script>
+  <!-- <script src="thyroid_model.js"></script> -->
+	<script src="config.js"></script>
+  <script src="common.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body class="pairwise" onunload="confirmUnload()">
+
+	<div class="main-nav-wrapper">
+
+		<h1 class="logo">WeDecide</h1>
+
+	</div><!-- /mainNav -->
+			<div class="container">
+				<h1 class="pairwise-results-title">Most important health care goals</h1>
+
+				<div class="wrapper">
+					<p class="pairwise-results-text"><b class="participantName"></b>, based on
+            your answers to our questions, the <b>healthcare goals</b> that most
+            influenced the choice of <b class="results1">Unknown</b> are
+            shown in the figure below.
+            </p>
+	        <div class="pairwise-results-values">
+	          <p><strong>Best Aligned:</strong> <span class="results1">Unknown</span></p>
+					</div>
+            <div id="theChart" style="width:700px;height:350px;"></div>
+				</div>
+				<div class="wrapper-noborder results-text">
+				</div>
+        <div class="footer">
+          <button class="continue-btn" onclick="goBack();">Previous</button>
+          <button class="continue-btn" onclick="window.location.href='dr.html';">Return to Physican Page</button>
+        </div>
+			</div>
+
+			<script>
+			//Checks for responseKey if given
+			setResponseKeyFromURL();
+			</script>
+        <script>
+          var ahpModel = getResponseAHPModel();
+          var priorities = ahpModel.synthesize();
+          var alts = ahpModel.alts.slice(0);
+          var altsSorted = alts.slice(0);
+          var altScoresDict = {};
+          for(var i=0; i < alts.length; i++) {
+            altScoresDict[alts[i]] = priorities[i];
+          }
+          altsSorted.sort(function(a, b) {
+            var cmp = altScoresDict[b]-altScoresDict[a];
+            // alert("Comparing "+a+" to "+b+ " compare value = "+cmp)
+            return cmp
+          })
+          console.log(priorities+" altsOrig="+alts+" sorted="+altsSorted);
+          //Now let's insert
+          insertStringIntoClass("results1", altsSorted[0]);
+          insertStringIntoClass("results2", altsSorted[1]);
+          insertStringIntoClass("results3", altsSorted[2]);
+          let all_crit_scores = ahpModel.childWeights(bottomOnly=false);
+          let crit_scores = ahpModel.childWeights(bottomOnly=true);
+          vNormalize(crit_scores)
+          console.log(all_crit_scores);
+          console.log(crit_scores);
+          //let theChart=document.getElementById('theChart');
+          let values = Object.values(crit_scores)
+          let labels = Object.keys(crit_scores)
+          var data = [{
+            values: values,
+            labels: labels,
+            type: 'pie',
+            hoverinfo: 'label+percent',
+            title: 'Healthcare goals influence on the decision'
+          }];
+          var layout = {
+            height: 350,
+            width: 700
+          };
+          Plotly.newPlot('theChart', data, layout, {displayModeBar: false})
+        </script>
+
+        <script>
+          let PREVIOUS_PAGE = "pairwise.html?currentPosition=-1"
+          let NEXT_PAGE = "results.html"
+        insertResponsesIntoHTML();
+        </script>
+				<script>
+				window.onbeforeunload = function(e) {
+				    return 'Please press the Logout button to logout.';
+				};
+				</script>
+
+</body>
+
+</html>

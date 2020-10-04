@@ -79,6 +79,7 @@
       var pname = getNameOfRespondent(responseKey)
       newBody += "<tr><td>"+pname+"</td><td>";
       //Add demographics link
+      newBody += "<a class=\"dr-link\" href=\"crit_rank.html?responseKey="+responseKey+"\">Criteria Weights</a>, ";
       newBody += "<a class=\"dr-link\" href=\"demographics.html?responseKey="+responseKey+"\">Demographics</a>, "
       //Add the Votes link
       newBody += "<a class=\"dr-link\" href=\"pairwise.html?responseKey="+responseKey+"\">Votes</a>, ";
