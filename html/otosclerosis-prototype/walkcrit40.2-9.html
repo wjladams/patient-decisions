@@ -22,6 +22,7 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="ahp.js"></script>
     <script src="config.js"></script>
   	<script src="common.js"></script>
 
@@ -29,43 +30,20 @@
   <body>
 
     <div class="container">
-      <h1>Hearing Aid </h1>
+      <h1>Permanent Health Risks</h1>
       <div class="wrapper">
-        <div class="optiontypes" style="">
-           <table class="optionstable" style="width:100%">
-             <colgroup>
-               <col style="width: 50%; float:left">
-               <col style="width: 50%; text-align:center">
-             </colgroup>
-             <tbody>
-             <tr>
-               <th style="text-align:center">Benefits</th>
-               <th style="text-align:center">Risks</th>
-             </tr>
-             <tr>
-               <td style="text-align:left">
-                 <ul>
-                   <li> Patients can avoid undergoing general anaesthetic and an operation
-                   <li> No risk of treatment related hearing reduction
-              </td>
-               <td style="text-align:left">
-                 <ul>
-                   <li> Increased risk of ear infection
-                   <li> About 1% stop using hearing aid because of perceived sound quality issues
-                   <li> Discomfort of wearing a device for long periods in the ear
-                   <li> Need for regular maintenance and battery change
-                   <li> Hearing aid use in wet environments is challenging
-                   <li> Perceived stigma from a visible sign of disability
-                </ul>
-               </td>
-             </tr>
-           </tbody>
-         </table>
-         </div>
+          <h2 class="subrisk">Loss of balance</h2>
+            <ul>
+              <li>For the surgery option, there is a small chance of permanent loss of balance.</li>
+              <li>The chances of this are 1 in 200</li>
+              <li>This can be visualized as:<br>
+                  <canvas id="viz"></canvas>
+              </li>
+            </ul>
       </div>
       <div class="footer">
         <button class="continue-btn" onclick="window.location.href=PREVIOUS_PAGE;">Previous</button>
-        <span class="step-indicator">Step 6 / 17 of Information</span>
+        <span class="step-indicator">Step 16 / 17 of Information</span>
         <button class="continue-btn" onclick="window.location.href=NEXT_PAGE;">Next</button>
       </div>
 
@@ -80,9 +58,18 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/tether.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script> <!--Handling canvas pict-->
+      var canvas = document.getElementById("viz")
+      var afterCanvas = document.getElementById("vizAfter")
+      var nRows = 8
+      var nCols = 25
+      var chance = 1
+      var boxSize = 20
+      drawChance(canvas, chance, nRows, nCols, boxSize)
+    </script>
     <script>
-    var PREVIOUS_PAGE = "walk5.html";
-    var NEXT_PAGE = "walk7.html";
+    var PREVIOUS_PAGE = "walkcrit4.2-8.html";
+    var NEXT_PAGE = "walk17.html";
     insertResponsesIntoHTML();
     </script>
   </body>

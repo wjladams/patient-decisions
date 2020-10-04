@@ -200,33 +200,9 @@ var AHP_MODEL_JSON = {
             ]
           },
           {
-            "name": "Temporary Health Risks",
-            "id": 5,
-            "description": "loss of taste (1 in 5 chance) or anesthetic issues",
-            "children":
-            [
-              {
-                "name": "Temporary Loss of Taste (1 in 5 chance)",
-                "description": "",
-                "id":6,
-                "alt_scores":[1.0, 1.0, 0.0]
-              },
-              {
-                "name": "Anesthetic Risks",
-                "description":"",
-                "id":7,
-                "alt_scores": [1.0, 1.0, 0.0]
-              }
-            ],
-            "pairwise" : [
-              [1, 0],
-              [0, 1]
-            ]
-          },
-          {
-            "name":"Permanent Health Risks",
+            "name":"Health Risks",
             "id":8,
-            "description":"increase risk of ear infections or possible loss of balance (1 in 200 chance)",
+            "description":"overall risks to health based on treatment option chosen",
             "children":
             [
               {
@@ -240,35 +216,41 @@ var AHP_MODEL_JSON = {
                 "description":"",
                 "id":10,
                 "alt_scores":[1.0, 1.0, 0.0]
+              },
+              {
+                "name": "Temporary Loss of Taste (1 in 5 chance)",
+                "description":"",
+                "id":11,
+                "alt_scores":[1.0, 1.0, 0.0]
               }
             ],
             "pairwise" : [
-              [1, 0],
-              [0, 1]
+              [1, 0, 0],
+              [0, 1, 0],
+              [0, 0, 1]
             ]
           }
         ],
         "pairwise" : [
-          [1, 0, 0],
-          [0, 1, 0],
-          [0, 0, 1]
+          [1, 0],
+          [0, 1]
         ]
       },
       {
         "name": "Inconvenience",
-        "id":11,
+        "id":12,
         "description":"things that could bother you in the short or long term, but are not health risks.",
         "children":
         [
           {
             "name": "Short Term Inconveniences (less than a month)",
-            "id":12,
+            "id":13,
             "description":"These are inconveniences that last for last than a month, without long term impacts.",
             "alt_scores":[1.0, 0.7, 0.1],
           },
           {
             "name": "Long Term Inconveniences (a month or longer)",
-            "id":13,
+            "id":14,
             "description":"These are inconveniences that last longer than a month.",
             "alt_scores":[0.4, 0.1, 1.0]
           }
