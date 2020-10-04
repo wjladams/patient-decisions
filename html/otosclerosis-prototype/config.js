@@ -201,26 +201,26 @@ var AHP_MODEL_JSON = {
           },
           {
             "name":"Health Risks",
-            "id":8,
+            "id":5,
             "description":"overall risks to health based on treatment option chosen",
             "children":
             [
               {
                 "name": "Increase Chance of Ear Infections",
-                "id":9,
+                "id":6,
                 "description":"",
                 "alt_scores":[1.0, 0.0, 1.0]
               },
               {
                 "name": "Loss of Balance (1 in 200 chance)",
                 "description":"",
-                "id":10,
+                "id":7,
                 "alt_scores":[1.0, 1.0, 0.0]
               },
               {
                 "name": "Temporary Loss of Taste (1 in 5 chance)",
                 "description":"",
-                "id":11,
+                "id":8,
                 "alt_scores":[1.0, 1.0, 0.0]
               }
             ],
@@ -238,19 +238,19 @@ var AHP_MODEL_JSON = {
       },
       {
         "name": "Inconvenience",
-        "id":12,
+        "id":9,
         "description":"things that could bother you in the short or long term, but are not health risks.",
         "children":
         [
           {
             "name": "Short Term Inconveniences (less than a month)",
-            "id":13,
+            "id":10,
             "description":"These are inconveniences that last for last than a month, without long term impacts.",
             "alt_scores":[1.0, 0.7, 0.1],
           },
           {
             "name": "Long Term Inconveniences (a month or longer)",
-            "id":14,
+            "id":11,
             "description":"These are inconveniences that last longer than a month.",
             "alt_scores":[0.4, 0.1, 1.0]
           }
@@ -270,15 +270,14 @@ var AHP_MODEL_JSON = {
 
   "pairwiseOrderByIds": [
     [0, 1],
-    [1, 11],
-    [0, 11],
+    [1, 9],
+    [0, 9],
     [2, 5],
-    [5, 8],
-    [2, 8],
     [3, 4],
     [6, 7],
-    [9, 10],
-    [12, 13]
+    [7, 8],
+    [6, 8],
+    [10, 11]
   ]
 
 }
