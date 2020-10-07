@@ -41,14 +41,16 @@
 				<h1 class="pairwise-question">Which are you more concerned about?</h1>
 
 				<div class="pairwise-answers">
-					<p class="pairwise-answer left"><span class="pwRowName">abc</span>
-						<span class="pairwise-description" id="rowdesc"></span>
-						</a>
+					<div class="pairwise-answer left"><span class="pwRowName">abc</span>
+						<!-- <div class="pairwise-description" id="rowdesc"></div> -->
+					</div>
+
 					</p>
 					<p class="pairwise-answer or">or</p>
-					<p class="pairwise-answer right"><span class="pwColName">cde</span>
-						<span class="pairwise-description" id="coldesc"></span>
-					</p>
+					<div class="pairwise-answer right"><span class="pwColName">cde</span>
+					<!-- <div class="pairwise-description" id="coldesc"></div> -->
+					</div>
+
 
 				</div>
 
@@ -78,6 +80,11 @@
 					  <div class="control-indicator"></div>
 					  <i>Not having a scar on my neck is</i> <b>Much More Concerning</b>
 					</label>
+				</div>
+				<div class="pairwise-answers">
+						<div class="pairwise-description" id="rowdesc"></div>
+						<p class="pairwise-answer or"></p>
+						<div class="pairwise-description" id="coldesc"></div>
 				</div>
 
 				<div class="footer">
@@ -175,8 +182,8 @@
 					$('[data-toggle="popover"]').popover();
 					let rowNodeDesc = AHP_MODEL.getChildWithId(ROW_ID).description;
 					let colNodeDesc = AHP_MODEL.getChildWithId(COL_ID).description;
-					$( "#rowdesc" ).text(rowNodeDesc)
-					$( "#coldesc" ).text(colNodeDesc)
+					$( "#rowdesc" ).html(rowNodeDesc)
+					$( "#coldesc" ).html(colNodeDesc)
 
 
 				</script>
