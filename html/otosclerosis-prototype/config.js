@@ -158,7 +158,7 @@ function getResponseMolecularTestName() {
 //// The AHP Model JSON and creating it                       //////
 ////////////////////////////////////////////////////////////////////
 
-var AHP_MODEL_JSON = {
+var AHP_MODEL_JSON_41 = {
   "name" : "Otosclerosis Model",
   "description" : "Version 4.1 of the Otosclerosis Model.",
   "alts" : ["Watchful Waiting", "Hearing Aid", "Surgery"],
@@ -182,14 +182,14 @@ var AHP_MODEL_JSON = {
             "children":
             [
               {
-                "name": "Loss of hearing on side of surgery <br>(1 in 200 chance)",
-                "description": "1 in 200 chance of complete hearing loss on surgerical side.",
+                "name": "Permanent Hearing Reduction",
+                "description": "1 in 200 people who have this treatment are at risk of permanently reduced hearing in the treated ear.",
                 "id":3,
                 "alt_scores": [1.0, 1.0, 0]
               },
               {
-                "name": "Hearing Distortion (???? in ????? chance)",
-                "description": "",
+                "name": "Hearing Distortion",
+                "description": "1 in 100 hearing aid users report distortion.",
                 "id":4,
                 "alt_scores": [1.0, 0.0, 1.0]
               }
@@ -208,18 +208,18 @@ var AHP_MODEL_JSON = {
               {
                 "name": "Increase Chance of Ear Infections",
                 "id":6,
-                "description":"",
+                "description":"This treatment increases the chance of recurring ear infections whilst it is being used (1% versus 10%)",
                 "alt_scores":[1.0, 0.0, 1.0]
               },
               {
-                "name": "Loss of Balance (1 in 200 chance)",
-                "description":"",
+                "name": "Balance disturbance ",
+                "description":"1 in 200 people who receive this treatment report a long lasting balance disturbance that can be quite debilitating in the first few weeks",
                 "id":7,
                 "alt_scores":[1.0, 1.0, 0.0]
               },
               {
-                "name": "Temporary Loss of Taste (1 in 5 chance)",
-                "description":"",
+                "name": "Temporary risk of taste disturbance",
+                "description":"1 in 5 people who receive this treatment report a temporary change to the taste sensation on a small segment of their tongue (a few weeks)",
                 "id":8,
                 "alt_scores":[1.0, 1.0, 0.0]
               }
@@ -239,7 +239,7 @@ var AHP_MODEL_JSON = {
       {
         "name": "Inconvenience",
         "id":9,
-        "description":"things that could bother you in the short or long term, but are not health risks.",
+        "description":"A quarter of people who chose this treatment reported stopping because of the following inconveniences: <ul><li>Requires regular maintenance and upkeep <li>Cosmetic impact of treatment visible to others <li>Sound quality that was not perfect in all environments</ul>",
         "children":
         [
           {
@@ -282,8 +282,83 @@ var AHP_MODEL_JSON = {
 
 }
 
+var AHP_MODEL_JSON_50 = {
+  "name" : "Otosclerosis Model",
+  "description" : "Nish's version of the Otosclerosis Model.",
+  "alts" : ["Watchful Waiting", "Hearing Aid", "Surgery"],
+  "alt_descriptions" : ["Remain vigilant", "Hearing aid", "Surgery of inner ear"],
+  "children": [
+    {
+      "name": "Hearing Improvement",
+      "id": 5,
+      "description": "Make this option more important if improving your hearing is more important",
+      "alt_scores": [0, 0.5, 1],
+    },
+    {
+      "name": "Procedure Risks",
+      "id": 6,
+      "description": "Make this option more important if you are more concerned about procedural risks than improving your hearing.",
+      "children": [
+        {
+          "name": "Inconvenience",
+          "id":0,
+          "description":"A quarter of people who chose this treatment reported stopping because of the following inconveniences: <ul><li>Requires regular maintenance and upkeep <li>Cosmetic impact of treatment visible to others <li>Sound quality that was not perfect in all environments</ul>",
+          "alt_scores": [0, 0.5, 1.0]
+        },
+        {
+          "name": "Recurring ear infections",
+          "id" : 1,
+          "description": "Hearing aids increase the chance of recurring ear infections whilst they are being used (1% versus 10%)",
+          "alt_scores": [0, 0.5, 1.0]
+        },
+        {
+          "name": "Permanent hearing reduction",
+          "id": 2,
+          "description": "1 in 200 people who have this treatment are at risk of permanently reduced hearing in the treated ear",
+          "alt_scores": [0, 0, 0]
+        },
+        {
+          "name": "Temporary risk of taste disturbance",
+          "id": 3,
+          "description": "1 in 5 people who receive this treatment report a temporary change to the taste sensation on a small segment of their tongue (a few weeks)",
+          "alt_scores": [0, 0, 0]
+        },
+        {
+          "name": "Balance disturbance",
+          "id": 4,
+          "description": "1 in 200 people who receive this treatment report a long lasting balance disturbance that can be quite debilitating in the first few weeks",
+          "alt_scores": [0, 0, 0]
+        }
+      ],
+      "pairwise": [
+        [1, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0],
+        [0, 0, 1, 0, 0],
+        [0, 0 ,0, 1, 0],
+        [0, 0, 0, 0, 1]
+      ],
+    }
+  ],
+  "pairwise": [
+    [1, 0],
+    [0, 1]
+  ],
+
+  "pairwiseOrderByIds": [
+    [0, 1],
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [0, 2],
+    [1, 3],
+    [2, 4],
+    [5, 6]
+  ]
+
+}
+
 var NUMBER_OF_WALKTHROUGH_STEPS=17
-var AHP_MODEL = AHPTreeNode.fromJSONObject(AHP_MODEL_JSON)
+var AHP_MODEL = AHPTreeNode.fromJSONObject(AHP_MODEL_JSON_50)
 
 ////////////////////////////////////////////////////////////////////
 //// End of the AHP Model definition section                  //////
