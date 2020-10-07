@@ -1,1 +1,101 @@
-../thyroid-prototype/results.html
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- THIS MUST BE DELETED WHEN SITE GOES LIVE!!!!!!!! -->
+	<meta name="robots" content="nofollow" />
+
+	<meta charset="utf-8" />
+
+	<!-- allows the content to be zoomed in automatic on the iphone -->
+	<meta name="viewport" content="width=device-width" />
+
+	<meta name="viewport" content="width=device-width, minimal-ui" />
+
+
+	<meta name="description" content="" />
+
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
+
+	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="scripts/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="ahp.js"></script>
+  <!-- <script src="thyroid_model.js"></script> -->
+	<script src="config.js"></script>
+  <script src="common.js"></script>
+
+</head>
+
+<body class="pairwise" onunload="confirmUnload()">
+
+	<div class="main-nav-wrapper">
+
+		<h1 class="logo">WeDecide</h1>
+
+	</div><!-- /mainNav -->
+			<div class="container">
+				<h1 class="pairwise-results-title">What should you choose?</h1>
+
+				<div class="wrapper">
+					<p class="pairwise-results-text"><b class="participantName"></b>, based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:</p>
+	        <div class="pairwise-results-values">
+	          <p><strong>Aligned:</strong> <span class="results1">Unknown</span></p>
+						<p><strong>Not Aligned:</strong> <span class="results2">Unknown</span></p>
+					</div>
+				</div>
+				<div class="wrapper-noborder results-text">
+				</div>
+				<div class="wrapper results-text">
+					Please return the tablet to the front desk.
+				</div>
+				<div class="footer results-text">
+	      </div>
+			</div>
+
+			<script>
+			//Checks for responseKey if given
+			setResponseKeyFromURL();
+			</script>
+        <script>
+          var ahpModel = getResponseAHPModel();
+          var priorities = ahpModel.synthesize();
+          var alts = ahpModel.alts.slice(0);
+          var altsSorted = alts.slice(0);
+          var altScoresDict = {};
+          for(var i=0; i < alts.length; i++) {
+            altScoresDict[alts[i]] = priorities[i];
+          }
+          altsSorted.sort(function(a, b) {
+            var cmp = altScoresDict[b]-altScoresDict[a];
+            // alert("Comparing "+a+" to "+b+ " compare value = "+cmp)
+            return cmp
+          })
+          console.log(priorities+" altsOrig="+alts+" sorted="+altsSorted);
+          //Now let's insert
+          insertStringIntoClass("results1", altsSorted[0]);
+          insertStringIntoClass("results2", altsSorted[1]);
+        </script>
+
+        <script>
+          let PREVIOUS_PAGE = "pairwise.html?currentPosition=-1"
+          let NEXT_PAGE = "results.html"
+        insertResponsesIntoHTML();
+        </script>
+				<script>
+				window.onbeforeunload = function(e) {
+				    return 'Please press the Logout button to logout.';
+				};
+				</script>
+
+</body>
+
+</html>
