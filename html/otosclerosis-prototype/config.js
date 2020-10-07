@@ -137,17 +137,7 @@ function getResponseHasUsefulMolecularTesting() {
   }
 }
 
-function getResponseMolecularTestName() {
-  let afirma = getResponseValue("afirma");
-  let thyroseq = getResponseValue("thyroseq");
-  if (afirma != "") {
-    return "afirma";
-  } else if (thyroseq != "") {
-    return "thyroseq";
-  } else {
-    return "";
-  }
-}
+
 
 ////////////////////////////////////////////////////////////////
 ////  End of additional function section                   /////
