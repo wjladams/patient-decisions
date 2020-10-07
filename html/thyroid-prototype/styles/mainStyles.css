@@ -306,10 +306,11 @@ strong {
 }
 
 .pairwise-description {
-  font: 500 1.0rem/1.0 museosans;
+  font: 500 1.2rem/1.0 museosans;
   color: #173953;
-  margin: 0 2rem;
-  flex-basis: 300px;
+  margin: 5rem 0.5rem;
+  flex-basis: 450px;
+  text-align: left !important;
 }
 
 .pairwise-answer.or {
@@ -489,7 +490,7 @@ strong {
 
 .riskTable {
   text-align: center;
-  border-spacing: 15px 1rem; 
+  border-spacing: 15px 1rem;
 }
 
 /*# sourceMappingURL=mainStyles.css.map */
