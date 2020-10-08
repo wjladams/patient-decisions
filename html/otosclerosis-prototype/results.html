@@ -18,11 +18,13 @@
 
 	<title></title>
 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" media="all" href="styles/mainStyles.css"  />
 
 	<link rel="stylesheet" type="text/css" media="print" href="styles/print.css"  />
 
-	<!--[if IE]>
+
+	    <title>Results</title>	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="scripts/css3-mediaqueries.js"></script>
 	<![endif]-->
@@ -43,16 +45,35 @@
 
 	</div><!-- /mainNav -->
 			<div class="container">
-				<h1 class="pairwise-results-title">What should you choose?</h1>
+				<h1 class="pairwise-results-title"><span class="participantName"></span> what should you choose?</h1>
 
-				<div class="wrapper">
-					<p class="pairwise-results-text"><b class="participantName"></b>, based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:</p>
-	        <div class="pairwise-results-values">
-	          <p><strong>Aligned:</strong> <span class="results1">Unknown</span></p>
-						<p><strong>Not Aligned:</strong> <span class="results2">Unknown</span></p>
-					</div>
+				<div class="wrapper pairwise-results-values">
+					<ul id="infos">
+						<li>This tool will not tell you what you should choose. That is up to you to decide with the help of your doctor.
+						<li>However, the tool can suggest based on your current answers and the values we can measure from them, that:
+						<li>Your treatment preferences align <strong><span class="strength1">Unknown</span></strong> with <strong><span class=results1></span></strong>
+					</ul>
 				</div>
-				<div class="wrapper-noborder results-text">
+				<div class="wrapper">
+					<h2><span class="participantName"></span> are you surprised by these results?</h2>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="very" value="2"  onclick="submitVote(2);">
+					  <label class="form-check-label" for="very">
+					    Very
+					  </label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="somewhat" value="1"  onclick="submitVote(1);">
+					  <label class="form-check-label" for="somewhat" onclick="submitVote(1);">
+					    Somewhat
+					  </label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="notvery" value="2"  onclick="submitVote(0);">
+					  <label class="form-check-label" for="notvery">
+					    Not very
+					  </label>
+					</div>
 				</div>
 				<div class="wrapper results-text">
 					Please return the tablet to the front desk.
@@ -71,6 +92,24 @@
           var alts = ahpModel.alts.slice(0);
           var altsSorted = alts.slice(0);
           var altScoresDict = {};
+					function strength(bigger, smaller) {
+						//Calculates the strength of how much a bigger number is than a smaller
+						//using the ratio.  Assumes that bigger is actually larger number than smaller.
+						var ratio = Math.abs(bigger/smaller)
+						console.log("Bigger alt score="+bigger+" smaller="+smaller+" ratio="+ratio)
+						if (ratio < 1.1) {
+							//Only very weakly bigger
+							return "Very Weakly"
+						} else if (ratio < 1.33) {
+							return "Weakly"
+						} else if (ratio < 1.67) {
+							return "Moderately"
+						} else if (ratio < 2.00) {
+							return "Strongly"
+						} else {
+							return "Very Strongly"
+						}
+					}
           for(var i=0; i < alts.length; i++) {
             altScoresDict[alts[i]] = priorities[i];
           }
@@ -82,7 +121,27 @@
           console.log(priorities+" altsOrig="+alts+" sorted="+altsSorted);
           //Now let's insert
           insertStringIntoClass("results1", altsSorted[0]);
-          insertStringIntoClass("results2", altsSorted[1]);
+					var ratio = altScoresDict[altsSorted[0]] / altScoresDict[altsSorted[1]];
+          insertStringIntoClass("strength1", strength(altScoresDict[altsSorted[0]], altScoresDict[altsSorted[1]]));
+					ids = ["#notvery", "#somewhat", "#very"]
+					function submitVote(vote) {
+						var forKey="surprised"
+						setACurrentResponseValue(forKey, vote)
+						console.log("Submit the ruddy thing. "+vote)
+					}
+					//Alright let's see if they already have a "surprised" value, and preselect that
+					var currents = getCurrentResponseValues();
+					if ("surprised" in currents) {
+						console.log("Surprised value is "+currents["surprised"])
+						$( ids[currents["surprised"]]).attr('checked', true);
+					}
+					//Lastly add details if details parameter Sent
+					let url = new URL(window.location.href)
+					var details = url.searchParams.get("details")
+					if (details) {
+						var infos = $( "#infos")
+						infos.append("<li>Scores <ul><li>"+alts[0]+": "+altScoresDict[alts[0]]+"</li><li>"+alts[1]+": "+altScoresDict[alts[1]]+"</li><li>Ratio: "+ratio+"</li></ul></li>");
+					}
         </script>
 
         <script>

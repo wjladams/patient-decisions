@@ -2,7 +2,7 @@
 // patient decision we are doing.
 
 //The demographic variable names / ids in demographics.html
-DEMOGRAPHICS = ["name", "age", "gender", ]
+DEMOGRAPHICS = ["name", "age", "gender", "surprised"]
 
 // Configure this function yourself.  This is used to insert Demographics
 // and other information into html elements.  See this example to understand
