@@ -20,3 +20,19 @@ The following are some external resources that we have created to help with work
   * Mathematician who designed and developed the new AHP theoretic calculations required.
   * Guided the design of the AHP models that power the decision for both the Thyroid Cancer and Otosclerosis models.
   * Setup and maintains the github source code repository.
+* Charles Casper <a href="https://www.linkedin.com/in/casperone"> on LinkedIn</a> was the [REDCap](https://www.project-redcap.org/) developer for the Thyroid Cancer application, he:
+  * Converted the existing prototype to REDCap
+  * Worked in conjunction with Bill Adams, he created the AHP calculation framework in REDCap
+  * Created the conditional walk through workflows and HTML screens in REDCap
+* Bo Wang [on Github](https://github.com/wboboston), contributed as a research associate in the project.  He is a:
+  * Research Fellow in Harvard Medical University, Massachusetts Eye and Ear Infirmary, USA
+  * Department of Thyroid and Parathyroid Surgery, Fujian Medical University Union Hospital，China
+* Dr. Natalie Justicz was the researcher who started this project for Thyroid Cancer applications:
+  * [Her original prototype without AHP](https://justicz.github.io/natalie-presentation/)
+  * Designed the AHP model in conjunction with Bill Adams
+  * Designed the original workflow of the information walk through, in conjunction with Bill Adams and David Rodriguez.
+* David Rodriguez [on Github](https://github.com/davidkrodriguez) was the lead Designer on both the Thyroid Cancer and Otosclerosis applications:
+  * Designed the pairwise comparison screen
+  * Designed the css and bootstrap code
+  * Helped Dr. Justicz layout the steps of the patient walk through for Thyroid Cancer
+  * Contributed greatly to the simplification of the presentation of the material
