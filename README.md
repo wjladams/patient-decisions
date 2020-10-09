@@ -36,3 +36,7 @@ The following are some external resources that we have created to help with work
   * Designed the css and bootstrap code
   * Helped Dr. Justicz layout the steps of the patient walk through for Thyroid Cancer
   * Contributed greatly to the simplification of the presentation of the material
+
+## Analyses
+* [Analysis of Thyroid Cancer AHP Model Jupyter Notebook](html/thyroid-prototype/analysis/Analysis.ipynb)
+* [Analysis of Otosclerosis AHP Model, Jupyter Notebook](html/otosclerosis-prototype/analysis/Analysis.ipynb)
