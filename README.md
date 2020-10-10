@@ -28,9 +28,9 @@ The following are some external resources that we have created to help with work
   * Research Fellow in Harvard Medical University, Massachusetts Eye and Ear Infirmary, USA
   * Department of Thyroid and Parathyroid Surgery, Fujian Medical University Union Hospital，China
 * Dr. Natalie Justicz was the researcher who started this project for Thyroid Cancer applications:
-  * [Her original prototype without AHP](https://justicz.github.io/natalie-presentation/)
-  * Designed the AHP model in conjunction with Bill Adams
-  * Designed the original workflow of the information walk through, in conjunction with Bill Adams and David Rodriguez.
+  * She [developed the original prototype](https://justicz.github.io/natalie-presentation/)
+  * She designed the AHP model in conjunction with Bill Adams
+  * She designed the original workflow of the information walk through, in conjunction with Bill Adams and David Rodriguez.
 * David Rodriguez [on Github](https://github.com/davidkrodriguez) was the lead Designer on both the Thyroid Cancer and Otosclerosis applications:
   * Designed the pairwise comparison screen
   * Designed the css and bootstrap code
