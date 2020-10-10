@@ -19,16 +19,23 @@ The following are some external resources that we have created to help with work
   * She [developed the original prototype](https://justicz.github.io/natalie-presentation/)
   * She designed the AHP model in conjunction with Bill Adams
   * She designed the original workflow of the information walk through, in conjunction with Bill Adams and David Rodriguez.
+* Dr. Nishchay Mehta:
+  * Original researcher on the Otosclerosis application
+  * Developer an AHP modeling structure for his dissertation that served as the template for both the Otosclerosis model and the Thyroid Cancer model.
+  * Lead researcher using this application with patients to help them understand their treatment choices for otosclerosis.
 * Dr. Bill Adams <a href="https://linkedin.com/in/wjladams ">on LinkedIn</a>, <a href="https://github.com/wjladams">on Github</a>: performed the following roles
   * Main developer of the web applications for the Thyroid Cancer and Otosclerosis use case.
   * Mathematician who designed and developed the new AHP theoretic calculations required.
   * Guided the design of the AHP models that power the decision for both the Thyroid Cancer and Otosclerosis models.
   * Setup and maintains the github source code repository.
+* Dr. Anythony Cheung:
+  * Lead researcher administering the Thyroid Cancer application with patients
+  * Lead researcher analyzing the results of the data that the Thyroid Cancer application receives.
 * Charles Casper <a href="https://www.linkedin.com/in/casperone"> on LinkedIn</a> was the [REDCap](https://www.project-redcap.org/) developer for the Thyroid Cancer application, he:
   * Converted the existing prototype to REDCap
   * Worked in conjunction with Bill Adams, he created the AHP calculation framework in REDCap
   * Created the conditional walk through workflows and HTML screens in REDCap
-* Bo Wang [on Github](https://github.com/wboboston), contributed as a research associate in the project.  He is a:
+* Dr. Bo Wang [on Github](https://github.com/wboboston), contributed as a research associate in the project.  He is a:
   * Research Fellow in Harvard Medical University, Massachusetts Eye and Ear Infirmary, USA
   * Department of Thyroid and Parathyroid Surgery, Fujian Medical University Union Hospital，China
 * David Rodriguez [on Github](https://github.com/davidkrodriguez) was the lead Designer on both the Thyroid Cancer and Otosclerosis applications:
