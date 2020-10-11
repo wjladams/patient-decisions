@@ -28,7 +28,7 @@ The following are some external resources that we have created to help with work
   * Mathematician who designed and developed the new AHP theoretic calculations required.
   * Guided the design of the AHP models that power the decision for both the Thyroid Cancer and Otosclerosis models.
   * Setup and maintains the github source code repository.
-* Dr. Anythony Cheung:
+* Dr. Anythony Cheung [on LinkedIn](www.linkedin.com/in/anthony-cheung-13769b43):
   * Lead researcher administering the Thyroid Cancer application with patients
   * Lead researcher analyzing the results of the data that the Thyroid Cancer application receives.
 * Charles Casper <a href="https://www.linkedin.com/in/casperone"> on LinkedIn</a> was the [REDCap](https://www.project-redcap.org/) developer for the Thyroid Cancer application, he:
