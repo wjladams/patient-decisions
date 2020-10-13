@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Thyroid Decision Aid" AsOfDateTime="2020-10-13T13:46:34" CreationDateTime="2020-10-13T13:46:34" SourceSystem="REDCap" SourceSystemVersion="9.5.35">
+<Study OID="Project.ThyroidDecisionAid">
+<GlobalVariables>
+	<StudyName>Thyroid Decision Aid</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "Thyroid Decision Aid".</StudyDescription>
+	<ProtocolName>Thyroid Decision Aid</ProtocolName>
+	<redcap:RecordAutonumberingEnabled>1</redcap:RecordAutonumberingEnabled>
+	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
+	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
+	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
+	<redcap:SurveysEnabled>1</redcap:SurveysEnabled>
+	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:Purpose>3</redcap:Purpose>
+	<redcap:PurposeOther></redcap:PurposeOther>
+	<redcap:ProjectNotes></redcap:ProjectNotes>
+	<redcap:MissingDataCodes></redcap:MissingDataCodes>
+	<redcap:SurveysGroup>
+		<redcap:Surveys form_name="demographic_information_staff_only" title="Demographic Information (Staff Only)" instructions="" acknowledgement="" question_by_section="0" display_page_number="0" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_next_survey="1" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" theme="" text_size="2" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="1" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="AFTER_SUBMIT" response_limit="" response_limit_include_partials="1" response_limit_custom_text="Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached." survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="0" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5=""/>
+		<redcap:Surveys form_name="walk_13" title="" instructions="" acknowledgement="" question_by_section="1" display_page_number="1" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_next_survey="1" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" theme="" text_size="2" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="1" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="AFTER_SUBMIT" response_limit="" response_limit_include_partials="1" response_limit_custom_text="Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached." survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="0" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5=""/>
+		<redcap:Surveys form_name="walk_47" title="" instructions="" acknowledgement="" question_by_section="1" display_page_number="1" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_next_survey="1" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" theme="" text_size="2" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="1" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="AFTER_SUBMIT" response_limit="" response_limit_include_partials="1" response_limit_custom_text="Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached." survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="0" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5=""/>
+		<redcap:Surveys form_name="walk_813" title="" instructions="" acknowledgement="&lt;p&gt;&lt;strong&gt;Thank you for taking the survey.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Have a nice day!&lt;/p&gt;" question_by_section="1" display_page_number="1" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_next_survey="1" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" theme="" text_size="2" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="1" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="AFTER_SUBMIT" response_limit="" response_limit_include_partials="1" response_limit_custom_text="Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached." survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="0" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5=""/>
+		<redcap:Surveys form_name="pairwise_questions" title="" instructions="" acknowledgement="" question_by_section="1" display_page_number="1" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_next_survey="1" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" theme="" text_size="2" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="1" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="AFTER_SUBMIT" response_limit="" response_limit_include_partials="1" response_limit_custom_text="Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached." survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="0" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5=""/>
+		<redcap:Surveys form_name="pairwise_results" title="Results" instructions="" acknowledgement="&lt;p&gt;Please return the tablet to the front desk.&lt;/p&gt;
+&lt;p&gt;Thank you.&lt;/p&gt;" question_by_section="1" display_page_number="1" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_next_survey="0" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" theme="" text_size="2" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="1" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="AFTER_SUBMIT" response_limit="" response_limit_include_partials="1" response_limit_custom_text="Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached." survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="0" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5=""/>
+		<redcap:Surveys form_name="final_treatment_decision" title="Final Treatment Decision" instructions="" acknowledgement="&lt;p&gt;&lt;strong&gt;Thank you for taking the survey.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Have a nice day!&lt;/p&gt;" question_by_section="0" display_page_number="0" question_auto_numbering="0" survey_enabled="1" save_and_return="0" save_and_return_code_bypass="0" logo="" hide_title="0" view_results="0" min_responses_view_results="10" check_diversity_view_results="0" end_survey_redirect_next_survey="1" end_survey_redirect_url="" survey_expiration="" promis_skip_question="0" survey_auth_enabled_single="0" edit_completed_response="0" hide_back_button="0" show_required_field_text="1" confirmation_email_subject="" confirmation_email_content="" confirmation_email_from="" confirmation_email_from_display="" confirmation_email_attach_pdf="0" confirmation_email_attachment="" text_to_speech="0" text_to_speech_language="en" theme="" text_size="2" font_family="16" theme_text_buttons="" theme_bg_page="" theme_text_title="" theme_bg_title="" theme_text_sectionheader="" theme_bg_sectionheader="" theme_text_question="" theme_bg_question="" enhanced_choices="1" repeat_survey_enabled="0" repeat_survey_btn_text="" repeat_survey_btn_location="AFTER_SUBMIT" response_limit="" response_limit_include_partials="1" response_limit_custom_text="Thank you for your interest; however, the survey is closed because the maximum number of responses has been reached." survey_time_limit_days="" survey_time_limit_hours="" survey_time_limit_minutes="" email_participant_field="" end_of_survey_pdf_download="0" pdf_auto_archive="0" pdf_econsent_version="" pdf_econsent_type="" pdf_econsent_firstname_field="" pdf_econsent_firstname_event_id="" pdf_econsent_lastname_field="" pdf_econsent_lastname_event_id="" pdf_econsent_dob_field="" pdf_econsent_dob_event_id="" pdf_econsent_allow_edit="0" pdf_econsent_signature_field1="" pdf_econsent_signature_field2="" pdf_econsent_signature_field3="" pdf_econsent_signature_field4="" pdf_econsent_signature_field5=""/>
+	</redcap:SurveysGroup>
+	<redcap:UserRolesGroup>
+		<redcap:UserRoles role_name="User" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="1" data_import_tool="0" data_comparison_tool="0" data_logging="0" file_repository="0" double_data="0" user_rights="0" data_access_groups="0" graphical="1" reports="1" design="0" calendar="0" data_entry="[demographic_information_staff_only,1][walk_13,2][walk_47_logic,2][walk_47,2][walk_813,2][pairwise_questions,2][pairwise_logic,2][pairwise_results,2][final_treatment_decision,2]" api_export="0" api_import="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="0" record_delete="0" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config=""/>
+	</redcap:UserRolesGroup>
+	<redcap:ReportsGroup>
+		<redcap:Reports title="Pertinent patient data" report_order="1" user_access="ALL" user_edit_access="ALL" description="" combine_checkbox_values="0" output_dags="0" output_survey_fields="0" output_missing_data_codes="0" remove_line_breaks_in_values="1" orderby_field1="record_id" orderby_sort1="ASC" orderby_field2="" orderby_sort2="" orderby_field3="" orderby_sort3="" advanced_logic="" filter_type="EVENT" dynamic_filter1="" dynamic_filter2="" dynamic_filter3="" fields="" limiter_fields="" limiter_dags="" limiter_events="" limiter_logic="" user_access_users="" user_access_roles="" user_access_dags="" user_edit_access_users="" user_edit_access_roles="" user_edit_access_dags="" redcap_reports_fields="record_id,dem_name,dem_age,dem_sex,dem_bethesda,dem_afirma,dem_thyroseq,as1,as2,as3,dr_2,dr_1,dr_3" redcap_reports_filter_dags="" redcap_reports_filter_events="" ID="13f2c766347afcd2f38cad3af1404e63632f3d8d"/>
+	</redcap:ReportsGroup>
+</GlobalVariables>
+<MetaDataVersion OID="Metadata.ThyroidDecisionAid_2020-10-13_1346" Name="Thyroid Decision Aid" redcap:RecordIdField="record_id">
+	<FormDef OID="Form.demographic_information_staff_only" Name="Demographic Information (Staff Only)" Repeating="No" redcap:FormName="demographic_information_staff_only">
+		<ItemGroupRef ItemGroupOID="demographic_information_staff_only.record_id" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="demographic_information_staff_only.demographic_information_staff_only_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.walk_13" Name="Walk_1-3" Repeating="No" redcap:FormName="walk_13">
+		<ItemGroupRef ItemGroupOID="walk_13.w1_1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_13.w1_2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_13.w2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_13.w3_bethesda_cancer_risk_text_1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_13.walk_13_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.walk_47_logic" Name="Walk_4,7 Logic" Repeating="No" redcap:FormName="walk_47_logic">
+		<ItemGroupRef ItemGroupOID="walk_47_logic.bethesda_afirma" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_47_logic.bethesda_thyroseq" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_47_logic.walk_47_logic_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.walk_47" Name="Walk_4,7" Repeating="No" redcap:FormName="walk_47">
+		<ItemGroupRef ItemGroupOID="walk_47.w4_result_1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_47.w4_result_2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_47.w7" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_47.walk_47_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.walk_813" Name="Walk_8-13" Repeating="No" redcap:FormName="walk_813">
+		<ItemGroupRef ItemGroupOID="walk_813.w8" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="walk_813.walk_813_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.pairwise_questions" Name="Pairwise Questions" Repeating="No" redcap:FormName="pairwise_questions">
+		<ItemGroupRef ItemGroupOID="pairwise_questions.matrix1_1_2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_questions.pairwise_questions_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.pairwise_logic" Name="Pairwise Logic" Repeating="No" redcap:FormName="pairwise_logic">
+		<ItemGroupRef ItemGroupOID="pairwise_logic.gm1_1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.gm1_2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.gmsum_1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.gmsum_2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.lpv1_1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.lpv1_2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.gpv1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.gpv2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.as1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.as2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_logic.pairwise_logic_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.pairwise_results" Name="Pairwise Results" Repeating="No" redcap:FormName="pairwise_results">
+		<ItemGroupRef ItemGroupOID="pairwise_results.scores_1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="pairwise_results.pairwise_results_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.final_treatment_decision" Name="Final Treatment Decision" Repeating="No" redcap:FormName="final_treatment_decision">
+		<ItemGroupRef ItemGroupOID="final_treatment_decision.dr_2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="final_treatment_decision.final_treatment_decision_complete" Mandatory="No"/>
+	</FormDef>
+	<ItemGroupDef OID="demographic_information_staff_only.record_id" Name="Demographic Information (Staff Only)" Repeating="No">
+		<ItemRef ItemOID="record_id" Mandatory="No" redcap:Variable="record_id"/>
+		<ItemRef ItemOID="dem_name" Mandatory="No" redcap:Variable="dem_name"/>
+		<ItemRef ItemOID="dem_age" Mandatory="No" redcap:Variable="dem_age"/>
+		<ItemRef ItemOID="dem_sex" Mandatory="No" redcap:Variable="dem_sex"/>
+		<ItemRef ItemOID="dem_bethesda" Mandatory="Yes" redcap:Variable="dem_bethesda"/>
+		<ItemRef ItemOID="dem_afirma" Mandatory="Yes" redcap:Variable="dem_afirma"/>
+		<ItemRef ItemOID="dem_thyroseq" Mandatory="Yes" redcap:Variable="dem_thyroseq"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="demographic_information_staff_only.demographic_information_staff_only_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="demographic_information_staff_only_complete" Mandatory="No" redcap:Variable="demographic_information_staff_only_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_13.w1_1" Name=" " Repeating="No">
+		<ItemRef ItemOID="w1_1" Mandatory="No" redcap:Variable="w1_1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_13.w1_2" Name="Walk_1-3" Repeating="No">
+		<ItemRef ItemOID="w1_2" Mandatory="No" redcap:Variable="w1_2"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_13.w2" Name=" " Repeating="No">
+		<ItemRef ItemOID="w2" Mandatory="No" redcap:Variable="w2"/>
+		<ItemRef ItemOID="w3_1" Mandatory="No" redcap:Variable="w3_1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_13.w3_bethesda_cancer_risk_text_1" Name="Walk_1-3" Repeating="No">
+		<ItemRef ItemOID="w3_bethesda_cancer_risk_text_1" Mandatory="No" redcap:Variable="w3_bethesda_cancer_risk_text_1"/>
+		<ItemRef ItemOID="w3_bethesda_cancer_risk_text_2" Mandatory="No" redcap:Variable="w3_bethesda_cancer_risk_text_2"/>
+		<ItemRef ItemOID="w3_bethesda_cancer_risk_text_3" Mandatory="No" redcap:Variable="w3_bethesda_cancer_risk_text_3"/>
+		<ItemRef ItemOID="w3_bethesda_cancer_risk_text_4" Mandatory="No" redcap:Variable="w3_bethesda_cancer_risk_text_4"/>
+		<ItemRef ItemOID="w3_bethesda_cancer_risk_text_5" Mandatory="No" redcap:Variable="w3_bethesda_cancer_risk_text_5"/>
+		<ItemRef ItemOID="w3_bethesda_cancer_risk_text_6" Mandatory="No" redcap:Variable="w3_bethesda_cancer_risk_text_6"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_13.walk_13_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="walk_13_complete" Mandatory="No" redcap:Variable="walk_13_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_47_logic.bethesda_afirma" Name="Walk_4,7 Logic" Repeating="No">
+		<ItemRef ItemOID="bethesda_afirma" Mandatory="No" redcap:Variable="bethesda_afirma"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_47_logic.bethesda_thyroseq" Name="Walk_4,7 Logic" Repeating="No">
+		<ItemRef ItemOID="bethesda_thyroseq" Mandatory="No" redcap:Variable="bethesda_thyroseq"/>
+		<ItemRef ItemOID="w4_test" Mandatory="No" redcap:Variable="w4_test"/>
+		<ItemRef ItemOID="w4_afirma" Mandatory="No" redcap:Variable="w4_afirma"/>
+		<ItemRef ItemOID="w4_thyroseq" Mandatory="No" redcap:Variable="w4_thyroseq"/>
+		<ItemRef ItemOID="w4_risk_afirma" Mandatory="No" redcap:Variable="w4_risk_afirma"/>
+		<ItemRef ItemOID="w4_risk_thyroseq" Mandatory="No" redcap:Variable="w4_risk_thyroseq"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_47_logic.walk_47_logic_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="walk_47_logic_complete" Mandatory="No" redcap:Variable="walk_47_logic_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_47.w4_result_1" Name=" " Repeating="No">
+		<ItemRef ItemOID="w4_result_1" Mandatory="No" redcap:Variable="w4_result_1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_47.w4_result_2" Name="Walk_4,7" Repeating="No">
+		<ItemRef ItemOID="w4_result_2" Mandatory="No" redcap:Variable="w4_result_2"/>
+		<ItemRef ItemOID="w4_result_3" Mandatory="No" redcap:Variable="w4_result_3"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_47.w7" Name=" " Repeating="No">
+		<ItemRef ItemOID="w7" Mandatory="No" redcap:Variable="w7"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_47.walk_47_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="walk_47_complete" Mandatory="No" redcap:Variable="walk_47_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_813.w8" Name=" " Repeating="No">
+		<ItemRef ItemOID="w8" Mandatory="No" redcap:Variable="w8"/>
+		<ItemRef ItemOID="w9" Mandatory="No" redcap:Variable="w9"/>
+		<ItemRef ItemOID="w10" Mandatory="No" redcap:Variable="w10"/>
+		<ItemRef ItemOID="w11" Mandatory="No" redcap:Variable="w11"/>
+		<ItemRef ItemOID="w12" Mandatory="No" redcap:Variable="w12"/>
+		<ItemRef ItemOID="w13" Mandatory="No" redcap:Variable="w13"/>
+		<ItemRef ItemOID="w14" Mandatory="No" redcap:Variable="w14"/>
+		<ItemRef ItemOID="w_last" Mandatory="No" redcap:Variable="w_last"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="walk_813.walk_813_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="walk_813_complete" Mandatory="No" redcap:Variable="walk_813_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_questions.matrix1_1_2" Name="&lt;center&gt;Which is most concerning&lt;/center&gt;" Repeating="No">
+		<ItemRef ItemOID="matrix1_1_2" Mandatory="Yes" redcap:Variable="matrix1_1_2"/>
+		<ItemRef ItemOID="matrix2_1_2" Mandatory="Yes" redcap:Variable="matrix2_1_2"/>
+		<ItemRef ItemOID="matrix2_2_3" Mandatory="Yes" redcap:Variable="matrix2_2_3"/>
+		<ItemRef ItemOID="matrix2_3_4" Mandatory="Yes" redcap:Variable="matrix2_3_4"/>
+		<ItemRef ItemOID="matrix2_4_5" Mandatory="Yes" redcap:Variable="matrix2_4_5"/>
+		<ItemRef ItemOID="matrix2_1_3" Mandatory="Yes" redcap:Variable="matrix2_1_3"/>
+		<ItemRef ItemOID="matrix2_1_4" Mandatory="Yes" redcap:Variable="matrix2_1_4"/>
+		<ItemRef ItemOID="matrix2_1_5" Mandatory="Yes" redcap:Variable="matrix2_1_5"/>
+		<ItemRef ItemOID="matrix2_2_4" Mandatory="Yes" redcap:Variable="matrix2_2_4"/>
+		<ItemRef ItemOID="matrix2_2_5" Mandatory="Yes" redcap:Variable="matrix2_2_5"/>
+		<ItemRef ItemOID="matrix2_3_5" Mandatory="Yes" redcap:Variable="matrix2_3_5"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_questions.pairwise_questions_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="pairwise_questions_complete" Mandatory="No" redcap:Variable="pairwise_questions_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.gm1_1" Name="Geometric Mean" Repeating="No">
+		<ItemRef ItemOID="gm1_1" Mandatory="No" redcap:Variable="gm1_1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.gm1_2" Name="Pairwise Logic" Repeating="No">
+		<ItemRef ItemOID="gm1_2" Mandatory="No" redcap:Variable="gm1_2"/>
+		<ItemRef ItemOID="gm2_1" Mandatory="No" redcap:Variable="gm2_1"/>
+		<ItemRef ItemOID="gm2_2" Mandatory="No" redcap:Variable="gm2_2"/>
+		<ItemRef ItemOID="gm2_3" Mandatory="No" redcap:Variable="gm2_3"/>
+		<ItemRef ItemOID="gm2_4" Mandatory="No" redcap:Variable="gm2_4"/>
+		<ItemRef ItemOID="gm2_5" Mandatory="No" redcap:Variable="gm2_5"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.gmsum_1" Name="GSum" Repeating="No">
+		<ItemRef ItemOID="gmsum_1" Mandatory="No" redcap:Variable="gmsum_1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.gmsum_2" Name="Pairwise Logic" Repeating="No">
+		<ItemRef ItemOID="gmsum_2" Mandatory="No" redcap:Variable="gmsum_2"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.lpv1_1" Name="Local Priority Vector" Repeating="No">
+		<ItemRef ItemOID="lpv1_1" Mandatory="No" redcap:Variable="lpv1_1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.lpv1_2" Name="Pairwise Logic" Repeating="No">
+		<ItemRef ItemOID="lpv1_2" Mandatory="No" redcap:Variable="lpv1_2"/>
+		<ItemRef ItemOID="lpv2_1" Mandatory="No" redcap:Variable="lpv2_1"/>
+		<ItemRef ItemOID="lpv2_2" Mandatory="No" redcap:Variable="lpv2_2"/>
+		<ItemRef ItemOID="lpv2_3" Mandatory="No" redcap:Variable="lpv2_3"/>
+		<ItemRef ItemOID="lpv2_4" Mandatory="No" redcap:Variable="lpv2_4"/>
+		<ItemRef ItemOID="lpv2_5" Mandatory="No" redcap:Variable="lpv2_5"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.gpv1" Name="Global Priority Vector" Repeating="No">
+		<ItemRef ItemOID="gpv1" Mandatory="No" redcap:Variable="gpv1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.gpv2" Name="Pairwise Logic" Repeating="No">
+		<ItemRef ItemOID="gpv2" Mandatory="No" redcap:Variable="gpv2"/>
+		<ItemRef ItemOID="gpv3" Mandatory="No" redcap:Variable="gpv3"/>
+		<ItemRef ItemOID="gpv4" Mandatory="No" redcap:Variable="gpv4"/>
+		<ItemRef ItemOID="gpv5" Mandatory="No" redcap:Variable="gpv5"/>
+		<ItemRef ItemOID="gpv6" Mandatory="No" redcap:Variable="gpv6"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.as1" Name="Alternative Scores" Repeating="No">
+		<ItemRef ItemOID="as1" Mandatory="No" redcap:Variable="as1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.as2" Name="Pairwise Logic" Repeating="No">
+		<ItemRef ItemOID="as2" Mandatory="No" redcap:Variable="as2"/>
+		<ItemRef ItemOID="as3" Mandatory="No" redcap:Variable="as3"/>
+		<ItemRef ItemOID="dr_we_decide" Mandatory="No" redcap:Variable="dr_we_decide"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_logic.pairwise_logic_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="pairwise_logic_complete" Mandatory="No" redcap:Variable="pairwise_logic_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_results.scores_1" Name="Pairwise Results" Repeating="No">
+		<ItemRef ItemOID="scores_1" Mandatory="No" redcap:Variable="scores_1"/>
+		<ItemRef ItemOID="scores_2" Mandatory="No" redcap:Variable="scores_2"/>
+		<ItemRef ItemOID="scores_3" Mandatory="No" redcap:Variable="scores_3"/>
+		<ItemRef ItemOID="scores_4" Mandatory="No" redcap:Variable="scores_4"/>
+		<ItemRef ItemOID="scores_5" Mandatory="No" redcap:Variable="scores_5"/>
+		<ItemRef ItemOID="scores_6" Mandatory="No" redcap:Variable="scores_6"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="pairwise_results.pairwise_results_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="pairwise_results_complete" Mandatory="No" redcap:Variable="pairwise_results_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="final_treatment_decision.dr_2" Name="Final Treatment Decision" Repeating="No">
+		<ItemRef ItemOID="dr_2" Mandatory="No" redcap:Variable="dr_2"/>
+		<ItemRef ItemOID="dr_1" Mandatory="No" redcap:Variable="dr_1"/>
+		<ItemRef ItemOID="dr_3" Mandatory="No" redcap:Variable="dr_3"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="final_treatment_decision.final_treatment_decision_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="final_treatment_decision_complete" Mandatory="No" redcap:Variable="final_treatment_decision_complete"/>
+	</ItemGroupDef>
+	<ItemDef OID="record_id" Name="record_id" DataType="text" Length="999" redcap:Variable="record_id" redcap:FieldType="text">
+		<Question><TranslatedText>Record ID</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="dem_name" Name="dem_name" DataType="text" Length="999" redcap:Variable="dem_name" redcap:FieldType="text" redcap:Identifier="y">
+		<Question><TranslatedText>Name</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="dem_age" Name="dem_age" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="dem_age" redcap:FieldType="text" redcap:TextValidationType="float">
+		<Question><TranslatedText>Age</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="dem_sex" Name="dem_sex" DataType="text" Length="1" redcap:Variable="dem_sex" redcap:FieldType="select">
+		<Question><TranslatedText>Sex</TranslatedText></Question>
+		<CodeListRef CodeListOID="dem_sex.choices"/>
+	</ItemDef>
+	<ItemDef OID="dem_bethesda" Name="dem_bethesda" DataType="text" Length="1" redcap:Variable="dem_bethesda" redcap:FieldType="select" redcap:RequiredField="y">
+		<Question><TranslatedText>Bethesda</TranslatedText></Question>
+		<CodeListRef CodeListOID="dem_bethesda.choices"/>
+	</ItemDef>
+	<ItemDef OID="dem_afirma" Name="dem_afirma" DataType="text" Length="2" redcap:Variable="dem_afirma" redcap:FieldType="select" redcap:RequiredField="y">
+		<Question><TranslatedText>Afirma</TranslatedText></Question>
+		<CodeListRef CodeListOID="dem_afirma.choices"/>
+	</ItemDef>
+	<ItemDef OID="dem_thyroseq" Name="dem_thyroseq" DataType="text" Length="2" redcap:Variable="dem_thyroseq" redcap:FieldType="select" redcap:RequiredField="y">
+		<Question><TranslatedText>Thyroseq</TranslatedText></Question>
+		<CodeListRef CodeListOID="dem_thyroseq.choices"/>
+	</ItemDef>
+	<ItemDef OID="demographic_information_staff_only_complete" Name="demographic_information_staff_only_complete" DataType="text" Length="1" redcap:Variable="demographic_information_staff_only_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="demographic_information_staff_only_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="w1_1" Name="w1_1" DataType="text" Length="999" redcap:Variable="w1_1" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Welcome [dem_name] </TranslatedText><redcap:FormattedTranslatedText>&lt;h1&gt;Welcome [dem_name] &lt;/h1&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w1_2" Name="w1_2" DataType="text" Length="999" redcap:Variable="w1_2" redcap:FieldType="descriptive">
+		<Question><TranslatedText>We will do 3 things together today
+ Provide you with useful information about Thyroid cancer and options for treatment
+            Ask some questions about which medical goals are most important to you
+            Provide you insight into the medical options for Thyroid cancer that best meet your goals</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;We will do 3 things together today&lt;/h3&gt;
+&lt;li&gt; Provide you with useful information about &lt;i&gt;Thyroid cancer&lt;/i&gt; and options for treatment&lt;/li&gt;
+            &lt;li&gt;Ask some questions about which medical goals are most important to you&lt;/li&gt;
+            &lt;li&gt;Provide you insight into the medical options for &lt;i&gt;Thyroid cancer&lt;/i&gt; that best meet your goals&lt;/li&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w2" Name="w2" DataType="text" Length="999" redcap:Variable="w2" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Information about Thyroid Cancer for [dem_name]
+ Thyroid cancer is common, but treatable
+            Fewer than 1 person in 1000 die from thyroid cancer
+            There are many reasonable choices for you</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;Information about Thyroid Cancer for [dem_name]&lt;/h3&gt;
+ &lt;li&gt;Thyroid cancer is common, but treatable&lt;/li&gt;
+            &lt;li&gt;Fewer than 1 person in 1000 die from thyroid cancer&lt;/li&gt;
+            &lt;li&gt;There are many reasonable choices for you&lt;/li&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w3_1" Name="w3_1" DataType="text" Length="999" redcap:Variable="w3_1" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>About your Bethesda Classification</TranslatedText><redcap:FormattedTranslatedText>&lt;h1&gt;About your Bethesda Classification&lt;/h1&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w3_bethesda_cancer_risk_text_1" Name="w3_bethesda_cancer_risk_text_1" DataType="text" Length="999" redcap:Variable="w3_bethesda_cancer_risk_text_1" redcap:FieldType="descriptive" redcap:BranchingLogic="[dem_bethesda] = &#039;1&#039;">
+		<Question><TranslatedText>[dem_name], your Bethesda Classification [dem_bethesda] tells us:
+Your cancer risk is 1% to 4%
+There are a number of good treatment options we will explore</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your Bethesda Classification [dem_bethesda] tells us:&lt;/h3&gt;
+&lt;li&gt;Your cancer risk is 1% to 4%
+&lt;li&gt;There are a number of good treatment options we will explore</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w3_bethesda_cancer_risk_text_2" Name="w3_bethesda_cancer_risk_text_2" DataType="text" Length="999" redcap:Variable="w3_bethesda_cancer_risk_text_2" redcap:FieldType="descriptive" redcap:BranchingLogic="[dem_bethesda] = &#039;2&#039;">
+		<Question><TranslatedText>[dem_name], your Bethesda Classification [dem_bethesda] tells us:
+Your cancer risk is 0% to 3%
+There are a number of good treatment options we will explore</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your Bethesda Classification [dem_bethesda] tells us:&lt;/h3&gt;
+&lt;li&gt;Your cancer risk is 0% to 3%
+&lt;li&gt;There are a number of good treatment options we will explore</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w3_bethesda_cancer_risk_text_3" Name="w3_bethesda_cancer_risk_text_3" DataType="text" Length="999" redcap:Variable="w3_bethesda_cancer_risk_text_3" redcap:FieldType="descriptive" redcap:BranchingLogic="[dem_bethesda] = &#039;3&#039;">
+		<Question><TranslatedText>[dem_name], your Bethesda Classification [dem_bethesda] tells us:
+Your cancer risk is 5% to 15%
+There are a number of good treatment options we will explore</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your Bethesda Classification [dem_bethesda] tells us:&lt;/h3&gt;
+&lt;li&gt;Your cancer risk is 5% to 15%
+&lt;li&gt;There are a number of good treatment options we will explore</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w3_bethesda_cancer_risk_text_4" Name="w3_bethesda_cancer_risk_text_4" DataType="text" Length="999" redcap:Variable="w3_bethesda_cancer_risk_text_4" redcap:FieldType="descriptive" redcap:BranchingLogic="[dem_bethesda] = &#039;4&#039;">
+		<Question><TranslatedText>[dem_name], your Bethesda Classification [dem_bethesda] tells us:
+Your cancer risk is 15% to 30%
+There are a number of good treatment options we will explore</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your Bethesda Classification [dem_bethesda] tells us:&lt;/h3&gt;
+&lt;li&gt;Your cancer risk is 15% to 30%
+&lt;li&gt;There are a number of good treatment options we will explore</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w3_bethesda_cancer_risk_text_5" Name="w3_bethesda_cancer_risk_text_5" DataType="text" Length="999" redcap:Variable="w3_bethesda_cancer_risk_text_5" redcap:FieldType="descriptive" redcap:BranchingLogic="[dem_bethesda] = &#039;5&#039;">
+		<Question><TranslatedText>[dem_name], your Bethesda Classification [dem_bethesda] tells us:
+Your cancer risk is 60% to 75%
+There are a number of good treatment options we will explore</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your Bethesda Classification [dem_bethesda] tells us:&lt;/h3&gt;
+&lt;li&gt;Your cancer risk is 60% to 75%
+&lt;li&gt;There are a number of good treatment options we will explore</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w3_bethesda_cancer_risk_text_6" Name="w3_bethesda_cancer_risk_text_6" DataType="text" Length="999" redcap:Variable="w3_bethesda_cancer_risk_text_6" redcap:FieldType="descriptive" redcap:BranchingLogic="[dem_bethesda] = &#039;6&#039;">
+		<Question><TranslatedText>[dem_name], your Bethesda Classification [dem_bethesda] tells us:
+Your cancer risk is 97% to 99%
+There are a number of good treatment options we will explore</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your Bethesda Classification [dem_bethesda] tells us:&lt;/h3&gt;
+&lt;li&gt;Your cancer risk is 97% to 99%
+&lt;li&gt;There are a number of good treatment options we will explore</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="walk_13_complete" Name="walk_13_complete" DataType="text" Length="1" redcap:Variable="walk_13_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="walk_13_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="bethesda_afirma" Name="bethesda_afirma" DataType="float" Length="999" redcap:Variable="bethesda_afirma" redcap:FieldType="calc" redcap:SectionHeader="Walk_4,7 Logic" redcap:Calculation="if([dem_bethesda] &lt;= 2, 0, if([dem_bethesda] &gt; 5, 0, 1))">
+		<Question><TranslatedText>Bethesda Case III, IV, V &amp; Afirma</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="bethesda_thyroseq" Name="bethesda_thyroseq" DataType="float" Length="999" redcap:Variable="bethesda_thyroseq" redcap:FieldType="calc" redcap:Calculation="if([dem_bethesda] = 3, 1, if([dem_bethesda] = 4, 1, 0))">
+		<Question><TranslatedText>Bethesda Case III, IV &amp; Thyroseq</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w4_test" Name="w4_test" DataType="float" Length="999" redcap:Variable="w4_test" redcap:FieldType="calc" redcap:Calculation="if([dem_afirma] * [bethesda_afirma] &lt;&gt; 0, 1, if([dem_thyroseq] * [bethesda_thyroseq] &lt;&gt; 0, 1, 0 ))">
+		<Question><TranslatedText>Has Adjusted Cancer Risk (based on Molecular Testing)</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w4_afirma" Name="w4_afirma" DataType="float" Length="999" redcap:Variable="w4_afirma" redcap:FieldType="calc" redcap:Calculation="if([dem_afirma] * [bethesda_afirma] &lt;&gt; 0, 1, 0)">
+		<Question><TranslatedText>Has Adjusted Afirma Cancer Risk (used for branching logic) </TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w4_thyroseq" Name="w4_thyroseq" DataType="float" Length="999" redcap:Variable="w4_thyroseq" redcap:FieldType="calc" redcap:Calculation="if([dem_thyroseq] * [bethesda_thyroseq] &lt;&gt; 0, 1, 0)">
+		<Question><TranslatedText>Has Adjusted Thyroseq Cancer Risk  (used for branching logic) </TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w4_risk_afirma" Name="w4_risk_afirma" DataType="float" Length="999" redcap:Variable="w4_risk_afirma" redcap:FieldType="calc" redcap:Calculation="if([dem_afirma] &lt; 0, 
+    if([dem_bethesda]=3,5, 
+    if([dem_bethesda] = 4, 6, 
+   if([dem_bethesda]=5, 15, 0))),
+  if([dem_bethesda]=3,38, 
+    if([dem_bethesda] = 4, 37, 
+    if([dem_bethesda]=5, 76, 0))))">
+		<Question><TranslatedText>AdjustCancerRisk (Afirma)</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w4_risk_thyroseq" Name="w4_risk_thyroseq" DataType="float" Length="999" redcap:Variable="w4_risk_thyroseq" redcap:FieldType="calc" redcap:Calculation="if([dem_thyroseq] &lt; 0, 
+    if([dem_bethesda] = 3, 3, 
+   if([dem_bethesda]=4, 2, 0)),
+  if([dem_bethesda]=3,64, 
+    if([dem_bethesda]=4, 68, 0)))">
+		<Question><TranslatedText>AdjustCancerRisk (Thyroseq)</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="walk_47_logic_complete" Name="walk_47_logic_complete" DataType="text" Length="1" redcap:Variable="walk_47_logic_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="walk_47_logic_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="w4_result_1" Name="w4_result_1" DataType="text" Length="999" redcap:Variable="w4_result_1" redcap:FieldType="descriptive" redcap:SectionHeader=" " redcap:BranchingLogic="[w4_test] = &#039;1&#039; and [w4_afirma] = &#039;1&#039;">
+		<Question><TranslatedText>[dem_name], your afirma results tell us:
+Because you have both FNA (Fine Needle Aspiration) and Molecular Testing (afirma) an adjustment to your cancer risk is warranted.
+Your adjusted cancer risk is [w4_risk_afirma]%</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your afirma results tell us:&lt;/h3&gt;
+&lt;li&gt;Because you have both FNA (Fine Needle Aspiration) and Molecular Testing (afirma) an adjustment to your cancer risk is warranted.
+&lt;li&gt;Your adjusted cancer risk is [w4_risk_afirma]%</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w4_result_2" Name="w4_result_2" DataType="text" Length="999" redcap:Variable="w4_result_2" redcap:FieldType="descriptive" redcap:BranchingLogic="[w4_test] = &#039;1&#039; and [w4_afirma] = &#039;0&#039; and [w4_thyroseq] = &#039;1&#039;">
+		<Question><TranslatedText>[dem_name], your thyroseq results tell us:
+Because you have both FNA (Fine Needle Aspiration) and Molecular Testing (thyroseq) an adjustment to your cancer risk is warranted.
+Your adjusted cancer risk is [w4_risk_thyroseq]%</TranslatedText><redcap:FormattedTranslatedText>&lt;h3&gt;[dem_name], your thyroseq results tell us:&lt;/h3&gt;
+&lt;li&gt;Because you have both FNA (Fine Needle Aspiration) and Molecular Testing (thyroseq) an adjustment to your cancer risk is warranted.
+&lt;li&gt;Your adjusted cancer risk is [w4_risk_thyroseq]%</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w4_result_3" Name="w4_result_3" DataType="text" Length="999" redcap:Variable="w4_result_3" redcap:FieldType="descriptive" redcap:BranchingLogic="[w4_test] = &#039;0&#039;">
+		<Question><TranslatedText>[dem_name], please click &quot;Next Page&quot; to explore your treatment options.</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: left;&quot;&gt;[dem_name], please click &quot;Next Page&quot; to explore your treatment options.&lt;/h3&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w7" Name="w7" DataType="text" Length="999" redcap:Variable="w7" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>[dem_name], your treatment options are:    Observation: Keep close tabs on the condition, prepared to make another judgment if the time comes. Hemi-Thyroidectomy: Removal of half the thyroid. Total Thyroidectomy: Removal of the entire thyroid. </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3&gt;[dem_name], your treatment options are:&lt;/h3&gt; &lt;p&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Observation: &lt;span style=&quot;font-weight: normal;&quot;&gt;Keep close tabs on the condition, prepared to make another judgment if the time comes.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;Hemi-Thyroidectomy: &lt;span style=&quot;font-weight: normal;&quot;&gt;Removal of half the thyroid.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;Total Thyroidectomy: &lt;span style=&quot;font-weight: normal;&quot;&gt;Removal of the entire thyroid.&lt;/span&gt;&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="walk_47_complete" Name="walk_47_complete" DataType="text" Length="1" redcap:Variable="walk_47_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="walk_47_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="w8" Name="w8" DataType="text" Length="999" redcap:Variable="w8" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>[dem_name], those treatment options may have implications such as:    Scar: The different options have differing scarring effects. Low Calcium: Some options could require you to take a calcium supplement. Voice Complications: Some options could affect your voice. Need for Medication: Some options may require lifelong medication. Recovery: Some options have longer recovery times.
+
+ Let&#039;s explore these different treatments and their implications.  </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3&gt;[dem_name], those treatment options may have implications such as:&lt;/h3&gt; &lt;p&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Scar: &lt;span style=&quot;font-weight: normal;&quot;&gt;The different options have differing scarring effects.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;Low Calcium: &lt;span style=&quot;font-weight: normal;&quot;&gt;Some options could require you to take a calcium supplement.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;Voice Complications: &lt;span style=&quot;font-weight: normal;&quot;&gt;Some options could affect your voice.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;Need for Medication: &lt;span style=&quot;font-weight: normal;&quot;&gt;Some options may require lifelong medication.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;Recovery: &lt;span style=&quot;font-weight: normal;&quot;&gt;Some options have longer recovery times.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt; &lt;h5&gt;Let&#039;s explore these different treatments and their implications.&lt;/h5&gt; &lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w9" Name="w9" DataType="text" Length="999" redcap:Variable="w9" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Concerns about Scarring    Observation Hemi-Thyroidectomy Total Thyroidectomy   No concerns 3-4cm scar 4-5cm scar   </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: center;&quot;&gt;Concerns about &lt;em&gt;Scarring&lt;/em&gt;&lt;/h3&gt; &lt;table style=&quot;border-collapse: collapse; width: 100%;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 59px;&quot;&gt;Observation&lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 59px;&quot;&gt;Hemi-Thyroidectomy&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 59px;&quot;&gt;Total Thyroidectomy&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td style=&quot;width: 20.7782%;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;No concerns&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 35.9765%;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;3-4cm scar&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 27.9543%;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;4-5cm scar&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w10" Name="w10" DataType="text" Length="999" redcap:Variable="w10" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Concerns about Low Calcium    Observation Hemi-Thyroidectomy Total Thyroidectomy   No concerns No concerns Temporary for 20 people in 100.       Permanent for ~1-5 people in 100.   </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: center;&quot;&gt;Concerns about &lt;em&gt;Low&lt;/em&gt; &lt;em&gt;Calcium&lt;/em&gt;&lt;/h3&gt; &lt;table style=&quot;border-collapse: collapse; width: 100%;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 59px;&quot;&gt;Observation&lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 59px;&quot;&gt;Hemi-Thyroidectomy&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 59px;&quot;&gt;Total Thyroidectomy&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td style=&quot;width: 20.7782%;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;No concerns&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 35.9765%;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;No concerns&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 27.9543%;&quot;&gt;Temporary&lt;span style=&quot;font-weight: normal;&quot;&gt; &lt;span style=&quot;font-weight: normal;&quot;&gt;for 20 people in 100.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 26px;&quot;&gt; &lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 26px;&quot;&gt; &lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 26px;&quot;&gt;Permanent &lt;span style=&quot;font-weight: normal;&quot;&gt;for ~1-5 people in 100.&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w11" Name="w11" DataType="text" Length="999" redcap:Variable="w11" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Concerns about Voice Complications    Observation Hemi-Thyroidectomy Total Thyroidectomy   No concerns Temporary for 10 people in 100. Temporary for 20 people in 100.     Permanent for ~1-5 people in 100. Permanent for ~1-5 people in 100.   </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: center;&quot;&gt;Concerns about &lt;em&gt;Voice Complications&lt;/em&gt;&lt;/h3&gt; &lt;table style=&quot;border-collapse: collapse; width: 100%;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 59px;&quot;&gt;Observation&lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 59px;&quot;&gt;Hemi-Thyroidectomy&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 59px;&quot;&gt;Total Thyroidectomy&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td style=&quot;width: 20.7782%;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;No concerns&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 35.9765%;&quot;&gt;Temporary &lt;span style=&quot;font-weight: normal;&quot;&gt;for 10 people in 100.&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 27.9543%;&quot;&gt;Temporary&lt;span style=&quot;font-weight: normal;&quot;&gt; &lt;span style=&quot;font-weight: normal;&quot;&gt;for 20 people in 100.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 26px;&quot;&gt; &lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 26px;&quot;&gt;Permanent &lt;span style=&quot;font-weight: normal;&quot;&gt;for ~1-5 people in 100.&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 26px;&quot;&gt;Permanent &lt;span style=&quot;font-weight: normal;&quot;&gt;for ~1-5 people in 100.&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w12" Name="w12" DataType="text" Length="999" redcap:Variable="w12" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Concerns about Need For Medication    Observation Hemi-Thyroidectomy Total Thyroidectomy   No concerns Thyroid supplementation required for ~30 people in 100. Thyroid supplementation required.   </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: center;&quot;&gt;Concerns about &lt;em&gt;Need For Medication&lt;/em&gt;&lt;/h3&gt; &lt;table style=&quot;border-collapse: collapse; width: 100%;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 59px;&quot;&gt;Observation&lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 59px;&quot;&gt;Hemi-Thyroidectomy&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 59px;&quot;&gt;Total Thyroidectomy&lt;/td&gt; &lt;/tr&gt; &lt;tr style=&quot;height: 54px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 54px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;No concerns&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 54px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Thyroid supplementation required for ~30 people in 100.&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 54px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Thyroid supplementation required.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w13" Name="w13" DataType="text" Length="999" redcap:Variable="w13" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Concerns about Recovery    Observation Hemi-Thyroidectomy Total Thyroidectomy   No concerns Same day surgery or one night in hospital Same day surgery or one night in hospital   </TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: center;&quot;&gt;Concerns about &lt;em&gt;Recovery&lt;/em&gt;&lt;/h3&gt; &lt;table style=&quot;border-collapse: collapse; width: 100%;&quot; border=&quot;1&quot;&gt; &lt;tbody&gt; &lt;tr style=&quot;height: 18px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 59px;&quot;&gt;Observation&lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 59px;&quot;&gt;Hemi-Thyroidectomy&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 59px;&quot;&gt;Total Thyroidectomy&lt;/td&gt; &lt;/tr&gt; &lt;tr style=&quot;height: 54px;&quot;&gt; &lt;td style=&quot;width: 20.7782%; height: 54px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;No concerns&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 35.9765%; height: 54px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Same day surgery or one night in hospital&lt;/span&gt;&lt;/td&gt; &lt;td style=&quot;width: 27.9543%; height: 54px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Same day surgery or one night in hospital&lt;/span&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w14" Name="w14" DataType="text" Length="999" redcap:Variable="w14" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>We are in this together.</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: center;&quot;&gt;We are in this together.&lt;/h3&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="w_last" Name="w_last" DataType="text" Length="999" redcap:Variable="w_last" redcap:FieldType="descriptive" redcap:SectionHeader=" ">
+		<Question><TranslatedText>Trade-off considerations for [dem_name]   We will consider the following trade-offs associated with observation, hemi-thyroidectomy, and total thyroidectomy. 
+You can help us guide your care by telling us which considerations matter most to you</TranslatedText><redcap:FormattedTranslatedText>&lt;div class=&quot;rich-text-field-label&quot;&gt;&lt;h3 style=&quot;text-align: center;&quot;&gt;Trade-off considerations for [dem_name]&lt;/h3&gt; &lt;p&gt; &lt;/p&gt; &lt;p&gt;We will consider the following trade-offs associated with observation, hemi-thyroidectomy, and total thyroidectomy.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;span style=&quot;color: #333399;&quot;&gt;You can help us guide your care by telling us which considerations matter most to you&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</redcap:FormattedTranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="walk_813_complete" Name="walk_813_complete" DataType="text" Length="1" redcap:Variable="walk_813_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="walk_813_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix1_1_2" Name="matrix1_1_2" DataType="text" Length="3" redcap:Variable="matrix1_1_2" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix1_1_2">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix1_1_2.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_1_2" Name="matrix2_1_2" DataType="text" Length="3" redcap:Variable="matrix2_1_2" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_1_2">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_1_2.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_2_3" Name="matrix2_2_3" DataType="text" Length="3" redcap:Variable="matrix2_2_3" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_2_3">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_2_3.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_3_4" Name="matrix2_3_4" DataType="text" Length="3" redcap:Variable="matrix2_3_4" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_3_4">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_3_4.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_4_5" Name="matrix2_4_5" DataType="text" Length="3" redcap:Variable="matrix2_4_5" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_4_5">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_4_5.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_1_3" Name="matrix2_1_3" DataType="text" Length="3" redcap:Variable="matrix2_1_3" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_1_3">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_1_3.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_1_4" Name="matrix2_1_4" DataType="text" Length="3" redcap:Variable="matrix2_1_4" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_1_4">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_1_4.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_1_5" Name="matrix2_1_5" DataType="text" Length="3" redcap:Variable="matrix2_1_5" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_1_5">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_1_5.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_2_4" Name="matrix2_2_4" DataType="text" Length="3" redcap:Variable="matrix2_2_4" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_2_4">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_2_4.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_2_5" Name="matrix2_2_5" DataType="text" Length="3" redcap:Variable="matrix2_2_5" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_2_5">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_2_5.choices"/>
+	</ItemDef>
+	<ItemDef OID="matrix2_3_5" Name="matrix2_3_5" DataType="text" Length="3" redcap:Variable="matrix2_3_5" redcap:FieldType="radio" redcap:SectionHeader="&lt;center&gt;Which is most concerning&lt;/center&gt;" redcap:RequiredField="y" redcap:MatrixGroupName="matrix2_3_5">
+		<Question><TranslatedText></TranslatedText></Question>
+		<CodeListRef CodeListOID="matrix2_3_5.choices"/>
+	</ItemDef>
+	<ItemDef OID="pairwise_questions_complete" Name="pairwise_questions_complete" DataType="text" Length="1" redcap:Variable="pairwise_questions_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="pairwise_questions_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="gm1_1" Name="gm1_1" DataType="float" Length="999" redcap:Variable="gm1_1" redcap:FieldType="calc" redcap:SectionHeader="Geometric Mean" redcap:Calculation="([matrix1_1_2] * 1)^(0.5)">
+		<Question><TranslatedText>GM1_1</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gm1_2" Name="gm1_2" DataType="float" Length="999" redcap:Variable="gm1_2" redcap:FieldType="calc" redcap:Calculation="(1/[matrix1_1_2] * 1)^(0.5)">
+		<Question><TranslatedText>GM1_2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gm2_1" Name="gm2_1" DataType="float" Length="999" redcap:Variable="gm2_1" redcap:FieldType="calc" redcap:Calculation="(1*[matrix2_1_2] * [matrix2_1_3] * [matrix2_1_4] * [matrix2_1_5])^(0.2)">
+		<Question><TranslatedText>GM2_1</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gm2_2" Name="gm2_2" DataType="float" Length="999" redcap:Variable="gm2_2" redcap:FieldType="calc" redcap:Calculation="(1/[matrix2_1_2] * 1 * [matrix2_2_3] * [matrix2_2_4] * [matrix2_2_5])^(0.2)">
+		<Question><TranslatedText>GM2_2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gm2_3" Name="gm2_3" DataType="float" Length="999" redcap:Variable="gm2_3" redcap:FieldType="calc" redcap:Calculation="(1/[matrix2_1_3] * 1/[matrix2_2_3] * 1 * [matrix2_3_4] * [matrix2_3_5])^(0.2)">
+		<Question><TranslatedText>GM2_3</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gm2_4" Name="gm2_4" DataType="float" Length="999" redcap:Variable="gm2_4" redcap:FieldType="calc" redcap:Calculation="(1/[matrix2_1_4] * 1/[matrix2_2_4] * 1/[matrix2_3_4] * 1 * [matrix2_4_5])^(0.2)">
+		<Question><TranslatedText>GM2_4</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gm2_5" Name="gm2_5" DataType="float" Length="999" redcap:Variable="gm2_5" redcap:FieldType="calc" redcap:Calculation="(1/[matrix2_1_5] * 1/[matrix2_2_5] * 1/[matrix2_3_5] * 1/[matrix2_4_5] * 1) ^ (0.2)">
+		<Question><TranslatedText>GM2_5</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gmsum_1" Name="gmsum_1" DataType="float" Length="999" redcap:Variable="gmsum_1" redcap:FieldType="calc" redcap:SectionHeader="GSum" redcap:Calculation="[gm1_1]+[gm1_2]">
+		<Question><TranslatedText>GMSum_1</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gmsum_2" Name="gmsum_2" DataType="float" Length="999" redcap:Variable="gmsum_2" redcap:FieldType="calc" redcap:Calculation="[gm2_1]+[gm2_2]+[gm2_3]+[gm2_4]+[gm2_5]">
+		<Question><TranslatedText>GMSum_2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lpv1_1" Name="lpv1_1" DataType="float" Length="999" redcap:Variable="lpv1_1" redcap:FieldType="calc" redcap:SectionHeader="Local Priority Vector" redcap:Calculation="[gm1_1]/[gmsum_1]">
+		<Question><TranslatedText>LPV1_1</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lpv1_2" Name="lpv1_2" DataType="float" Length="999" redcap:Variable="lpv1_2" redcap:FieldType="calc" redcap:Calculation="[gm1_2]/[gmsum_1]">
+		<Question><TranslatedText>LPV1_2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lpv2_1" Name="lpv2_1" DataType="float" Length="999" redcap:Variable="lpv2_1" redcap:FieldType="calc" redcap:Calculation="[gm2_1]/[gmsum_2]">
+		<Question><TranslatedText>LPV2_1</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lpv2_2" Name="lpv2_2" DataType="float" Length="999" redcap:Variable="lpv2_2" redcap:FieldType="calc" redcap:Calculation="[gm2_2]/[gmsum_2]">
+		<Question><TranslatedText>LPV2_2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lpv2_3" Name="lpv2_3" DataType="float" Length="999" redcap:Variable="lpv2_3" redcap:FieldType="calc" redcap:Calculation="[gm2_3]/[gmsum_2]">
+		<Question><TranslatedText>LPV2_3</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lpv2_4" Name="lpv2_4" DataType="float" Length="999" redcap:Variable="lpv2_4" redcap:FieldType="calc" redcap:Calculation="[gm2_4]/[gmsum_2]">
+		<Question><TranslatedText>LPV2_4</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lpv2_5" Name="lpv2_5" DataType="float" Length="999" redcap:Variable="lpv2_5" redcap:FieldType="calc" redcap:Calculation="[gm2_5]/[gmsum_2]">
+		<Question><TranslatedText>LPV2_5</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gpv1" Name="gpv1" DataType="float" Length="999" redcap:Variable="gpv1" redcap:FieldType="calc" redcap:SectionHeader="Global Priority Vector" redcap:Calculation="[lpv1_1]">
+		<Question><TranslatedText>GPV1</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gpv2" Name="gpv2" DataType="float" Length="999" redcap:Variable="gpv2" redcap:FieldType="calc" redcap:Calculation="[lpv1_2]*[lpv2_1]">
+		<Question><TranslatedText>GPV2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gpv3" Name="gpv3" DataType="float" Length="999" redcap:Variable="gpv3" redcap:FieldType="calc" redcap:Calculation="[lpv1_2]*[lpv2_2]">
+		<Question><TranslatedText>GPV3</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gpv4" Name="gpv4" DataType="float" Length="999" redcap:Variable="gpv4" redcap:FieldType="calc" redcap:Calculation="[lpv1_2]*[lpv2_3]">
+		<Question><TranslatedText>GPV4</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gpv5" Name="gpv5" DataType="float" Length="999" redcap:Variable="gpv5" redcap:FieldType="calc" redcap:Calculation="[lpv1_2]*[lpv2_4]">
+		<Question><TranslatedText>GPV5</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="gpv6" Name="gpv6" DataType="float" Length="999" redcap:Variable="gpv6" redcap:FieldType="calc" redcap:Calculation="[lpv1_2]*[lpv2_5]">
+		<Question><TranslatedText>GPV6</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="as1" Name="as1" DataType="float" Length="999" redcap:Variable="as1" redcap:FieldType="calc" redcap:SectionHeader="Alternative Scores" redcap:Calculation="0*[gpv1]+1*[gpv2] + 1*[gpv3] + 1*[gpv4] + 1*[gpv5]+1*[gpv6]">
+		<Question><TranslatedText>AS1_Observation</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="as2" Name="as2" DataType="float" Length="999" redcap:Variable="as2" redcap:FieldType="calc" redcap:Calculation="0.8*[gpv1]+0.2*[gpv2] + 0.3*[gpv3] + 0.2*[gpv4] + 0.9*[gpv5]+0.9*[gpv6]">
+		<Question><TranslatedText>AS2_Hemi-Thyroidectomy</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="as3" Name="as3" DataType="float" Length="999" redcap:Variable="as3" redcap:FieldType="calc" redcap:Calculation="1*[gpv1]+0.1*[gpv2] + 0.1*[gpv3] + 0.1*[gpv4] + 0.5*[gpv5]+0.5*[gpv6]">
+		<Question><TranslatedText>AS3_Total Thyroidectomy</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="dr_we_decide" Name="dr_we_decide" DataType="float" Length="999" redcap:Variable="dr_we_decide" redcap:FieldType="calc" redcap:Calculation="if ([as1] &gt; max([as2],[as3]), 1,
+  if([as2] &gt; [as3], 2, 3))">
+		<Question><TranslatedText>We Decide Recommendation</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="pairwise_logic_complete" Name="pairwise_logic_complete" DataType="text" Length="1" redcap:Variable="pairwise_logic_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="pairwise_logic_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="scores_1" Name="scores_1" DataType="text" Length="999" redcap:Variable="scores_1" redcap:FieldType="descriptive" redcap:BranchingLogic="[as1] &lt; min([as2],[as3]) AND [as2] &lt; [as3]">
+		<Question><TranslatedText>[dem_name], based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:
+
+Best Aligned: Total Thyroidectomy
+
+Somewhat Aligned: Hemi-Thyroidectomy
+
+Least Aligned: Observation</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="scores_2" Name="scores_2" DataType="text" Length="999" redcap:Variable="scores_2" redcap:FieldType="descriptive" redcap:BranchingLogic="[as1] &lt; min([as2],[as3]) AND [as3] &lt; [as2]">
+		<Question><TranslatedText>[dem_name], based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:
+
+Best Aligned: Hemi-Thyroidectomy
+
+Somewhat Aligned: Total Thyroidectomy
+
+Least Aligned: Observation</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="scores_3" Name="scores_3" DataType="text" Length="999" redcap:Variable="scores_3" redcap:FieldType="descriptive" redcap:BranchingLogic="[as2] &lt; min([as1],[as3]) AND [as1] &lt; [as3]">
+		<Question><TranslatedText>[dem_name], based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:
+
+Best Aligned: Total Thyroidectomy
+
+Somewhat Aligned: Observation
+
+Least Aligned: Hemi-Thyroidectomy</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="scores_4" Name="scores_4" DataType="text" Length="999" redcap:Variable="scores_4" redcap:FieldType="descriptive" redcap:BranchingLogic="[as2] &lt; min([as1],[as3]) AND [as3] &lt; [as1]">
+		<Question><TranslatedText>[dem_name], based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:
+
+Best Aligned: Observation
+
+Somewhat Aligned: Total Thyroidectomy
+
+Least Aligned: Hemi-Thyroidectomy</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="scores_5" Name="scores_5" DataType="text" Length="999" redcap:Variable="scores_5" redcap:FieldType="descriptive" redcap:BranchingLogic="[as3] &lt; min([as1],[as2]) AND [as1] &lt; [as2]">
+		<Question><TranslatedText>[dem_name], based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:
+
+Best Aligned: Hemi-Thyroidectomy
+
+Somewhat Aligned: Observation
+
+Least Aligned: Total Thyroidectomy</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="scores_6" Name="scores_6" DataType="text" Length="999" redcap:Variable="scores_6" redcap:FieldType="descriptive" redcap:BranchingLogic="[as3] &lt; min([as1],[as2]) AND [as2] &lt; [as1]">
+		<Question><TranslatedText>[dem_name], based on your answers to our questions, the options best aligned (in order) to your healthcare goals include:
+
+Best Aligned: Observation 
+
+Somewhat Aligned: Hemi-Thyroidectomy
+
+Least Aligned: Total Thyroidectomy</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="pairwise_results_complete" Name="pairwise_results_complete" DataType="text" Length="1" redcap:Variable="pairwise_results_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="pairwise_results_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="dr_2" Name="dr_2" DataType="text" Length="1" redcap:Variable="dr_2" redcap:FieldType="radio" redcap:FieldAnnotation="@READONLY @DEFAULT=&#039;[dr_we_decide]&#039;">
+		<Question><TranslatedText>We Decide Rec.</TranslatedText></Question>
+		<CodeListRef CodeListOID="dr_2.choices"/>
+	</ItemDef>
+	<ItemDef OID="dr_1" Name="dr_1" DataType="text" Length="1" redcap:Variable="dr_1" redcap:FieldType="radio">
+		<Question><TranslatedText>Physician Rec.</TranslatedText></Question>
+		<CodeListRef CodeListOID="dr_1.choices"/>
+	</ItemDef>
+	<ItemDef OID="dr_3" Name="dr_3" DataType="text" Length="1" redcap:Variable="dr_3" redcap:FieldType="radio">
+		<Question><TranslatedText>Patient Choice</TranslatedText></Question>
+		<CodeListRef CodeListOID="dr_3.choices"/>
+	</ItemDef>
+	<ItemDef OID="final_treatment_decision_complete" Name="final_treatment_decision_complete" DataType="text" Length="1" redcap:Variable="final_treatment_decision_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="final_treatment_decision_complete.choices"/>
+	</ItemDef>
+	<CodeList OID="dem_sex.choices" Name="dem_sex" DataType="text" redcap:Variable="dem_sex">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Female</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Male</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Not reported</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="dem_bethesda.choices" Name="dem_bethesda" DataType="text" redcap:Variable="dem_bethesda">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>I</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>II</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>III</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>IV</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>V</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="6"><Decode><TranslatedText>VI</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="dem_afirma.choices" Name="dem_afirma" DataType="text" redcap:Variable="dem_afirma">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>N/A</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Suspicious</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="-1"><Decode><TranslatedText>Benign</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="dem_thyroseq.choices" Name="dem_thyroseq" DataType="text" redcap:Variable="dem_thyroseq">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>N/A</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Positive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="-1"><Decode><TranslatedText>Negative</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="demographic_information_staff_only_complete.choices" Name="demographic_information_staff_only_complete" DataType="text" redcap:Variable="demographic_information_staff_only_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="walk_13_complete.choices" Name="walk_13_complete" DataType="text" redcap:Variable="walk_13_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="walk_47_logic_complete.choices" Name="walk_47_logic_complete" DataType="text" redcap:Variable="walk_47_logic_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="walk_47_complete.choices" Name="walk_47_complete" DataType="text" redcap:Variable="walk_47_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="walk_813_complete.choices" Name="walk_813_complete" DataType="text" redcap:Variable="walk_813_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix1_1_2.choices" Name="matrix1_1_2" DataType="text" redcap:Variable="matrix1_1_2">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Not Knowing if I Have Cancer</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Having Surgery</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_1_2.choices" Name="matrix2_1_2" DataType="text" redcap:Variable="matrix2_1_2">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Having a scar</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Potential low calcium</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_2_3.choices" Name="matrix2_2_3" DataType="text" redcap:Variable="matrix2_2_3">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Potential low calcium</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Voice complications</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_3_4.choices" Name="matrix2_3_4" DataType="text" redcap:Variable="matrix2_3_4">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Voice complications</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>&lt;div style=&quot;float:right;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;div style=&quot;float:right;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_4_5.choices" Name="matrix2_4_5" DataType="text" redcap:Variable="matrix2_4_5">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>&lt;div style=&quot;float:left;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;div style=&quot;float:left;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Recovery from surgery</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_1_3.choices" Name="matrix2_1_3" DataType="text" redcap:Variable="matrix2_1_3">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Having a scar</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Voice complications</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_1_4.choices" Name="matrix2_1_4" DataType="text" redcap:Variable="matrix2_1_4">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Having a scar</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>&lt;div style=&quot;float:right;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;div style=&quot;float:right;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_1_5.choices" Name="matrix2_1_5" DataType="text" redcap:Variable="matrix2_1_5">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Having a scar</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Recovery from surgery</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_2_4.choices" Name="matrix2_2_4" DataType="text" redcap:Variable="matrix2_2_4">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Potential low calcium</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>&lt;div style=&quot;float:right;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;div style=&quot;float:right;&quot;&gt;Need for thyroid supplementation&lt;/div&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_2_5.choices" Name="matrix2_2_5" DataType="text" redcap:Variable="matrix2_2_5">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Potential low calcium</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Recovery from surgery</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="matrix2_3_5.choices" Name="matrix2_3_5" DataType="text" redcap:Variable="matrix2_3_5">
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Voice complications</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;←&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>They&#039;re even</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.5"><Decode><TranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</TranslatedText><redcap:FormattedTranslatedText>&lt;span style=&quot;font-size: 20pt&quot;&gt;→&lt;/span&gt;</redcap:FormattedTranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="0.2"><Decode><TranslatedText>Recovery from surgery</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="pairwise_questions_complete.choices" Name="pairwise_questions_complete" DataType="text" redcap:Variable="pairwise_questions_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="pairwise_logic_complete.choices" Name="pairwise_logic_complete" DataType="text" redcap:Variable="pairwise_logic_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="pairwise_results_complete.choices" Name="pairwise_results_complete" DataType="text" redcap:Variable="pairwise_results_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="dr_2.choices" Name="dr_2" DataType="text" redcap:Variable="dr_2">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Observation</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Hemi-Thyroidectomy</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Total Thyroidectomy</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="dr_1.choices" Name="dr_1" DataType="text" redcap:Variable="dr_1">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Observation</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Hemi-Thyroidectomy</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Total Thyroidectomy</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="dr_3.choices" Name="dr_3" DataType="text" redcap:Variable="dr_3">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Observation</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Hemi-Thyroidectomy</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Total Thyroidectomy</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="final_treatment_decision_complete.choices" Name="final_treatment_decision_complete" DataType="text" redcap:Variable="final_treatment_decision_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+</MetaDataVersion>
+</Study>
+</ODM>
